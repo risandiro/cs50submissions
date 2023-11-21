@@ -1,5 +1,7 @@
 name = input("What's your name? ")
 
-if name == "Harry":
-    print("Gryffindor")
-elif name == "
+match name:
+    case "Harry":
+        print ("Gryffindor")
+    case _:
+        print("Who?")
