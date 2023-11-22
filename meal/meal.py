@@ -11,7 +11,7 @@ def convert(time):
     hours, minutes = time.split(":")
     hours = float(hours)
     minutes = float(minutes)
-    if 0 < minutes < 59:
+    if 0 < minutes > 59:
         hours = 0
     hours  = hours + (minutes / 60)
     return hours
