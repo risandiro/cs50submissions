@@ -1,6 +1,6 @@
 def main():
     x = convert(input("What time is it? "))
-    
+    if x <
 
 
 def convert(time):
