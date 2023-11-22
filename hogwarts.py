@@ -12,3 +12,14 @@ students = ["Hermione", "Harry", "Ron"]
 for i in range(len(students)):
     print(i + 1, students[i])
 
+# a 'dictionary' variable
+
+students2 = {
+    "Hermione": "Gryffindor",
+    "Harry": "Gryffindor",
+    "Ron": "Gryffindor",
+    "Draco": "Slytherin",
+}
+
+for student in students2:
+    print(student)
