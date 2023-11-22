@@ -8,12 +8,6 @@ def main():
 def is_even(n):
     return n % 2 == 0
 
-
-
-
-
-
-
 """
     return True if n % 2 == 0 else False
 
