@@ -6,3 +6,6 @@ students = [
     {"name": "Draco", "house": "Slytherin", "patronus": None}
     # 'None' represents the absense of a value
 ]
+
+for student in students:
+    print(student["name"])
