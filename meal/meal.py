@@ -14,7 +14,7 @@ def convert(time):
     if 0 > minutes > 59:
         hours  = hours + (minutes / 60)
         return hours
-    return None
+    return 0
 
 if __name__ == "__main__":
     main()
