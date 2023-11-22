@@ -28,3 +28,9 @@ def get_number():
         n = int(input("What's n? "))
         if n > 0:
             return n
+
+def meow(n):
+    for _ in range(n):
+        print(n)
+
+main()
