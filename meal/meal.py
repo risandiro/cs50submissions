@@ -1,9 +1,10 @@
 def main():
     x = convert(input("What time is it? "))
-    if x >= 7 <= 8:
+    if 7 <= x <= 8:
         print("breakfast time")
-    elif x <
-
+    elif x >= 12 <= 13:
+        print("lunch time")
+    elif x >= 18 <= 19
 
 def convert(time):
     hours, minutes = time.split(":")
