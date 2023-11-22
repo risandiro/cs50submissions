@@ -13,7 +13,7 @@ for i in range(len(students)):
     print(i + 1, students[i])
 
 # a 'dictionary' variable
-
+# "key": "variable"
 students2 = {
     "Hermione": "Gryffindor",
     "Harry": "Gryffindor",
