@@ -12,9 +12,9 @@ def convert(time):
     hours = float(hours)
     minutes = float(minutes)
     if 0 > minutes > 59:
-    
-    hours  = hours + (minutes / 60)
-    return hours
+        hours  = hours + (minutes / 60)
+        return hours
+    return None
 
 if __name__ == "__main__":
     main()
