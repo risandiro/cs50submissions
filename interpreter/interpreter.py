@@ -1,3 +1,3 @@
 expression = input("Expression: ")
-x, y, z = expression.split(" ")
+int(x), char(y), int(z) = expression.split(" ")
 
