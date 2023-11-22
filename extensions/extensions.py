@@ -1,5 +1,4 @@
-x = input("File name: ")
-x = x.strip()
+x = x.strip(input("File name: "))
 x = x.lower()
 
 if x.endswith(".gif"):
