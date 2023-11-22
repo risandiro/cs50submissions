@@ -20,8 +20,8 @@ for _ in range(n):
 '''
 
 def main():
-    number = get_number
-    meow(3)
+    number = get_number()
+    meow(number)
 
 def get_number():
     while True:
@@ -32,6 +32,6 @@ def get_number():
 
 def meow(n):
     for _ in range(n):
-        print(n)
+        print("meow")
 
 main()
