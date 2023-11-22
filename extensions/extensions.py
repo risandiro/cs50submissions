@@ -4,7 +4,7 @@ x = x.lower()
 
 if x.endswith(".gif"):
     print("image/gif")
-elif x.endswith(".jpg" or ".jpeg"):
+elif x.endswith(".jpg") or x.endswith(".jpeg"):
     print("image/jpeg")
 elif x.endswith(".png"):
     print("image/png")
