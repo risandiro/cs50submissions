@@ -4,12 +4,10 @@ def main():
 
 def convert(time):
     hours, minutes = time.split(":")
-    hours = int(hours)
-    minutes = int(minutes)
-    minutes / 60
-
-
-
+    hours = float(hours)
+    minutes = float(minutes)
+    hours = hours + (minutes / 60)
+    print(hours)
 
 if __name__ == "__main__":
     main()
