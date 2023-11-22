@@ -11,4 +11,7 @@ match y:
     case "*":
         print(float(x * z))
     case "/":
-        print(float(x / z))
+        if z == 0:
+            print("infinity")
+        else:
+            print(float(x / z))
