@@ -9,6 +9,5 @@ students = ["Hermione", "Harry", "Ron"]
 #    print(student, end="\n")
 
 # command 'len' tells you the lenght of a list
-
 for i in range(len(students)):
     print(i, students[i])
