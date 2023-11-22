@@ -10,4 +10,4 @@ students = ["Hermione", "Harry", "Ron"]
 
 # command 'len' tells you the lenght of a list
 for i in range(len(students)):
-    print(i, students[i])
+    print(i + 1 , students[i])
