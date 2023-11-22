@@ -11,10 +11,10 @@ def convert(time):
     hours, minutes = time.split(":")
     hours = float(hours)
     minutes = float(minutes)
-    if 0 <= minutes <= 59:
-        hours  = hours + (minutes / 60)
-        return hours
-    return 
+    if 0 > minutes > 59:
+        exit()
+    hours  = hours + (minutes / 60)
+    return hours
 
 if __name__ == "__main__":
     main()
