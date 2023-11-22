@@ -1,4 +1,4 @@
-# a list filled with collection of dictionaries
+# 1 list filled with collection of 4 dictionaries, with 3 keys and 3 definitions in each one
 students = [
     {"name": "Hermione", "house": "Gryffindor", "patronus": "Otter"},
     {"name": "Harry", "house": "Gryffindor", "patronus": "Stag"}

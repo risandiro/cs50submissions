@@ -15,7 +15,6 @@ for i in range(len(students)):
 print("\n-----------------------\n")
 
 # a 'dictionary' variable
-# "key": "variable"
 students2 = {
     "Hermione": "Gryffindor",
     "Harry": "Gryffindor",
@@ -25,4 +24,3 @@ students2 = {
 
 for student in students2:
     print(student, students2[student], sep=", ")
-    
