@@ -2,10 +2,12 @@ x = input("File name: ")
 x = x.name.strip()
 x = x.lower()
 
-if x.endswith(".gif" or ".jpg" or ".jpeg" or ".png" or ".pdf" or ".txt" or ".zip") == True:
-    match x:
-        case ".gif"
+if x.endswith(".gif"):
+    print("image/gif")
+elif x.endswith(".jpg" or ".jpeg"):
+    print("image/jpeg)
+elif x.endswith(".png"):
+    print("image/png")
 
-else:
-    print("application/octet-stream")
+
 
