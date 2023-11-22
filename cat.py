@@ -6,6 +6,6 @@ while i < 3:
 
 # i is automatically assigned to 0
 # for i in [0, 1, 2]:
-for i in range(3):
+for _ in range(3):
     print("meow")
 
