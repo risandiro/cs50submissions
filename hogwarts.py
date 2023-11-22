@@ -7,3 +7,4 @@ print(students[0])
 # python automatically assigns the variable to be 0 in a 'for' loop
 for student in students:
     print(student)
+ 
