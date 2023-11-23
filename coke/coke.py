@@ -1,6 +1,6 @@
 total = 50
 
-while total != 0:
+while total <= 0:
     coin = input("Insert Coin: ")
 
     match coin:
@@ -16,3 +16,5 @@ while total != 0:
             if total != 0:
                 total = total - 5
                 print("Amount Due:", total)
+
+print("Change Owed:", total)
