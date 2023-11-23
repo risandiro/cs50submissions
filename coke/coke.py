@@ -27,5 +27,7 @@ while total > 0:
                 else:
                     print("Amount Due:", total)
 
-        case _: coin = input("Insert Coin: ")
+        case _:
+            print("Amount Due:", total)
+            coin = input("Insert Coin: ")
 
