@@ -1,10 +1,8 @@
-s = input("Input: ")
-vowels = "a", "A", "e", "E", "i", "I", "o", "O", "u", "U"
+input = input("Input: ")
+output = ""
 
-print("Output: ", end="")
+for c in input:
+    if c != "a":
+        output += c
 
-for c in s:
-    if c != vowels:
-        print(c, end="")
-
-print()
+print("Output:", output)
