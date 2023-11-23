@@ -1,7 +1,7 @@
 total = 50
 coin = input("Insert Coin: ")
 
-while total <= 0
+while total != 0o
     match coin:
         case "25":
             if total != 0:
