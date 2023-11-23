@@ -9,14 +9,14 @@ while total > 0:
             if total > 0:
                 total = total - 25
                 if total < 0:
-                    print("Change Owed:", total)
+                    print("Change Owed:", -total)
                 else:
                     print("Amount Due:", total)
         case "10":
             if total > 0:
                 total = total - 10
                 if total < 0:
-                    print("Change Owed:", total)
+                    print("Change Owed:", -total)
                 else:
                     print("Amount Due:", total)
         case "5":
