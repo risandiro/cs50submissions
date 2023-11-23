@@ -27,4 +27,4 @@ while total > 0:
                 else:
                     print("Amount Due:", total)
 
-
+        case "_":
