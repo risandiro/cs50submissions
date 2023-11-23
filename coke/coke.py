@@ -1,0 +1,2 @@
+x = input("Insert Coin: ")
+
