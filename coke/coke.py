@@ -1,6 +1,6 @@
 total = 50
 
-while total <= 0:
+while total >= 0:
     coin = input("Insert Coin: ")
 
     match coin:
