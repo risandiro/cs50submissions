@@ -5,3 +5,4 @@ for c in s:
     if c.isupper():
         print("_", end="")
     print(c, end="")
+print()
