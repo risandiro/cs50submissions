@@ -8,7 +8,7 @@ while total > 0:
         case "25":
             if total > 0:
                 total = total - 25
-                if total < 0:
+                if total > 0:
                     print("Change Owed:", -total)
                 else:
                     print("Amount Due:", total)
