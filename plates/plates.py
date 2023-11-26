@@ -6,14 +6,17 @@ def main():
         print("Invalid")
 
 def is_valid(s):
-   if rule_one(s) == True
+   if rule_one(s) == True:
         return True
 
 
 
 def rule_one(s):
      ftl = s[0:2]
-     ftl.isnumeric()
+     if ftl.isnumeric() == True:
+        return False
+     else:
+         return True
 
 
 
