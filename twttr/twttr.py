@@ -2,6 +2,7 @@ input = input("Input: ")
 vowels = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"]
 counter = 0
 
+print("Output:", end=" ")
 for letter in input:
     for i in range(len(vowels)):
         if letter == vowels[i]:
