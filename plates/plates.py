@@ -6,8 +6,12 @@ def main():
         print("Invalid")
 
 def is_valid(s):
-   if rule_one(s) == True:
+   if rule_two(s) == True:
         return True
+
+
+
+
 
 
 
@@ -17,6 +21,9 @@ def rule_one(s):
         return False
      else:
          return True
+
+def rule_two(s):
+
 
 
 
