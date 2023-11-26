@@ -6,7 +6,9 @@ def main():
         print("Invalid")
 
 def is_valid(s):
-    rule
+   if rule_one(s) == True
+        return True
+
 
 
 def rule_one(s):
