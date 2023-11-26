@@ -6,7 +6,9 @@ def main():
         print("Invalid")
 
 def is_valid(s):
-    print(s[0:2])
+    x = s[0:2]
+    if x
+
 
 
 main()
