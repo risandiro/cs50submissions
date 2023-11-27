@@ -30,9 +30,17 @@ def rule_two(s):
 
 
 def rule_three(s):
-    lst = [x for x in s]
-    while counter != 0:
-        for character in lst:
+    counter = 0
+    for char in s:
+        if char.isnumeric():
+            break
+        counter += 1
+
+    afd = s[counter:len(s)]
+    print(afd)
+
+
+
 
 
 
