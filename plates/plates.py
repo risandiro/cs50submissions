@@ -12,8 +12,8 @@ def is_valid(s):
         return False
     elif rule_two(s) != True:
         return False
-   #elif rule_three(s) != True:
-   #    return False
+    elif rule_three(s) != True:
+        return False
    #elif rule_four(s) != True:
    #    return False
     else:
