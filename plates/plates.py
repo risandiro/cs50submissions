@@ -8,7 +8,7 @@ def main():
         print("Invalid")
 
 def is_valid(s):
-   if rule_four(s) == True:
+   if rule_three(s) == True:
         return True
 
 # --------------------------------------
@@ -27,6 +27,9 @@ def rule_two(s):
         return True
     else:
         return False
+
+def rule_three(s):
+    
 
 
 def rule_four(s):
