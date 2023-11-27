@@ -27,10 +27,7 @@ def rule_two(s):
     for letter in s:
         if letter.isnumeric():
             counter += 1
-    if counter <= 2:
-        return False
-    else:
-        return True
+    if counter >= 2
 
 
 
