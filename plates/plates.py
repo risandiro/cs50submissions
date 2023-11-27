@@ -8,7 +8,7 @@ def main():
         print("Invalid")
 
 def is_valid(s):
-   if rule_four(s) == True:
+   if rule_two(s) == True:
         return True
 
 # --------------------------------------
@@ -23,10 +23,10 @@ def rule_one(s):
 
 def rule_two(s):
     number_of_characters = len(s)
-    if 2 >= number_of_characters >= 6:
-        return False
-    else:
+    if 2 <= number_of_characters <= 6:
         return True
+    else:
+        return False
 
 
 def rule_four(s):
