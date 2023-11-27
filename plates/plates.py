@@ -46,6 +46,7 @@ def rule_three(s):
 
     if counter <= 1:
         afd = s[counter:len(s)]
+        print(afd)
         if afd.isnumeric():
             return True
         else:
