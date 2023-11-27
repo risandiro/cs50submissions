@@ -8,8 +8,16 @@ def main():
         print("Invalid")
 
 def is_valid(s):
-   if rule_three(s) == True:
-        return True
+   if rule_one(s) != True:
+        return False
+   elif rule_two(s) != True:
+       return False
+   elif rule_three(s) != True:
+       return False
+   elif rule_four(s) != True:
+       return False
+   else:
+       return True
 
 # --------------------------------------
 
@@ -49,12 +57,6 @@ def rule_four(s):
     else:
         return True
 
-
-
-
-
-
-
-
+# --------------------------------------
 
 main()
