@@ -30,11 +30,10 @@ def rule_two(s):
 
 
 def rule_three(s):
-    string = ""
     for character in s:
         if character.isnumeric():
             
-            break
+
 
 
 def rule_four(s):
