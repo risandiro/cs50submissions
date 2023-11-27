@@ -43,12 +43,6 @@ def rule_three(s):
         return False
 
 
-
-
-
-
-
-
 def rule_four(s):
     if any(char in string.punctuation for char in s):
         return False
