@@ -30,9 +30,9 @@ def rule_two(s):
 
 
 def rule_three(s):
-    lst = []
-    for letter in s:
-        lst.append(letter)
+    lst = [x for x in s]
+    while counter != 0:
+        
 
 
 
