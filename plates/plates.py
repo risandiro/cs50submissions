@@ -15,7 +15,7 @@ def is_valid(s):
 
 def rule_one(s):
      ftl = s[0:2]
-     if ftl.isnumeric() == True:
+     if ftl.isnumeric():
         return False
      else:
          return True
@@ -28,8 +28,11 @@ def rule_two(s):
     else:
         return False
 
+
 def rule_three(s):
     while counter != 0:
+        for character in s:
+            if character.isnumeric():
 
 
 def rule_four(s):
