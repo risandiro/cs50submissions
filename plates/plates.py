@@ -29,7 +29,7 @@ def rule_two(s):
         return False
 
 def rule_three(s):
-    
+    while counter != 0:
 
 
 def rule_four(s):
