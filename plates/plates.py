@@ -34,6 +34,7 @@ def rule_three(s):
     for character in s:
         if character.isnumeric():
             counter =+ 1
+            
 
 
 
