@@ -8,7 +8,7 @@ def main():
         print("Invalid")
 
 def is_valid(s):
-   if rule_one(s) != True:
+    if rule_one(s) != True:
         return False
     elif rule_two(s) != True:
         return False
