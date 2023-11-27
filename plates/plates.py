@@ -33,7 +33,8 @@ def rule_three(s):
 
 
 def rule_four(s):
-    not_allowed = [".", " ", "]
+    while True:
+
 
 
 
