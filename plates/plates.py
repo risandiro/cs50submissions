@@ -12,8 +12,8 @@ def is_valid(s):
         return False
     elif rule_two(s) != True:
         return False
-    elif rule_three(s) != True:
-        return False
+   # elif rule_three(s) != True:
+   #     return False
     elif rule_four(s) != True:
         return False
     else:
@@ -44,11 +44,14 @@ def rule_three(s):
             break
         counter += 1
 
-    afd = s[counter:len(s)]
-    if afd.isnumeric():
-        return True
+    if counter != 0:
+        afd = s[counter:len(s)]
+        if afd.isnumeric():
+            return True
+        else:
+          return False
     else:
-        return False
+        return True
 
 
 def rule_four(s):
