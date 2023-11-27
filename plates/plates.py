@@ -28,9 +28,7 @@ def rule_two(s):
         if character.isnumeric() == False:
             counter += 1
 
-    if 
-
-    elif counter < 2:
+    if counter < 2:
         return False
     else:
         return True
