@@ -24,10 +24,11 @@ def rule_one(s):
 
 def rule_two(s):
     counter = 0
-    for letter in s:
-        if letter.isnumeric() == False:
+    for character in s:
+        if character.isnumeric() == False:
             counter += 1
-    if counter <= 2:
+            
+    if counter < 2:
         return False
     else:
         return True
