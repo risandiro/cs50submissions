@@ -10,14 +10,14 @@ def main():
 def is_valid(s):
    if rule_one(s) != True:
         return False
-   elif rule_two(s) != True:
-       return False
-   elif rule_three(s) != True:
-       return False
-   elif rule_four(s) != True:
-       return False
-   else:
-       return True
+    elif rule_two(s) != True:
+        return False
+   #elif rule_three(s) != True:
+   #    return False
+   #elif rule_four(s) != True:
+   #    return False
+    else:
+        return True
 
 # --------------------------------------
 
