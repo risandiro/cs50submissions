@@ -23,6 +23,14 @@ def rule_one(s):
          return True
 
 def rule_two(s):
+    number_of_characters = len(s)
+    print(number_of_characters)
+
+
+
+
+
+def rule_xxx(s):
     counter = 0
     for character in s:
         if character.isnumeric() == False:
