@@ -8,7 +8,7 @@ def main():
         print("Invalid")
 
 def is_valid(s):
-   if rule_two(s) == True:
+   if rule_four(s) == True:
         return True
 
 # --------------------------------------
@@ -32,6 +32,8 @@ def rule_two(s):
 def rule_four(s):
     if any(char in string.punctuation for char in s):
         return False
+    else:
+        return True
 
 
 
