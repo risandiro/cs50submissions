@@ -1,3 +1,5 @@
+import string
+
 def main():
     plate = input("Plate: ")
     if is_valid(plate):
@@ -6,7 +8,7 @@ def main():
         print("Invalid")
 
 def is_valid(s):
-   if rule_three(s) == True:
+   if rule_four(s) == True:
         return True
 
 # --------------------------------------
@@ -27,11 +29,8 @@ def rule_two(s):
         return False
 
 
-def rule_three(s):
-
-
 def rule_four(s):
-    if any(char in string.punctuation for char in name):
+    if any(char in string.punctuation for char in s):
         print("Yup its there")
 
 
