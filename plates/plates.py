@@ -8,16 +8,16 @@ def main():
         print("Invalid")
 
 def is_valid(s):
-    if rule_three(s) != True:
+    if rule_one(s) != True:
         return False
-#    elif rule_two(s) != True:
-#        return False
-#    elif rule_three(s) != True:
-#        return False
-#    elif rule_four(s) != True:
-#        return False
-#    else:
-#        return True
+    elif rule_two(s) != True:
+        return False
+    elif rule_three(s) != True:
+        return False
+    elif rule_four(s) != True:
+        return False
+    else:
+        return True
 
 # --------------------------------------
 
@@ -47,10 +47,8 @@ def rule_three(s):
     if counter >= 1:
         afd = s[counter:len(s)]
         if afd.isnumeric():
-            print("True")
             return True
         else:
-          print("False")
           return False
     else:
         return True
