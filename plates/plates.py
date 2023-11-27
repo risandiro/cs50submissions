@@ -31,7 +31,7 @@ def rule_two(s):
 
 def rule_four(s):
     if any(char in string.punctuation for char in s):
-        print("Yup its there")
+        
 
 
 
