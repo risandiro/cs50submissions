@@ -33,7 +33,8 @@ def rule_three(s):
 
 
 def rule_four(s):
-    not_allowed = [".", " ", "!", "\"", "#", ]
+    if any(char in string.punctuation for char in name):
+        print("Yup its there")
 
 
 
