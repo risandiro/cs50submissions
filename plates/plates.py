@@ -24,7 +24,10 @@ def rule_one(s):
 
 def rule_two(s):
     number_of_characters = len(s)
-    print(number_of_characters)
+    if 2 >= number_of_characters <=6:
+        return True
+    else:
+        return False
 
 
 
