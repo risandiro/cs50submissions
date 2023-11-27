@@ -23,7 +23,7 @@ def rule_one(s):
          return True
 
 def rule_two(s):
-    for
+    for letter in range(len(s)):
 
 
 
