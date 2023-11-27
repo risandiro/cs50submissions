@@ -25,7 +25,7 @@ def rule_one(s):
 def rule_two(s):
     counter = 0
     for letter in s:
-        if letter.isnumeric == False:
+        if letter.isnumeric() == False:
             counter += 1
     if counter <= 2:
         return False
