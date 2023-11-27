@@ -27,8 +27,10 @@ def rule_two(s):
     for character in s:
         if character.isnumeric() == False:
             counter += 1
-            
-    if counter < 2:
+
+    if 
+
+    elif counter < 2:
         return False
     else:
         return True
