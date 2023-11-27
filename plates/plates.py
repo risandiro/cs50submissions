@@ -50,8 +50,6 @@ def rule_three(s):
             return True
         else:
           return False
-    elif s[counter] == 0:
-        return False
     else:
         return True
 
