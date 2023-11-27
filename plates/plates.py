@@ -23,8 +23,10 @@ def rule_one(s):
 
 def rule_two(s):
     number_of_characters = len(s)
-    if 2 > number_of_characters and if 7 <
-
+    if 2 > number_of_characters and 7 < number_of_characters:
+        return False
+    else:
+        return True
 
 
 def rule_four(s):
