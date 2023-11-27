@@ -30,7 +30,8 @@ def rule_two(s):
 def rule_three(s):
     counter = 0
     while counter != 0:
-        
+
+        counter += 1
 
 
 
