@@ -44,8 +44,8 @@ def rule_three(s):
             break
         counter += 1
 
+    afd = s[counter:len(s)]
     if counter <= 2:
-        afd = s[counter:len(s)]
         if afd.isnumeric():
             return True
         else:
