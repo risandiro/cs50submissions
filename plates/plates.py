@@ -33,7 +33,7 @@ def rule_three(s):
 
 
 def rule_four(s):
-    not_allowed = [".", " ", "]
+    not_allowed = [".", " ", "!", "\n"", ]
 
 
 
