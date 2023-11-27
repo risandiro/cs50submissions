@@ -29,9 +29,8 @@ def rule_two(s):
 
 def rule_three(s):
     counter = 0
-    for character in s:
-        if character.isnumeric() == True:
-            counter += 1
+    while counter != 0:
+        
 
 
 
