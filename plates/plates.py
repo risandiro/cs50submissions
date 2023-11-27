@@ -6,14 +6,10 @@ def main():
         print("Invalid")
 
 def is_valid(s):
-   if rule_two(s) == True:
+   if rule_three(s) == True:
         return True
 
-
-
-
-
-
+# --------------------------------------
 
 def rule_one(s):
      ftl = s[0:2]
@@ -21,6 +17,7 @@ def rule_one(s):
         return False
      else:
          return True
+
 
 def rule_two(s):
     number_of_characters = len(s)
@@ -30,19 +27,13 @@ def rule_two(s):
         return False
 
 
-
-
-
-def rule_xxx(s):
+def rule_three(s):
     counter = 0
     for character in s:
-        if character.isnumeric() == False:
+        if character.isnumeric() == True:
             counter += 1
 
-    if counter < 2:
-        return False
-    else:
-        return True
+
 
 
 
