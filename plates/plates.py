@@ -45,7 +45,7 @@ def rule_three(s):
         counter += 1
 
     afd = s[counter:len(s)]
-    print(counter)
+    print(s[counter])
     if s[counter] == 0:
         return False
 
