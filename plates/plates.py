@@ -50,6 +50,8 @@ def rule_three(s):
             return True
         else:
           return False
+    elif 
+
     else:
         return True
 
