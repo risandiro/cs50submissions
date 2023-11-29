@@ -20,9 +20,9 @@ dictionary = {
     "plums": "70",
     "strawberries": "50",
     "sweet cherries": "100",
-    "tangarine": "50},
+    "tangarine": "50",
     "watermelon": "80",
     }
 
 if fruit in dictionary:
-
+    print("Calories:", dictionary[fruit])
