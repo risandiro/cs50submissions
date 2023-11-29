@@ -1,0 +1,1 @@
+fruit = fruit.input("Item: ")
