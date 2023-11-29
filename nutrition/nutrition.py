@@ -1,1 +1,3 @@
-fruit = fruit.input("Item: ")
+fruit = input("Item: ")
+fruit = fruit.lower()
+
