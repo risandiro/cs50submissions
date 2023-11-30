@@ -5,7 +5,7 @@ while True:
         percent = x / y * 100
         if percent <= 1:
             print("E")
-        elif percent >= 99:
+        elif 99 >= percent < 100:
             print("F")
         else:
             print(f"{int(percent)}")
