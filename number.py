@@ -25,8 +25,8 @@ def get_int():
         except ValueError:
             print("x is not an integer")
         else:
-            break
-    return x
+            # return works as a break from a loop and also finishes the definition
+            return x
 
 
 main()
