@@ -4,6 +4,7 @@ while True:
         x , y = int(x), int(y)
         if y > x:
             percent = x / y * 100
+            print(percent)
             if percent <= 1:
                 print("E")
             elif percent <= 99:
