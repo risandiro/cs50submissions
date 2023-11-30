@@ -7,4 +7,5 @@ while True:
     except (ValueError, ZeroDivisionError):
         pass
 
+print(f"{int(x / y * 100)}%")
 
