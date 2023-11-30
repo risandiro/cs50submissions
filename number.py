@@ -15,8 +15,9 @@ else:
 """
 
 def main():
-    x = get_int()
+    x = get_int("What's x? ")
     print(f"x is {x}")
+
 
 def get_int():
     while True:
@@ -28,12 +29,13 @@ def get_int():
             # return works as a break from a loop and also finishes the definition
             return x
 
-def get_int_refined():
+def get_int_refined(prompt):
     while True:
         try:
-            return int(input("What's x? "))
+            return int(input(prompt))
         except ValueError:
             print("x is not an integer")
             # instead of print you can use "pass" that is going to ignore and proceed
+
 
 main()
