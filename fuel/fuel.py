@@ -1,4 +1,5 @@
-try:
-    x = int(input("Fraction: "))
-
-except (ValueError, ZeroDivisionError):
+while True:
+    try:
+        return int(input("Fraction: "))
+    except (ValueError, ZeroDivisionError):
+        pass
