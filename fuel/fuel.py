@@ -7,5 +7,13 @@ while True:
     except (ValueError, ZeroDivisionError):
         pass
 
-print(f"{int(x / y * 100)}%")
+percent = x / y * 100
+if percent <= 1:
+    print("E")
+elif percent >= 99:
+    print("F")
+else:
+    print(int(percent))
+
+
 
