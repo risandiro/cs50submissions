@@ -34,5 +34,6 @@ def get_int_refined():
             return int(input("What's x? "))
         except ValueError:
             print("x is not an integer")
+            # instead of print you can use "pass" that is going to ignore and proceed
 
 main()
