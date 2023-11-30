@@ -21,12 +21,18 @@ def main():
 def get_int():
     while True:
         try:
-            x = int(input("What's x?"))
+            x = int(input("What's x? "))
         except ValueError:
             print("x is not an integer")
         else:
             # return works as a break from a loop and also finishes the definition
             return x
 
+def get_int_refined():
+    while True:
+        try:
+            return int(input("What's x? "))
+        except ValueError:
+            print("x is not an integer")
 
 main()
