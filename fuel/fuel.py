@@ -3,7 +3,7 @@ while True:
         x, y = input("Fraction: ").split("/")
         x , y = int(x), int(y)
         if y >= x:
-            percent = round(x / y * 100)
+            percent = int(round(x / y * 100))
             if percent <= 1:
                 print("E")
                 break
@@ -11,7 +11,7 @@ while True:
                 print("F")
                 break
             else:
-                print(f"{int(percent)}%")
+                print(f"{percent}%")
                 break
 
     except (ValueError, ZeroDivisionError):
