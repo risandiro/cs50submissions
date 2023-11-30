@@ -1,8 +1,8 @@
 while True:
     try:
-        fraction = input("Fraction: ")
-        x, y = x.split("/")
-        
+        x, y = input("Fraction: ").split("/")
+
+
     except (ValueError, ZeroDivisionError):
         pass
 
