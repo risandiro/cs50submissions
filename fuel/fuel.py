@@ -15,7 +15,7 @@ while True:
     except (ValueError, ZeroDivisionError):
         pass
 
-    except (percent > 100):
+    except percent > 100:
         pass
 
 
