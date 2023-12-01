@@ -9,9 +9,12 @@ while True:
             grocery_list[item] = 1
     except EOFError:
         print("")
-        grocery_list = list(grocery_list.keys())
-        grocery_list.sort()
-        grocery_list = {i: grocery_list[i] for i in grocery_list}
+        keys = list(grocery_list.keys())
+        print(keys, "\n")
+        keys.sort()
+        print(keys, "\n")
+        grocery_list = {i: grocery_list[i] for i in keys}
+
         for article, count in grocery_list.items():
             print(count, article.upper())
         break
