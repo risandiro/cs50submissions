@@ -2,7 +2,7 @@ grocery_list = {}
 
 while True:
     try:
-        item = input()
+        item = input().lower()
         if item in grocery_list:
             grocery_list[item] = grocery_list[item] + 1
         else:
