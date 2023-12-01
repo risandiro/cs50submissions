@@ -4,10 +4,9 @@ while True:
     try:
         item = input()
         if item in grocery_list:
-            grocery_list[item] =
+            grocery_list[item] = grocery_list[item] + 1
         else:
-            grocery_list[item] = "0"
-
+            grocery_list[item] = 0
     except EOFError:
         print("")
         break
