@@ -15,7 +15,7 @@ while True:
         keys.sort()
         # sort the list alphabetically
         grocery_list = {i: grocery_list[i] for i in keys}
-        # copy the i value of the list and replace it with i key of the dic
+        # copy the i value from the list and replace it with i key in the dic
 
         for article, count in grocery_list.items():
             print(count, article.upper())
