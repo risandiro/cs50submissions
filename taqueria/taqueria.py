@@ -16,9 +16,8 @@ while True:
         item = input("Item: ")
         if item in menu:
             total = total + menu[item]
+            print(f"Total: ${total}")
 
 
     except EOFError:
         break
-
-print(f"${total}")
