@@ -8,5 +8,7 @@ while True:
         else:
             grocery_list[item] = 1
     except EOFError:
-        print(grocery_list)
-        break
+        for grocery in grocery_list:
+            print(grocery)
+
+
