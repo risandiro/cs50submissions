@@ -8,6 +8,7 @@ while True:
         else:
             grocery_list[item] = 1
     except EOFError:
+        print("")
         for article, count in grocery_list.items():
             print(count, article.upper())
         break
