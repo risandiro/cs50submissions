@@ -11,9 +11,11 @@ while True:
         print("")
 
         keys = list(grocery_list.keys())
-        # copy all keys to a 
-        keys.sort() # ["carrot", "lettuce", "tomato"]
+        # copy all keys from a dictionary to a new list
+        keys.sort()
+        # sort the list alphabetically
         grocery_list = {i: grocery_list[i] for i in keys}
+        # copy the i value of the list and replace it with i key of the dic
 
         for article, count in grocery_list.items():
             print(count, article.upper())
