@@ -10,14 +10,14 @@ menu = {
     "Tortilla Salad": 8.00,
 }
 
-total = float("0")
+total = 0
 while True:
     try:
         item = input("Item: ")
         if item in menu:
             total = total + menu[item]
             total = round(total, 2)
-            print(f"Total: ${total}")
+            print(f"Total: ${total:.2f}")
 
 
     except EOFError:
