@@ -15,7 +15,7 @@ while True:
     try:
         item = input("Item: ")
         if item in menu:
-            total = total + d[item]
+            total = total + menu[item]
 
 
     except EOFError:
