@@ -19,7 +19,7 @@ while True:
             total = round(total, 2)
             print(f"Total: ${total:.2f}")
 
-
+# if user inputs control-d, which is a common way of ending one's input
     except EOFError:
         print("")
         break
