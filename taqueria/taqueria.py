@@ -13,7 +13,8 @@ menu = {
 total = 0
 while True:
     try:
-        item = input("Item: ")
+        item = input("Item: ").lower()
+        item = item.title()
         if item in menu:
             total = total + menu[item]
             total = round(total, 2)
