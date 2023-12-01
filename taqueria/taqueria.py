@@ -16,6 +16,7 @@ while True:
         item = input("Item: ")
         if item in menu:
             total = total + menu[item]
+            total = round(total, 2)
             print(f"Total: ${total}")
 
 
