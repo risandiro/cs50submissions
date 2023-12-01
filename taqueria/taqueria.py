@@ -15,10 +15,10 @@ while True:
     try:
         item = input("Item: ")
         if item in menu:
-            d[item]
+            total = total + d[item]
 
 
     except EOFError:
         break
 
-print
+print(total)
