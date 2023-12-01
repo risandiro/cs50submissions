@@ -15,7 +15,7 @@ while True:
     try:
         item = input("Item: ")
         if item in menu:
-            
+            d[item]
 
 
     except EOFError:
