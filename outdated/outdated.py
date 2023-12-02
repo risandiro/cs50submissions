@@ -15,7 +15,7 @@ months = [
 
 while True:
     try:
-        date = input("Date: ")
+        date = input("Date: ").strip()
         month, day, year = date.split("/")
         if month.isnumeric() and day.isnumeric() and year.isnumeric():
             day, month = int(day), int(month)
