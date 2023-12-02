@@ -16,8 +16,3 @@ months = [
 while True:
     try:
         date = input("Date: ")
-        
-
-    except ValueError:
-        break
-
