@@ -36,6 +36,7 @@ while True:
                     if day <= 9:
                         day = str(day)
                             day = 0 + day
+                        
                     if month_index <= 9:
                         month_index = 0 + month_index
 
