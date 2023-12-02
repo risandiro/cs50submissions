@@ -30,6 +30,7 @@ while True:
                     add = "0"
                     month = f"{add}{month}"
                 print(year, month, day, sep="-")
+                break
 
 
     except ValueError:
@@ -57,3 +58,4 @@ while True:
                         month_index = f"{add}{month_index}"
 
                     print(year, month_index, day, sep="-")
+                    break
