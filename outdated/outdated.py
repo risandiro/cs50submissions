@@ -33,7 +33,11 @@ while True:
             if year.isnumeric() and day.isnumeric():
                 day = int(day)
                 if 0 < day <= 31:
-                    print(year, month_index, day, sep="-")
+                    if day <= 9:
+                        day = str(day)
+                        print(year, month_index, 0 + day, sep="-")
+                    else:
+                        print(year, month_index, day, sep="-")
 
 
 
