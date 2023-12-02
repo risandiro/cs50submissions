@@ -19,4 +19,5 @@ while True:
         x, y, z = date.split("/")
 
     except ValueError:
-        
+        x, y = date.split(",")
+        y = y.
