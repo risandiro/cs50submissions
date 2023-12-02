@@ -19,8 +19,9 @@ while True:
         x, y, z = date.split("/")
 
     except ValueError:
-        x, y = date.split(",")
-        
-        y = y.strip()
+        month_date, year = date.split(",")
+        month, day = month_date.split(" ")
+        year = year.strip()
+        print(year, month, day, sep="-")
 
 
