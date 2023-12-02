@@ -39,7 +39,7 @@ while True:
                         day =  f"{add}{day}"
 
                     if month_index <= 9:
-                        month_index = 0 + month_index
+                        
 
                     print(year, month_index, day, sep="-")
 
