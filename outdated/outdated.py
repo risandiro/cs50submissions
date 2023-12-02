@@ -32,7 +32,7 @@ while True:
 
             if year.isnumeric() and day.isnumeric():
                 day = int(day)
-                if 0 < day < 31:
+                if 0 < day <= 31:
                     print(year, month_index, day, sep="-")
 
 
