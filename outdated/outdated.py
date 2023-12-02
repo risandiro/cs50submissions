@@ -16,8 +16,10 @@ months = [
 while True:
     try:
         date = input("Date: ")
-        x, y, z = date.split("/")
-        
+        month, day, year = date.split("/")
+        if month.isnumeric() and day.isnumeric() and year.isnumeric():
+            
+
 
     except ValueError:
         month_date, year = date.split(",")
