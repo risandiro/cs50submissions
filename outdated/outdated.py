@@ -28,6 +28,7 @@ while True:
                 if(x == month):
                     break
                 month_index += 1
+        if 
             print(year, month_index, day, sep="-")
 
 
