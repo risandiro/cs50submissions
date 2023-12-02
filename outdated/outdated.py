@@ -18,7 +18,18 @@ while True:
         date = input("Date: ")
         month, day, year = date.split("/")
         if month.isnumeric() and day.isnumeric() and year.isnumeric():
-            
+            day, month = int(day), int(month)
+            if 0 < day <= 31 and 0 < month <= 12:
+
+                if day <= 9:
+                    day = str(day)
+                    add = "0"
+                    day = f"{add}{day}"
+                if month <= 9:
+                    month = str(month)
+                    add = "0"
+                    month = f"{add}{month}"
+                print(year, month, day, sep="-")
 
 
     except ValueError:
