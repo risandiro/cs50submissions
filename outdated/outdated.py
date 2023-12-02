@@ -1,5 +1,4 @@
 months = [
-    "..."
     "January",
     "February",
     "March",
@@ -24,6 +23,9 @@ while True:
         month, day = month_date.split(" ")
         year = year.strip()
         if month in months:
-            print(year, months.index(month), day, sep="-")
+            index = 0
+            for month in months:
+                if(month == months):
+                    break
 
 
