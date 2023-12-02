@@ -16,7 +16,7 @@ months = [
 while True:
     try:
         date = input("Date: ")
-        x, y, z = date.split(sep = "/", maxsplit = 2)
+        x, y, z = date.split("/", maxsplit = 2)
         print (x, y, z)
 
     except:
