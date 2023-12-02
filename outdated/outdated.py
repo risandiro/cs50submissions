@@ -28,6 +28,7 @@ while True:
                 if(x == month):
                     break
                 month_index += 1
+            month_index += 1
 
             if year.isnumeric() and day.isnumeric():
                 day = int(day)
