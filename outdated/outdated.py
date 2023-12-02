@@ -16,8 +16,7 @@ months = [
 while True:
     try:
         date = input("Date: ")
-        search = date.index(months)
-        print(index)
+        
 
     except ValueError:
         break
