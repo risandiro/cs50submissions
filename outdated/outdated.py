@@ -20,4 +20,7 @@ while True:
 
     except ValueError:
         x, y = date.split(",")
-        y = y.
+        
+        y = y.strip()
+
+
