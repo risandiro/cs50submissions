@@ -20,5 +20,5 @@ while True:
         print(index)
 
     except ValueError:
-        
+        break
 
