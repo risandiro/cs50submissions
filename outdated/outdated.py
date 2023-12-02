@@ -22,6 +22,7 @@ while True:
         month_date, year = date.split(",")
         month, day = month_date.split(" ")
         year = year.strip()
-        print(year, month, day, sep="-")
+        if month in months:
+            print(year, month, day, sep="-")
 
 
