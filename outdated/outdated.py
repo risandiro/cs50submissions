@@ -43,6 +43,3 @@ while True:
                         month_index = f"{add}{month_index}"
 
                     print(year, month_index, day, sep="-")
-
-
-
