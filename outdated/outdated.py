@@ -35,9 +35,11 @@ while True:
                 if 0 < day <= 31:
                     if day <= 9:
                         day = str(day)
-                        print(year, month_index, 0 + day, sep="-")
-                    else:
-                        print(year, month_index, day, sep="-")
+                            day = 0 + day
+                    if month_index <= 9:
+                        month_index = 0 + month_index
+
+                    print(year, month_index, day, sep="-")
 
 
 
