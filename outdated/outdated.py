@@ -17,6 +17,7 @@ while True:
     try:
         date = input("Date: ")
         x, y, z = date.split("/")
+        
 
     except ValueError:
         month_date, year = date.split(",")
