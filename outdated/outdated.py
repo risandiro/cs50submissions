@@ -16,3 +16,4 @@ months = [
 while True:
     try:
         date = input("Date: ")
+        x, y, z = date.split()
