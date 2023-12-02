@@ -39,7 +39,8 @@ while True:
                         day =  f"{add}{day}"
 
                     if month_index <= 9:
-                        
+                        add = "0"
+                        month_index = f"{add}{month_index}"
 
                     print(year, month_index, day, sep="-")
 
