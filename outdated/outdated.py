@@ -13,6 +13,7 @@ months = [
     "December"
 ]
 
-
-try: input("Date: ")
+while True:
+    try: input("Date: ")
+    
 
