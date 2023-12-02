@@ -23,6 +23,6 @@ while True:
         month, day = month_date.split(" ")
         year = year.strip()
         if month in months:
-            print(year, month, day, sep="-")
+            print(year, months.index[month], day, sep="-")
 
 
