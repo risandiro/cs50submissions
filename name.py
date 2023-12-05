@@ -23,5 +23,6 @@ import sys
 if len(sys.argv) < 2:
     sys.exit("Too few arguments")
 
-for arg in sys.argv:
-    print("hello, my name is", arg + 1)
+# outputs a slice of the list, starting from 1 to the end
+for arg in sys.argv[1:]:
+    print("hello, my name is", arg)
