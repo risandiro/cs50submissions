@@ -14,7 +14,8 @@ response = requests.get("https://itunes.apple.com/search?entity=song&limit=1&ter
 # print(json.dumps(response.json(), indent = 2))  -> more readable json response
 
 o = response.json()
-# for every key ("results" is a list that contains a dictionary)
+# we know that the response contains a key called "results" and that it a a list
+
 for result in o["results"]:
     print(result["trackName"])
 
