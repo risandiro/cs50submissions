@@ -9,9 +9,10 @@ if len(sys.argv == 1):
     figlet = Figlet()
     print(figlet)
     figlet.getFonts()
-    figlet.setFont(font=)
+    print(figlet)
+    figlet.setFont(font="slant")
 
     print(figlet.renderText(input))
 
-if len(sys.argv == 3):
+# if len(sys.argv == 3):
 
