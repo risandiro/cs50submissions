@@ -4,6 +4,9 @@ from pyfiglet import Figlet
 
 
 input = input("Input: ")
+fonts = Figlet()
+fonts = fonts.getFonts()
+fonts
 
 if len(sys.argv) == 1:
     x = Figlet()
@@ -11,6 +14,6 @@ if len(sys.argv) == 1:
     x.setFont(font="slant")
     print(x.renderText(input))
 
-elif len(sys.argv == 3):
+# elif len(sys.argv == 3):
 
 
