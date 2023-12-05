@@ -1,19 +1,21 @@
 import sys
-import random
+from random import shuffle
 from pyfiglet import Figlet
 
 
 input = input("Input: ")
 fonts = Figlet()
 fonts = fonts.getFonts()
-fonts
+shuffle(fonts)
+print(fonts)
 
+'''
 if len(sys.argv) == 1:
     x = Figlet()
     x.getFonts()
-    x.setFont(font="slant")
+    x.setFont(font="fonts")
     print(x.renderText(input))
 
-# elif len(sys.argv == 3):
-
+elif len(sys.argv == 3):
+'''
 
