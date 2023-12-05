@@ -10,5 +10,5 @@ else:
     # sys.argv[0] is "name.py"
     print("hello, my name is", sys.argv[1])
 
-# if the input is queted, python recognize it as a single string, even
-# if there's a space between them
+# if a input is queted, it's recognized as a single string, even if there's a space between them
+
