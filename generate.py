@@ -1,4 +1,4 @@
-# import random
+# import random   docs.python.org/3/library/random.html
 from random import choice, randint, shuffle
 
 # random.choice -> choice
