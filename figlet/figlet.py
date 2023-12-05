@@ -5,7 +5,7 @@ from pyfiglet import Figlet
 
 input = input("Input: ")
 
-if len(sys.argv == 1):
+if len(sys.argv < 2):
     figlet = Figlet()
     print(figlet)
     figlet.getFonts()
