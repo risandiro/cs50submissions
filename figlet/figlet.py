@@ -18,7 +18,10 @@ if len(sys.argv) == 1:
 
 elif len(sys.argv) == 3:
     if sys.argv[1] == "-f" or sys.argv[1] == "--font":
-        x.setFont(font = sys.argv[2])
-        print(x.renderText(input))
+        if sys.argv[2] in fonts:
+            x.setFont(font = sys.argv[2])
+            print(x.renderText(input))
+        else:
+            sys.exit("Invalid usage")
     else:
         sys.exit("Invalid usage")
