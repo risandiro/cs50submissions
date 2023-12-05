@@ -2,12 +2,15 @@ import sys
 import random
 from pyfiglet import Figlet
 
-fonts = figlet.getFonts()
 
-input = Figlet(input("Input: "))
+input = input("Input: ")
 
-input = figlet.setFont(font="coinstak")
-print(input)
+if len(sys.argv == 1):
+    figlet = Figlet()
+    figlet.getFonts()
+    figlet.setFont(font="slant")
 
-# if len(sys.argv == 1):
+    print(figlet.renderText(input))
 
+if len(sys.argv == 3):
+    
