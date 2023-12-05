@@ -7,6 +7,3 @@ def hello(name):
 
 def goodbye(name):
     print(f"goodbye, {name}")
-
-
-main()
