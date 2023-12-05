@@ -25,3 +25,6 @@ elif len(sys.argv) == 3:
             sys.exit("Invalid usage")
     else:
         sys.exit("Invalid usage")
+else:
+    sys.exit("Invalid usage")
+
