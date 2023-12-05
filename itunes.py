@@ -14,8 +14,10 @@ response = requests.get("https://itunes.apple.com/search?entity=song&limit=1&ter
 # print(json.dumps(response.json(), indent = 2))  -> more readable json response
 
 o = response.json()
-# we know that the response contains a key called "results" and that it a a list
 
+# we know that the response contains a key called "results" and that it a a list
+# and that list contains only one song, because we set limit=1 in the url
 for result in o["results"]:
     print(result["trackName"])
 
+ 
