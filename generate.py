@@ -11,5 +11,6 @@ number = randint(1, 10)
 # it doesn't just return a value, it shuffles the whole list
 cards = ["jack", "queen", "king"]
 shuffle(cards)
-for i in cards:
-    print()
+for i in range(len(cards)):
+    print(i + 1, cards[i])
+print("")
