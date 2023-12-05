@@ -1,7 +1,10 @@
 # import random
-from random import choice
+from random import choice, randint
 
-# random.choice -> choice 
+# random.choice -> choice
 coin = choice(["heads", "tails"])
-print(coin)
+# print(coin)
+
+number = randint(1, 10)
+print(number)
 
