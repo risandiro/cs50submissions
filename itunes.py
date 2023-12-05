@@ -20,3 +20,6 @@ o = response.json()
 for result in o["results"]:
     print(result["trackName"])
 
+
+
+# python itunes.py weezer
