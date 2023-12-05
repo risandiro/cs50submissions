@@ -3,11 +3,10 @@ import random
 
 from pyfiglet import Figlet
 
-fonts = figlet.getFonts()
 input = input("Input: ")
+figlet = Figlet(input)
+fonts = figlet.getFonts()
+print(figlet)
 
-if len(sys.argv) == 1:
-    figlet = Figlet(input)
-
-# if len(sys.argv == 3):
+# if len(sys.argv == 1):
 
