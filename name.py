@@ -9,3 +9,5 @@ elif len(sys.argv) > 2:
 else:
     # sys.argv[0] is "name.py"
     print("hello, my name is", sys.argv[1])
+
+# if the input is queted, python recognize it as a single item
