@@ -5,14 +5,12 @@ from pyfiglet import Figlet
 
 input = input("Input: ")
 
-if len(sys.argv < 2):
-    figlet = Figlet()
-    print(figlet)
-    figlet.getFonts()
-    print(figlet)
-    figlet.setFont(font="slant")
+if len(sys.argv) == 1:
+    x = Figlet()
+    x.getFonts()
+    x.setFont(font="slant")
+    print(x.renderText(input))
 
-    print(figlet.renderText(input))
+elif len(sys.argv == 3):
 
-# if len(sys.argv == 3):
 
