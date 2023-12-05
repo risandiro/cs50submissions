@@ -4,15 +4,15 @@ from pyfiglet import Figlet
 
 
 input = input("Input: ")
-fonts = Figlet()
-fonts = fonts.getFonts()
-shuffle(fonts)
-
 
 if len(sys.argv) == 1:
+    fonts = Figlet()
+    fonts = fonts.getFonts()
+    shuffle(fonts)
+
     x = Figlet()
     x.getFonts()
-    x.setFont(font = fonts[1])
+    x.setFont(font = fonts[0])
     print(x.renderText(input))
 
 # elif len(sys.argv == 3):
