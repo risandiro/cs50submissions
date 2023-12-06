@@ -46,7 +46,7 @@ def generate_integer(level):
     if level == 1:
         return random.randrange(10)
     if level == 2:
-        return random.randrange(100)
+        return random.randrange(0, 100)
     if level == 3:
         return random.randrange(1000)
 
