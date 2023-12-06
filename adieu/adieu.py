@@ -7,5 +7,8 @@ while True:
     except EOFError:
         if len(name_list) == 1:
             print("Adieu, adieu, to", name_list[0])
-        if len(name_list) == 2:
+            break
+
+        elif len(name_list) == 2:
             print(f"Adieu, adieu, to {name_list[0]} and {name_list[1]}")
+            break
