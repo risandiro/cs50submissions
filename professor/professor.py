@@ -15,13 +15,8 @@ def main():
                 if answer != (x + y):
                     print("EEE")
                     mistake += 1
-                    raise ValueError
-                else:
-                    i += 1
-            else:
-                print (f"{x} + {y} ={x + y}")
-                i += 1
 
+        
 
 
 def get_level():
