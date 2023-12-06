@@ -3,9 +3,9 @@ import random
 
 def main():
     i = 0
+    level = get_level()
     while i != 10:
         print(i)
-        level = get_level()
         x, y = generate_integer(level), generate_integer(level)
         print (f"{x} + {y} =", end=" ")
         answer = int(input())
