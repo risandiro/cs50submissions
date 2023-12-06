@@ -5,11 +5,10 @@ def main():
     i = 0
     level = get_level()
     while i != 10:
-        print(i)
         x, y = generate_integer(level), generate_integer(level)
 
         mistake = int(0)
-        while mistake < 4:
+        while mistake < 3:
             print (f"{x} + {y} =", end=" ")
             answer = int(input())
             if answer != (x + y):
@@ -20,7 +19,7 @@ def main():
                 break
 
         if mistake == 3:
-            print (f"{x} + {y} = (x + y)")
+            print (f"{x} + {y} = {x + y}")
 
 
 
