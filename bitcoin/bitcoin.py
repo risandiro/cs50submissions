@@ -10,8 +10,8 @@ if len(sys.argv) == 2:
         response = response.json()
         x = response["bpi"]
         x = x["USD"]
-        x = x["rate"]
-        result = float(x * nu)
+        x = x["rate_float"]
+        result = float(x * nmbr)
         print(f"${result:,.4f}")
 
     except ValueError:
