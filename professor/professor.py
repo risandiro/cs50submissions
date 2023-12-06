@@ -7,16 +7,19 @@ def main():
         level = get_level()
         x, y = generate_integer(level), generate_integer(level)
         print (f"{x} + {y} =", end=" ")
-        answer = int(input()
+        answer = int(input())
 
         mistake = 0
         try:
             if mistake < 4:
-            if answer != (x + y):
-                print("EEE")
-                mistake += 1
-                raise ValueError
+                if answer != (x + y):
+                    print("EEE")
+                    mistake += 1
+                    raise ValueError
+                else:
+                    i += 1
             else:
+                print (f"{x} + {y} ={x + y}")
                 i += 1
 
 
