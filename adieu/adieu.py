@@ -5,4 +5,4 @@ while True:
         name = input("Name: ")
         name_list.append(name)
     except EOFError:
-
+        print("Adieu, adieu, to", )
