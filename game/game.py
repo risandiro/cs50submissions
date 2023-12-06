@@ -10,4 +10,18 @@ while True:
 
 number = randint(1, level)
 
-whie
+while True:
+    try:
+        guess = int(input("Guess: "))
+        if guess > 0:
+            if guess != number:
+                if guess > number:
+                    print("Too large!")
+                else:
+                    print("Too small!")
+            else:
+                print("Just right!")
+                break
+
+    except ValueError:
+        pass
