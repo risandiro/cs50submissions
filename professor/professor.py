@@ -2,12 +2,23 @@ import random
 
 
 def main():
+    print(get_level())
 
 
 def get_level():
+    while True:
+        try:
+            level = int(input("Level: "))
+            if 0 > level < 4:
+                return level
+
+        except ValueError:
+            pass
 
 
-def generate_integer(level):
+
+
+# def generate_integer(level):
 
 
 
