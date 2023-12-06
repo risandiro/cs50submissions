@@ -19,7 +19,8 @@ def main():
                     i += 1
                     break
             except ValueError:
-                pass
+                print("EEE")
+                mistake += 1
 
         if mistake == 3:
             print (f"{x} + {y} = {x + y}")
