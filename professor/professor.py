@@ -25,7 +25,8 @@ def main():
         if mistake == 3:
             print (f"{x} + {y} = {x + y}")
             i += 1
-            correct =+ 1
+            correct += 1
+
 
     print(f"Score: {10 - correct}")
 
