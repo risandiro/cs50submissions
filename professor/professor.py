@@ -7,10 +7,10 @@ def main():
     while i != 10:
         print(i)
         x, y = generate_integer(level), generate_integer(level)
-        print (f"{x} + {y} =", end=" ")
 
         mistake = int(0)
         while mistake < 4:
+            print (f"{x} + {y} =", end=" ")
             answer = int(input())
             if answer != (x + y):
                 print("EEE")
