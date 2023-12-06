@@ -4,6 +4,7 @@ import random
 def main():
     i = 0
     while i != 10:
+        print(i)
         level = get_level()
         x, y = generate_integer(level), generate_integer(level)
         print (f"{x} + {y} =", end=" ")
@@ -17,9 +18,9 @@ def main():
                     mistake += 1
                 else:
                     i += 1
+                    raise ValueError
             else:
                 print (f"{x} + {y} = (x + y)")
-
 
         except ValueError:
             pass
