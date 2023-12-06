@@ -1,6 +1,13 @@
-import random
+from random import randint
 
 while True:
-    level = int(input("Level: "))
-    if level > 0:
-        break
+    try:
+        level = int(input("Level: "))
+        if level > 0:
+            break
+    except ValueError:
+        pass
+
+number = randint(1, level)
+
+whie
