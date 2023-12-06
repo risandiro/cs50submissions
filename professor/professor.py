@@ -19,7 +19,7 @@ def main():
                 i += 1
                 break
 
-        if mistake < 4:
+        if mistake == 3:
             print (f"{x} + {y} = (x + y)")
 
 
