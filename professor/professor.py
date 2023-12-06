@@ -11,19 +11,17 @@ def main():
         answer = int(input())
 
         mistake = int(0)
-        try:
-            if mistake < 4:
-                if answer != (x + y):
-                    print("EEE")
-                    mistake += 1
-                else:
-                    i += 1
-                    raise ValueError
+        while mistake < 4:
+            if answer != (x + y):
+                print("EEE")
+                mistake += 1
             else:
-                print (f"{x} + {y} = (x + y)")
+                i += 1
+                break
+            
+        if mistake < 4:
+            print (f"{x} + {y} = (x + y)")
 
-        except ValueError:
-            pass
 
 
 
