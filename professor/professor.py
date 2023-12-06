@@ -9,7 +9,7 @@ def main():
         print (f"{x} + {y} =", end=" ")
         answer = int(input())
 
-        mistake = 0
+        mistake = int(0)
         try:
             if mistake < 4:
                 if answer != (x + y):
