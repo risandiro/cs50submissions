@@ -2,7 +2,7 @@ import random
 
 
 def main():
-    i = 0
+    i, final = 0, 0
     level = get_level()
     while i != 10:
         x, y = generate_integer(level), generate_integer(level)
@@ -23,7 +23,9 @@ def main():
 
         if mistake == 3:
             print (f"{x} + {y} = {x + y}")
+            final =+ 1
 
+    print("Score)
 
 
 
