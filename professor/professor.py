@@ -8,17 +8,17 @@ def main():
         print(i)
         x, y = generate_integer(level), generate_integer(level)
         print (f"{x} + {y} =", end=" ")
-        answer = int(input())
 
         mistake = int(0)
         while mistake < 4:
+            answer = int(input(""))
             if answer != (x + y):
                 print("EEE")
                 mistake += 1
             else:
                 i += 1
                 break
-            
+
         if mistake < 4:
             print (f"{x} + {y} = (x + y)")
 
