@@ -2,7 +2,7 @@ import random
 
 
 def main():
-
+    print(generate_integer(1))
 
 def get_level():
     while True:
@@ -15,8 +15,12 @@ def get_level():
             pass
 
 def generate_integer(level):
-
-
+    if level == 1:
+        return randrange(10)
+    if level == 2:
+        return randrange(100)
+    if level == 3:
+        return randrange(1000)
 
 
 if __name__ == "__main__":
