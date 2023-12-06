@@ -8,7 +8,11 @@ if len(sys.argv) == 2:
         nmbr = float(sys.argv[1])
         response = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
         response = response.json()
-        print(response["rate"])
+        x = response["bpi"]
+        x = x["USD"]
+        x = x["rate"]
+        result = float(x * nu)
+        print(f"${result:,.4f}")
 
     except ValueError:
         sys.exit("Command-line argument is not a number")
