@@ -25,7 +25,7 @@ def main():
             print (f"{x} + {y} = {x + y}")
             final =+ 1
 
-    print("Score)
+    print("Score:", (10 - final))
 
 
 
