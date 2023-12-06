@@ -11,7 +11,7 @@ def main():
 
         mistake = int(0)
         while mistake < 4:
-            answer = int(input(""))
+            answer = int(input())
             if answer != (x + y):
                 print("EEE")
                 mistake += 1
