@@ -16,6 +16,7 @@ while True:
         elif len(name_list) > 2:
             print("Adieu, adieu, to ", sep="", end="")
             for person in name_list:
+                if person
                 print(person, end=", ")
             print("")
             break
