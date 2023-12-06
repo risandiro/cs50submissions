@@ -48,7 +48,7 @@ def generate_integer(level):
     if level == 2:
         return random.randrange(10, 100)
     if level == 3:
-        return random.randrange(1000)
+        return random.randrange(100, 1000)
 
 
 if __name__ == "__main__":
