@@ -10,13 +10,16 @@ def main():
         mistake = int(0)
         while mistake < 3:
             print (f"{x} + {y} =", end=" ")
-            answer = int(input())
-            if answer != (x + y):
-                print("EEE")
-                mistake += 1
-            else:
-                i += 1
-                break
+            try:
+                answer = int(input())
+                if answer != (x + y):
+                    print("EEE")
+                    mistake += 1
+                else:
+                    i += 1
+                    break
+            except ValueError:
+                pass
 
         if mistake == 3:
             print (f"{x} + {y} = {x + y}")
