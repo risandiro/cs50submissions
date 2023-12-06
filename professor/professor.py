@@ -2,9 +2,18 @@ import random
 
 
 def main():
-    level = get_level()
-    x, y = generate_integer(level), generate_integer(level)
-    
+    i = 0
+    while i != 10:
+        level = get_level()
+        x, y = generate_integer(level), generate_integer(level)
+        print (f"{x} + {y} =", end=" ")
+
+        answer = int(input())
+        if answer != (x + y):
+            print("EEE")
+        else:
+            i += 1
+
 
 
 def get_level():
