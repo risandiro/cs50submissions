@@ -1,7 +1,7 @@
 import sys, requests
 
 if len(sys.argv) == 1:
-    print("Missing command-line argument")
+    sys.exit("Missing command-line argument")
 
 if len(sys.argv) == 2:
     try:
