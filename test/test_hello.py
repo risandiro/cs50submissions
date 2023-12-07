@@ -8,3 +8,5 @@ def test_argument():
     for name in ["David", "Mike", "John"]:
         assert hello(name) == f"hello, {name}"
 
+# pytest test
+# python treates that folder as a package so we can test the whole folder
