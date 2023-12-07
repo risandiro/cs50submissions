@@ -1,5 +1,3 @@
-# pytest test_calculator.py
-
 from calculator import square
 
 
@@ -19,14 +17,14 @@ def test_square():
         print("3 squared was not 9")
 '''
 
+# pytest test_calculator.py
+
 def test_square():
     assert square(2) == 4
     assert square(3) == 9
     assert square(-2) == 4
     assert square(-3) == 9
     assert square(0) == 0
-
-
 
 
 if __name__ == "__main__":
