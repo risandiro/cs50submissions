@@ -14,4 +14,4 @@ def test_integer():
 
 def test_empty()
     with pytest.raises(TypeError):
-        square()
+        shorten()
