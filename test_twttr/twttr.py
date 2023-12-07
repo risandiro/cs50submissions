@@ -5,7 +5,7 @@ def main():
 
 def shorten(word):
     vowels = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"]
-    print("Output:", end=" ")
+    Output = "Output: "
 
     counter = 0
     for letter in word:
