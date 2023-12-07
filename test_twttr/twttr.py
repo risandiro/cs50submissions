@@ -4,7 +4,7 @@ def main():
     print(answer)
 
 
-def shorten(word=""):
+def shorten(str: word):
     vowels = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"]
     output = "Output: "
 
@@ -16,7 +16,7 @@ def shorten(word=""):
         if counter == 0:
             output += letter
         counter = 0
-    return output
+    return str(output)
 
 
 if __name__ == "__main__":
