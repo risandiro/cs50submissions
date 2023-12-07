@@ -1,3 +1,3 @@
 from twttr import shorten
 
-print(shorten("))
+print(shorten("miazga"))
