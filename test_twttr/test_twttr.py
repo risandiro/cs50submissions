@@ -15,3 +15,6 @@ def test_integer():
 def test_empty():
     with pytest.raises(TypeError):
         shorten()
+
+def test_combi():
+    assert shorten("KaAcCkAa") == "Output: KcCk"
