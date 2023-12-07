@@ -1,10 +1,17 @@
+import sys
+
 def main():
     word = input("Input: ")
     answer = shorten(word)
     print(answer)
 
 
-def shorten(str: word):
+def shorten(word):
+    try:
+        word = str(word)
+    except ValueError:
+        sys.exit()
+
     vowels = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"]
     output = "Output: "
 
