@@ -1,11 +1,12 @@
 def main():
     word = input("Input: ")
-    shorten(word)
+    answer = shorten(word)
+    print(answer)
 
 
 def shorten(word):
     vowels = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"]
-    Output = "Output: "
+    output = "Output: "
 
     counter = 0
     for letter in word:
@@ -13,9 +14,9 @@ def shorten(word):
             if letter == vowels[i]:
                 counter += 1
         if counter == 0:
-            print(letter, end="")
+            output += letter
         counter = 0
-    print()
+    return output
 
 
 if __name__ == "__main__":
