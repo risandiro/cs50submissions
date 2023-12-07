@@ -1,7 +1,7 @@
 from twttr import shorten
 
 def test_default():
-    assert shorten() ==
+    assert shorten() == TypeError
 
 def test_lowercase():
     assert shorten("miazga") == "Output: mzg"
@@ -10,3 +10,6 @@ def test_lowercase():
 def test_uppercase():
     assert shorten("MIAZGA") == "Output: MZG"
     assert shorten("KRK") == "Output: KRK"
+
+def test_integer():
+    assert shorten(int(5)) == "Output: 5"
