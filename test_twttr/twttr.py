@@ -4,7 +4,6 @@ def main():
     word = input("Input: ")
     answer = shorten(word)
     print(answer)
-    sys.exit()
 
 def shorten(word):
     try:

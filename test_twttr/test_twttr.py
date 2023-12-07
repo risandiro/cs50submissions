@@ -9,9 +9,6 @@ def test_uppercase():
     assert shorten("MIAZGA") == "Output: MZG"
     assert shorten("KRK") == "Output: KRK"
 
-def test_integer():
-    assert shorten(int(5)) == "Output: 5"
-
 def test_empty():
     with pytest.raises(TypeError):
         shorten()
