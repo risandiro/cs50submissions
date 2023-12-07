@@ -11,3 +11,4 @@ def test_uppercase():
 
 def test_integer():
     assert shorten(int(5)) == "Output: 5"
+
