@@ -1,9 +1,5 @@
 from twttr import shorten
-
-def main()
-    test_lowercase()
-    test_uppercase()
-    test_integer()
+import pytest
 
 def test_lowercase():
     assert shorten("miazga") == "Output: mzg"
@@ -16,5 +12,6 @@ def test_uppercase():
 def test_integer():
     assert shorten(int(5)) == "Output: 5"
 
-if __name__ == "__main__":
-    main()
+def test_empty()
+    with pytest.raises(TypeError):
+        square()
