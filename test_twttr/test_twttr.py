@@ -1,5 +1,8 @@
 from twttr import shorten
 
+def test_default():
+    assert shorten() == ""
+
 def test_lowercase():
     assert shorten("miazga") == "Output: mzg"
     assert shorten("krk") == "Output: krk"

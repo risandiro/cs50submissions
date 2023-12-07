@@ -4,7 +4,7 @@ def main():
     print(answer)
 
 
-def shorten(word):
+def shorten(word=""):
     vowels = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"]
     output = "Output: "
 
