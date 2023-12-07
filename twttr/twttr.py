@@ -1,16 +1,18 @@
-input = input("Input: ")
-vowels = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"]
-counter = 0
-
-print("Output:", end=" ")
-for letter in input:
-    for i in range(len(vowels)):
-        if letter == vowels[i]:
-            counter += 1
-    if counter == 0:
-        print(letter, end="")
+def main():
+    input = input("Input: ")
+    vowels = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"]
     counter = 0
-print()
+
+def shorten(word):
+    print("Output:", end=" ")
+    for letter in word:
+        for i in range(len(vowels)):
+            if letter == vowels[i]:
+                counter += 1
+        if counter == 0:
+            print(letter, end="")
+        counter = 0
+    print()
 
 
 
