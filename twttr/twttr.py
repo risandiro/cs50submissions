@@ -1,9 +1,11 @@
 def main():
+
+
+def shorten(word):
     input = input("Input: ")
     vowels = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"]
     counter = 0
-
-def shorten(word):
+    
     print("Output:", end=" ")
     for letter in word:
         for i in range(len(vowels)):
