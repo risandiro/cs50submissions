@@ -1,11 +1,13 @@
 def main():
     x = input("Greeting: ")
-    x = x.strip()
+    cash = value(x)
+    print(f"${cash}")
+
 
 def value(greeting):
-    if greeting.lower().startswith("hello")
+    if greeting.lower().startswith("hello"):
         return int(0)
-    elif greeting.lower().startswith("h")
+    elif greeting.lower().startswith("h"):
         return int(20)
     else:
         return int(100)
