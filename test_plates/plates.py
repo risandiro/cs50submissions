@@ -41,7 +41,7 @@ def rule_two(s):
 def rule_three(s):
     for char in range(len(s)):
         if s[char].isnumeric()
-            
+            break
 
 
 def rule_four(s):
