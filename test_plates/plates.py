@@ -43,6 +43,8 @@ def rule_three(s):
     for char in range(len(s)):
         if counter != 1:
             if s[char].isnumeric():
+                if s[char] == 0:
+                    return False
                 counter += 1
                 continue
         if counter == 1:
