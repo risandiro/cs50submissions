@@ -33,9 +33,9 @@ with open("names.txt", "r") as file:
 
 # ----------------------------------------
 
+# "r" -> read is the default, you don't have to specify
 names = []
 
-# "r" -> read is the default, you don't have to specify
 with open("names.txt") as file:
     for line in file:
         names.append(line.rstrip())
@@ -43,7 +43,7 @@ with open("names.txt") as file:
 for name in sorted(names):
     print(f"hello, {name}")
 
-# to make it more compact
+# to make it more compact, but you can't actually work with the data itself this way
 
 with open("names.txt") as file:
     for line in sorted(file):
