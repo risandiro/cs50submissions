@@ -19,7 +19,7 @@ def test_zero_division():
         convert("3/0")
 
 def test_gauge():
-    assert gauge("1") == "E"
-    assert gauge("2") == "2%"
-    assert gauge("98") == "98%"
-    assert gauge("99") == "F"
+    assert gauge(1) == "E"
+    assert gauge(2) == "2%"
+    assert gauge(98) == "98%"
+    assert gauge(99) == "F"
