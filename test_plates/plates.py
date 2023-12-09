@@ -41,12 +41,13 @@ def rule_two(s):
 def rule_three(s):
     counter = 0
     for char in range(len(s)):
-        if counter < 1:
+        if counter != 1:
             if s[char].isnumeric():
                 counter += 1
                 continue
-        if s[char].isnumeric() == False:
-            return False
+        if counter == 1:
+            if s[char].isnumeric() == False:
+                return False
     return True
 
 
