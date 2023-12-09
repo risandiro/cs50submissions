@@ -13,4 +13,4 @@ def test_20():
 def test_100():
     assert value("abrakadabra") == 100
     assert value("Chuppa Chupps") == 100
-    assert value() == 100
+    assert value("") == 100
