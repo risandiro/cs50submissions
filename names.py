@@ -11,6 +11,7 @@ name = input("What's your name? ")
 # if the file doesn't exist, python creates it
 # "w" -> write (opens as a new tab and rewrites any content possibly there)
 # "a" -> append (adds to a file)
+# "r" -> read (read all lines and return them as a list)
 
 file = open("names.txt", "a")
 file.write(f"{name}\n")
@@ -22,3 +23,9 @@ name = input("What's your name? ")
 
 with open("names.txt", "a") as file:
     file.write(f"{name}\n")
+
+with open("names.txt", "r") as file:
+    lines = file.readlines()
+
+for line in lines:
+    print(line.rstrip())
