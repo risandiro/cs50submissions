@@ -1,4 +1,4 @@
-import plates
+from plates import is_valid
 
 def test_rule_one():
     assert is_valid("A1AA") == False
