@@ -9,7 +9,7 @@ def test_rule_two():
     assert is_valid("AAAAAAA") == False
     assert is_valid("AAAAAA") == True
     assert is_valid("A") == False
-    assert is_valid("AAA") == True
+    assert is_valid("AA") == True
     assert is_valid("") == False
 
 def test_rule_three():
