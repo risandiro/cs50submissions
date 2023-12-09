@@ -18,3 +18,5 @@ def test_zero_division():
     with pytest.raises(ZeroDivisionError):
         convert("3/0")
 
+def test_gauge():
+    
