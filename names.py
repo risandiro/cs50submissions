@@ -11,7 +11,7 @@ name = input("What's your name? ")
 
 # if the file doesn't exist, python creates it
 # "w" -> write (opens as a new tab and rewrites any content possibly there)
-# "a" -> append
+# "a" -> append (adds to a file)
 
 file = open("names.txt", "a")
 file.write(name)
