@@ -3,9 +3,9 @@ def main():
     x = x.strip()
 
 def value(greeting):
-    if greeting.startswith("hello") or greeting.startswith("Hello"):
+    if greeting.lower().startswith("hello")
         return int(0)
-    elif greeting.startswith("h") or greeting.startswith("H"):
+    elif greeting.lower().startswith("h")
         return int(20)
     else:
         return int(100)
