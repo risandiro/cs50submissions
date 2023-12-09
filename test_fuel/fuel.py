@@ -19,10 +19,10 @@ def convert(fraction):
         raise ValueError
 
 def gauge(percentage):
-    if percentage <= 1:
+    if int(percentage) <= 1:
         return "E"
 
-    elif percentage >= 99:
+    elif int(percentage) >= 99:
         return "F"
 
     return f"{percentage}%"
