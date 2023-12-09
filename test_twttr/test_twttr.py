@@ -14,7 +14,7 @@ def test_combi():
     assert shorten("MrKKk") == "MrKKk"
 
 def test_punc():
-    assert shorten("#&\€|") == "#&\€|"
+    assert shorten(".#&\€|") == ".#&\€|"
     assert shorten("}]>") == "}]>"
 
 def test_numbers():
