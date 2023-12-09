@@ -55,7 +55,8 @@ def rule_three(s):
 
 def rule_four(s):
     if any(char in string.punctuation for char in s):
-        
+        if 
+
         return False
     else:
         return True
