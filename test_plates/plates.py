@@ -29,7 +29,7 @@ def rule_one(s):
             return True
     except IndexError:
         return False
-    
+
 
 def rule_two(s):
     if 1 < len(s) < 7:
@@ -39,23 +39,7 @@ def rule_two(s):
 
 
 def rule_three(s):
-    counter = 0
-    for char in s:
-        if char.isnumeric():
-            break
-        counter += 1
-
-    afd = s[counter:len(s)]
-    if counter <= 2:
-        if afd.isnumeric():
-            if s[counter] != "0":
-                return True
-            else:
-                return False
-        else:
-          return False
-    else:
-        return True
+    
 
 
 def rule_four(s):
