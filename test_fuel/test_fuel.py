@@ -18,8 +18,8 @@ def test_zero_division():
     with pytest.raises(ZeroDivisionError):
         convert("3/0")
 
-def test_gauge_rounding():
-    assert gauge("1/67") == "E"
-    assert gauge("1/66") == "2%"
-    assert gauge("100/101") == "F"
-    assert gauge("93/95") == "98%"
+def test_gauge():
+    assert gauge("1") == "E"
+    assert gauge("2") == "2%"
+    assert gauge("98") == "98%"
+    assert gauge("99") == "F"
