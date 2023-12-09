@@ -44,7 +44,9 @@ def rule_three(s):
         while counter < 1:
             if s[char].isnumeric():
                 counter += 1
-        
+                continue
+        if s[char].isnumeric():
+
 
 
 
