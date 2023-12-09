@@ -21,3 +21,5 @@ def test_zero_division():
 def test_gauge_rounding():
     assert gauge("1/67") == "E"
     assert gauge("1/66") == "2%"
+    assert gauge("100/101") == "F"
+    assert gauge("99/100")
