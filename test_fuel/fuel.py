@@ -8,7 +8,11 @@ def convert(fraction):
             x, y = fraction.split("/")
             x , y = int(x), int(y)
             if y >= x:
-                percent = int(round(x / y * 100))
+                return int(round(x / y * 100))
+        except (ValueError, ZeroDivisionError):
+            pass
+
+
                 if percent <= 1:
                     print("E")
                     break
@@ -18,6 +22,3 @@ def convert(fraction):
                 else:
                     print(f"{percent}%")
                     break
-
-        except (ValueError, ZeroDivisionError):
-        pass
