@@ -13,6 +13,8 @@ def convert(fraction):
     x , y = int(x), int(y)
     if y >= x:
         return int(round(x / y * 100))
+    else:
+        raise ValueError
 
 def gauge(percentage):
     if percentage <= 1:
