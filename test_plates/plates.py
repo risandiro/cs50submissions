@@ -23,7 +23,7 @@ def is_valid(s):
 
 def rule_one(s):
     try:
-        if s[0].isnumeric() or s[1].isnumeric():
+        if s[0:1].isnumeric():
             return False
         else:
             return True
