@@ -45,10 +45,9 @@ def rule_three(s):
             if s[char].isnumeric():
                 counter += 1
                 continue
-        if s[char].isnumeric():
-
-
-
+        if s[char].isnumeric() == False:
+            return False
+    return True
 
 
 def rule_four(s):
