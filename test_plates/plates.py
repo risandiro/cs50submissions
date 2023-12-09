@@ -39,7 +39,9 @@ def rule_two(s):
 
 
 def rule_three(s):
-    for char in len(s):
+    for char in range(len(s)):
+        if s[char].isnumeric()
+            
 
 
 def rule_four(s):
