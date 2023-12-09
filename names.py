@@ -14,6 +14,6 @@ name = input("What's your name? ")
 # "a" -> append (adds to a file)
 
 file = open("names.txt", "a")
-file.write(name)
+file.write(f"{name}\n")
 file.close()
 
