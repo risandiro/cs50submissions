@@ -3,18 +3,14 @@ def main():
 
 
 def convert(fraction):
-    while True:
-        try:
-            x, y = fraction.split("/")
-            x , y = int(x), int(y)
-            if y >= x:
-                return int(round(x / y * 100))
-        except (ValueError, ZeroDivisionError):
-            pass
+    x, y = fraction.split("/")
+    x , y = int(x), int(y)
+    if y >= x:
+        return int(round(x / y * 100))
 
-
-                if percent <= 1:
-                    print("E")
+def gauge(percentage):
+    if percentage <= 1:
+        return "E"
                     break
                 elif percent >= 99:
                     print("F")
