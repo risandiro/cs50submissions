@@ -25,7 +25,8 @@ with open("names.txt", "a") as file:
     file.write(f"{name}\n")
 
 with open("names.txt", "r") as file:
-    lines = file.readlines()
-
-for line in lines:
-    print(line.rstrip())
+    # lines = file.readlines()
+    # for line in lines
+    #  -> we don't need to read them because for loop reads them also
+    for line in file:
+        print(line.rstrip())
