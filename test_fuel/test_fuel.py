@@ -20,6 +20,7 @@ def test_zero_division():
 
 def test_normal():
     convert("1/2") == 50
+    convert("15/57") == 26
 
 def test_gauge():
     assert gauge(1) == "E"
