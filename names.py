@@ -43,4 +43,9 @@ with open("names.txt") as file:
 for name in sorted(names):
     print(f"hello, {name}")
 
+# to make it more compact
+
+with open("names.txt") as file:
+    for line in sorted(file):
+        print("hello,", line.rstrip())
 
