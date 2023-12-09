@@ -22,8 +22,7 @@ def is_valid(s):
 # --------------------------------------
 
 def rule_one(s):
-     ftl = s[0:2]
-     if ftl.isnumeric():
+     if s[0:2].isnumeric():
         return False
      else:
          return True
