@@ -30,3 +30,15 @@ with open("names.txt", "r") as file:
     #  -> we don't need to read them because for loop reads them also
     for line in file:
         print(line.rstrip())
+
+# ----------------------------------------
+
+names = []
+
+# "r" -> read is the default, you don't have to specify
+with open("names.txt") as file:
+    for line in file:
+        names.append(line.rstrip())
+
+for name in sorted(names):
+    print(f"hello, {name}")
