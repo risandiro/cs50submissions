@@ -2,28 +2,20 @@ import sys
 
 def main():
     word = input("Input: ")
-    answer = shorten(word)
-    print(answer)
+    output = shorten(word)
+    print("Output:", output)
 
 def shorten(word):
-    try:
-        word = str(word)
-    except ValueError:
-        sys.exit()
+    vowels = ["a", "e", "i", "o",  "u"]
+    output = ""
 
-    vowels = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"]
-    output = "Output: "
-
-    counter = 0
-    for letter in word:
-        for i in range(len(vowels)):
-            if letter == vowels[i]:
-                counter += 1
-        if counter == 0:
-            output += letter
-        counter = 0
-    return str(output)
-
+    # for every character in the (length of) input
+    for char in range(len(word)):
+        # if the character (upper-or-lower case) is not in the "vowel" list
+        if word[char].lower() not in vowels:
+            # add it to the string
+            output += word[char]
+    return output
 
 if __name__ == "__main__":
     main()
