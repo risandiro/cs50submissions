@@ -1,3 +1,8 @@
+def main():
+
+
+
+def convert(fraction):
 while True:
     try:
         x, y = input("Fraction: ").split("/")
