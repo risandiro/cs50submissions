@@ -9,5 +9,10 @@ print(sorted(names))
 
 name = input("What's your name? ")
 
-open("names.txt", "w")
+# if the file doesn't exist, python creates it
+# next we specify what we want to do with it "w", means write and allows to change the content
+file = open("names.txt", "w")
+
+file.write(name)
+file.close()
 
