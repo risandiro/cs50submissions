@@ -30,8 +30,7 @@ def rule_one(s):
 
 
 def rule_two(s):
-    number_of_characters = len(s)
-    if 2 <= number_of_characters <= 6:
+    if 1 < len(s) < 7:
         return True
     else:
         return False
