@@ -39,11 +39,13 @@ def rule_two(s):
 
 
 def rule_three(s):
+    counter = 0
     for char in range(len(s)):
         while counter < 1:
             if s[char].isnumeric():
                 counter += 1
-        
+        if s[char]
+
 
 
 
