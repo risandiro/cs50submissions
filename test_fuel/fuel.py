@@ -2,7 +2,11 @@ def main():
     frac = input("Fraction: ")
     perc = convert(frac)
     output = gauge(perc)
-    if output 
+
+    if output.isnumeric():
+        print(f"{output}%")
+    else:
+        print(output)
 
 def convert(fraction):
     x, y = fraction.split("/")
@@ -14,11 +18,10 @@ def gauge(percentage):
     if percentage <= 1:
         return "E"
 
-    elif percent >= 99:
+    elif percentage >= 99:
         return "F"
 
-    else:
-        return f"{percent}%"
+    return f"{percentage}%"
 
 
 if __name__ == "__main__":
