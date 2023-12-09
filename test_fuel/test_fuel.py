@@ -4,4 +4,4 @@ import pytest
 
 def test_empty():
     with pytest.raises(ValueError):
-        convert()
+        convert("4/3")
