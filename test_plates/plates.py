@@ -22,11 +22,14 @@ def is_valid(s):
 # --------------------------------------
 
 def rule_one(s):
-     if s[0].isnumeric() or s[1].isnumeric():
+    try:
+        if s[0].isnumeric() or s[1].isnumeric():
+            return False
+        else:
+            return True
+    except IndexError:
         return False
-     else:
-         return True
-
+    
 
 def rule_two(s):
     if 1 < len(s) < 7:
