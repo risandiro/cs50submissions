@@ -49,3 +49,8 @@ with open("names.txt") as file:
     for line in sorted(file):
         print("hello,", line.rstrip())
 
+# ----------------------------------------
+
+with open("students.csv") as file:
+    for line in file:
+        
