@@ -53,4 +53,5 @@ with open("names.txt") as file:
 
 with open("students.csv") as file:
     for line in file:
-        line.rstip().split(",")
+        row = line.rstip().split(",")
+        print
