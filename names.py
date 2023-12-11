@@ -62,11 +62,11 @@ students = []
 
 with open("names.csv") as file:
     for line in file:
-        name, house = line.rstrip().split(",")
+        name, house, home = line.rstrip().split(",")
         #student = {}
         #student["name"] = name
         #student["house"] = house
-        student = {"name": name, "house": house}
+        student = {"name": name, "house": house, "home": home}
         students.append(student)
 
 def get_name(student):
@@ -77,10 +77,10 @@ def get_house(student):
     return student["house"]
 
 for student in sorted(students, key=get_name, reverse=True):
-    print(f"{student['name']} is in {student['house']}")
+    print(f"{student['name']} is in {student['house']} and lives {student['home']}")
 
 for student in sorted(students, key=get_house):
-    print(f"{student['name']} is in {student['house']}")
+    print(f"{student['name']} is in {student['house']} and lives {student['home']}")
 
 # lambda indicates to python that this is an annonymous function that you just pass to another function
 # we replace name with lambda, argument: return value
