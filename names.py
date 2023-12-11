@@ -104,6 +104,7 @@ with open("students.csv") as file:
     reader = csv.reader(file)
     for row in reader:
         students.append({"name": row[0], "house": row[1], "home": row[2]})
+        # students.append(row)
 
     # for name, house, home in reader:
         # students.append({"name": name, "house": house, "home": home})
@@ -115,6 +116,8 @@ with open("students.csv") as file:
     reader = csv.DictReader(file)
     for row in reader:
         students.append({"name": row["name"], "house": row["house"], "home": row["home"]})
+        # students.append(row)
+
 
     for student in sorted(students, key=lambda student: student["name"])
         print(student["house"])
