@@ -63,4 +63,8 @@ students = []
 with open("names.csv") as file:
     for line in file:
         name, house = line.rstrip().split(",")
-        students.append()
+        student = {}
+        student["name"] = name
+        student["house"] = house
+        students.append(student)
+
