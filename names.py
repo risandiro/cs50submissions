@@ -55,3 +55,12 @@ with open("students.csv") as file:
     for line in file:
         row = line.rstip().split(",")
         print(f"{row[0]} is in {row[1]}")
+
+# ----------------------------------------
+
+students = []
+
+with open("names.csv") as file:
+    for line in file:
+        name, house = line.rstrip().split(",")
+        students.append()
