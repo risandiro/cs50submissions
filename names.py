@@ -71,6 +71,7 @@ with open("names.csv") as file:
 
 def get_name(student):
     return student["name"]
+# lambda student: student["name"])
 
 def get_house(student):
     return student["house"]
@@ -80,3 +81,7 @@ for student in sorted(students, key=get_name, reverse=True):
 
 for student in sorted(students, key=get_house):
     print(f"{student['name']} is in {student['house']}")
+
+# lambda indicates to python that this is an annonymous function that we won't reuse
+# we replace name with lambda, argument: return value
+for student in sorted(students, key=lambda student: student["name"])
