@@ -96,3 +96,6 @@ with open("students.csv") as file:
     reader = csv.reader(file)
     for row in reader:
         students.append({"name": row[0], "house": row[1], "home": row[2]})
+
+    # for name, house, home in reader:
+        # students.append({"name": name, "house": house, "home": home})
