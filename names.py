@@ -93,7 +93,7 @@ for student in sorted(students, key=get_house):
 for student in sorted(students, key=lambda student: student["name"])
     print(f"{student['name']} is in {student['house']}")
 
-# ------------------------------------------ 
+# ------------------------------------------
 
 # if you have commas in "names.csv" and want to use them without separating the values
 # with csv you can use quotes to distinguish which commas are separators and which aren't
@@ -119,6 +119,23 @@ with open("students.csv") as file:
     for student in sorted(students, key=lambda student: student["name"])
         print(student["house"])
 
-# ------------------------------------------- write data to csv
+# -------------------------------------------- writing data to csv
+
+import csv
+
+name = input("What's your name? ")
+home = input("Where's your home? ")
+
+# ------------------------------------------- write data to csv as a list
+
+with open("students.csv", "a") as file:
+    writer = csv.writer(file)
+    writer.writerow([name,home])
+
+# ------------------------------------------- write data to csv as a dictionary
+
+with open("students.csv", "a") as file:
+    writer = csv.DictWriter(file, fieldnames=["name", "home"])
+    writer.writerow({"name": name, "home": home})
 
 
