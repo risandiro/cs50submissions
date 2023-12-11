@@ -82,7 +82,7 @@ for student in sorted(students, key=get_name, reverse=True):
 for student in sorted(students, key=get_house):
     print(f"{student['name']} is in {student['house']}")
 
-# lambda indicates to python that this is an annonymous function that we won't reuse
+# lambda indicates to python that this is an annonymous function that you just pass to another function
 # we replace name with lambda, argument: return value
 for student in sorted(students, key=lambda student: student["name"])
     print(f"{student['name']} is in {student['house']}")
