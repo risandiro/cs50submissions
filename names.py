@@ -68,3 +68,6 @@ with open("names.csv") as file:
         student["house"] = house
         students.append(student)
 
+for student in students:
+    print(f"{student['name']} is in {student['house']}")
+
