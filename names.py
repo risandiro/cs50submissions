@@ -95,3 +95,4 @@ students = []
 with open("students.csv") as file:
     reader = csv.reader(file)
     for row in reader:
+        students.append({"name": row[0], "house": row[1], "home": row[2]})
