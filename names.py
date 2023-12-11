@@ -1,10 +1,11 @@
+# ---------------------------------------- sort a list
 
 names = []
 for _ in range(3):
     names.append(input("What's your name? "))
 print(sorted(names))
 
-# ----------------------------------------
+# ---------------------------------------- basic functions of i/o
 
 name = input("What's your name? ")
 
@@ -17,12 +18,13 @@ file = open("names.txt", "a")
 file.write(f"{name}\n")
 file.close()
 
-# ----------------------------------------
-
-name = input("What's your name? ")
+# -----
 
 with open("names.txt", "a") as file:
     file.write(f"{name}\n")
+
+# ---------------------------------------- print all lines from a text file
+
 
 with open("names.txt", "r") as file:
     # lines = file.readlines()
@@ -31,7 +33,7 @@ with open("names.txt", "r") as file:
     for line in file:
         print(line.rstrip())
 
-# ----------------------------------------
+# ---------------------------------------- copy the content from a text file to a local list
 
 # "r" -> read is the default, you don't have to specify
 names = []
@@ -49,14 +51,14 @@ with open("names.txt") as file:
     for line in sorted(file):
         print("hello,", line.rstrip())
 
-# ----------------------------------------
+# ---------------------------------------- copy the content of csv file as a list of values
 
 with open("students.csv") as file:
     for line in file:
         row = line.rstip().split(",")
         print(f"{row[0]} is in {row[1]}")
 
-# ----------------------------------------
+# ---------------------------------------- list of students where every student is a dict
 
 students = []
 
@@ -69,12 +71,16 @@ with open("names.csv") as file:
         student = {"name": name, "house": house, "home": home}
         students.append(student)
 
+# ---------------------------------------- sort the data by a chosen key
+
 def get_name(student):
     return student["name"]
 # lambda student: student["name"])
 
 def get_house(student):
     return student["house"]
+# lambda student: student["house"])
+
 
 for student in sorted(students, key=get_name, reverse=True):
     print(f"{student['name']} is in {student['house']} and lives {student['home']}")
@@ -87,7 +93,7 @@ for student in sorted(students, key=get_house):
 for student in sorted(students, key=lambda student: student["name"])
     print(f"{student['name']} is in {student['house']}")
 
-# ------------------------------------------
+# ------------------------------------------ 
 
 # if you have commas in "names.csv" and want to use them without separating the values
 # with csv you can use quotes to distinguish which commas are separators and which aren't
@@ -112,3 +118,7 @@ with open("students.csv") as file:
 
     for student in sorted(students, key=lambda student: student["name"])
         print(student["house"])
+
+# ------------------------------------------- write data to csv
+
+
