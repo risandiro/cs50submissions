@@ -89,6 +89,8 @@ for student in sorted(students, key=lambda student: student["name"])
 
 # ------------------------------------------
 
+# if you have commas in "names.csv" and want to use them without separating the values
+# with csv you can use quotes to distinguish which commas are separators and which aren't
 import csv
 
 students = []
