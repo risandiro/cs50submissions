@@ -13,7 +13,7 @@ def main():
                 elif len(line) == 0:
                     continue
                 counter += 1
-
+        print(counter)
     except FileNotFoundError:
         sys.exit("File does not exist")
 
