@@ -9,7 +9,7 @@ def main():
             for line in file:
                 line = line.rstrip()
                 print(line)
-                if line.startswith("#"):
+                if line.startswith("#") or line.startswith("'''") or line.startswith('"""'):
                     continue
                 elif len(line) == 0:
                     continue
