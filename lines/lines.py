@@ -18,7 +18,8 @@ def cma_check():
 def file_check():
     if sys.argv[1].endswith(".py"):
         try:
-            open
+            with open(sys.argv[1]) as file:
+                
 
 
         except FileNotFoundError:
