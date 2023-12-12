@@ -1,7 +1,8 @@
 import sys
 
 def main():
-
+    if cma_check() == True:
+        
 
 
 def cma_check():
