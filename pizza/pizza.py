@@ -1,4 +1,5 @@
-import tabulate, csv, sys
+import csv, sys
+from tabulate import tabulate
 
 def main():
     cma_check()
@@ -9,7 +10,7 @@ def main():
             reader = csv.DictReader(file)
             for row in reader:
                 menu.append({"Regular Pizza": row["Regular Pizza"], "Small": row["Small"], "Large": row["Large"]})
-            print(menu)
+            print(tabulate(menu), tablefmt="grid")
 
 
 
