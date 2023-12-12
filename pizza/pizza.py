@@ -8,8 +8,8 @@ def main():
         with open(sys.argv[1]) as file:
             reader = csv.DictReader(file)
             for row in reader:
-                menu.append({"name": row["name"], "house": row["house"], "home": row["home"]})
-                print(menu)
+                menu.append({"Regular Pizza": row["Regular Pizza"], "Small": row["Small"], "Large": row["Large"]})
+            print(menu)
 
 
 
