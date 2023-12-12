@@ -4,7 +4,11 @@ def main():
     cma_check()
     file_check()
     try:
+        menu = []
         with open(sys.argv[1]) as file:
+            reader = csv.reader(file)
+            for row in reader:
+                menu append
 
 
 
