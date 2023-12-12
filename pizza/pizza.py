@@ -9,8 +9,8 @@ def main():
         with open(sys.argv[1]) as file:
             reader = csv.DictReader(file)
             for row in reader:
-                menu.append({"Regular Pizza": row["Regular Pizza"], "Small": row["Small"], "Large": row["Large"]})
-            print(tabulate(menu, headers=["Regular Pizza", "Small", "Large"], tablefmt="grid"))
+                menu.append(row)
+            print(tabulate(menu, tablefmt="grid"))
 
 
 
