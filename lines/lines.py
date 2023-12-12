@@ -3,8 +3,12 @@ import sys
 def main():
     cma_check()
     file_check()
+    try:
+        with open(sys.argv[1]) as file:
 
 
+    except FileNotFoundError:
+        sys.exit("File does not exist")
 
 
 def cma_check():
@@ -17,13 +21,7 @@ def cma_check():
 
 def file_check():
     if sys.argv[1].endswith(".py"):
-        try:
-            with open(sys.argv[1]) as file:
-                
-
-
-        except FileNotFoundError:
-            sys.exit("File does not exist")
+        return
     else:
         sys.exit("Not a Python file")
 
