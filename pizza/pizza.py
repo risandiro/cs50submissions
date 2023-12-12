@@ -6,9 +6,9 @@ def main():
     try:
         menu = []
         with open(sys.argv[1]) as file:
-            reader = csv.reader(file)
+            reader = csv.DictReader(file)
             for row in reader:
-                menu append
+                menu.append()
 
 
 
