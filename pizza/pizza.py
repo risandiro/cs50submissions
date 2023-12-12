@@ -7,10 +7,10 @@ def main():
     try:
         menu = []
         with open(sys.argv[1]) as file:
-            reader = csv.DictReader(file)
+            reader = csv.reader(file)
             for row in reader:
                 menu.append(row)
-            print(tabulate(menu, tablefmt="grid"))
+            print(tabulate(menu, headers="firstrow", tablefmt="grid"))
 
 
 
