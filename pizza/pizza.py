@@ -6,8 +6,9 @@ def main():
     try:
         menu = []
         with open(sys.argv[1]) as file:
-            for line in file:
-                
+            reader = csv.DictReader(file)
+            
+
 
 
 
