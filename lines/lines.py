@@ -8,6 +8,7 @@ def main():
         with open(sys.argv[1]) as file:
             for line in file:
                 line = line.rstrip()
+                print(line)
                 if line.startswith("#"):
                     continue
                 elif len(line) == 0:
