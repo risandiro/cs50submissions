@@ -1,9 +1,15 @@
-import tabulate, csv
+import tabulate, csv, sys
 
 def main():
     cma_check()
     file_check()
+    try:
+        with open(sys.argv[1]) as file:
 
+
+
+    except FileNotFoundError:
+        sys.exit("File does not exist")
 
 
 def cma_check():
