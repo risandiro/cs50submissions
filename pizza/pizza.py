@@ -1,4 +1,4 @@
-import tabulate
+import tabulate, csv
 
 def main():
     cma_check()
