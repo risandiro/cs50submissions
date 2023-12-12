@@ -10,7 +10,7 @@ def main():
             reader = csv.DictReader(file)
             for row in reader:
                 menu.append({"Regular Pizza": row["Regular Pizza"], "Small": row["Small"], "Large": row["Large"]})
-            print(tabulate(menu), headers="firstrow", tablefmt="grid")
+            print(tabulate(menu, tablefmt="grid"))
 
 
 
