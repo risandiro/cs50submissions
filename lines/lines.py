@@ -7,7 +7,7 @@ def main():
     try:
         with open(sys.argv[1]) as file:
             for line in file:
-                line = line.lstrip()
+                line = line.strip()
                 if line.startswith("#"):
                     continue
                 elif len(line) == 0:
