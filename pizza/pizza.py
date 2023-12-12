@@ -12,11 +12,8 @@ def main():
                 menu.append(row)
             print(tabulate(menu, headers="firstrow", tablefmt="grid"))
 
-
-
     except FileNotFoundError:
         sys.exit("File does not exist")
-
 
 def cma_check():
     if len(sys.argv) == 2:
