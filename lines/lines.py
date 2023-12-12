@@ -9,7 +9,7 @@ def main():
                 line = line.rstrip()
                 if line.startswith("#"):
                     continue
-                elif line.
+                elif len(line)
 
 
     except FileNotFoundError:
