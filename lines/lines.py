@@ -3,14 +3,16 @@ import sys
 def main():
     cma_check()
     file_check()
+    counter = 0
     try:
         with open(sys.argv[1]) as file:
             for line in file:
                 line = line.rstrip()
                 if line.startswith("#"):
                     continue
-                elif len(line)
-
+                elif len(line) == 0:
+                    continue
+                counter += 1
 
     except FileNotFoundError:
         sys.exit("File does not exist")
