@@ -8,7 +8,6 @@ def main():
         menu = []
         with open(sys.argv[1]) as file:
             reader = csv.DictReader(file)
-            menu.append
             for row in reader:
                 menu.append(row)
             print(tabulate(menu, tablefmt="grid"))
