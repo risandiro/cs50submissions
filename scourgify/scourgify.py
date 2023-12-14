@@ -2,7 +2,7 @@ import sys, csv
 
 def main():
     cma_check()
-    data = []
+    data = {}
     try:
 
         with open(sys.argv[1]) as file:
