@@ -6,12 +6,12 @@ def main():
         with open(sys.argv[1]) as file:
             reader = csv.DictReader(file)
             with open(sys.argv[2], "a") as file_0:
-                writer = csv.DictWriter(file_0, fieldnames=["first name", "last name", "house"])
+                writer = csv.DictWriter(file_0, fieldnames=["first", "last", "house"])
                 writer.writeheader()
 
                 for row in reader:
                     last_name, first_name = row["name"].strip().split(",")
-                    writer.writerow({"first name": first_name, "last name": last_name, "house": row["house"]})
+                    writer.writerow({"first": first_name, "last": last_name, "house": row["house"]})
 
     except FileNotFoundError:
         sys.exit(f"Could not read {sys.argv[1]}")
