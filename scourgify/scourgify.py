@@ -2,6 +2,7 @@ import sys, csv
 
 def main():
     cma_check()
+    
     try:
 
         with open(sys.argv[1]) as file:
