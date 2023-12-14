@@ -5,7 +5,7 @@ def main():
     try:
         with open(sys.argv[1]) as file:
             reader = csv.DictReader(file)
-            with open(sys.argv[2], "w") as file_0:
+            with open(sys.argv[2], "a") as file_0:
                 writer = csv.DictWriter(file_0, fieldnames=["first name", "last name", "house"])
                 writer.writeheader()
 
