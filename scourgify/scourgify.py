@@ -4,8 +4,11 @@ def main():
     cma_check()
     try:
 
+        with open(sys.argv[1]) as file:
+            
+
     except FileNotFoundError:
-        sys.exit("could not re)
+        sys.exit(f"Could not read {sys.argv[1]}")
 
 
 def cma_check():
