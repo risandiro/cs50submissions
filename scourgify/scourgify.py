@@ -5,7 +5,7 @@ def main():
     try:
 
     except FileNotFoundError:
-        sys.exit()
+        sys.exit("could not re)
 
 
 def cma_check():
