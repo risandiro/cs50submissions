@@ -1,4 +1,4 @@
-import sys, os, Pillow
+import sys, os,Pillow
 
 def main():
     input_check()
@@ -10,11 +10,10 @@ def main():
 def input_check():
     ext = [".jpg", ".jpeg", "png"]
     if len(sys.argv) == 3:
-        if sys.argv[1].endswith(tuple(ext)):
-            if sys.argv[2].endswith(tuple(ext)):
-                _, ext1 = sys.argv[1].split(".")
-                _, ext2 = sys.argv[2].split(".")
-                if ext1 == ext2:
+        
+        root_ext1 = os.path.splitext(sys.argv[1])
+        root_ext2 = os.path.splitext(sys.argv[2])
+                if root_ext1[1] == root_ext2[1]:
                     return
 
                 else:
