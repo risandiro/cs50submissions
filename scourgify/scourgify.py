@@ -2,6 +2,10 @@ import sys
 
 def main():
     cma_check()
+    try:
+
+    except FileNotFoundError:
+        sys.exit()
 
 
 def cma_check():
