@@ -10,9 +10,11 @@ def main():
                 last_name, first_name = row["name"].strip().split(",")
                 data.append({"first name": first_name, "last name": last_name, "house": row["house"]})
 
-
     except FileNotFoundError:
         sys.exit(f"Could not read {sys.argv[1]}")
+
+    with open(sys.argv[2], "w") as file:
+        
 
 
 
