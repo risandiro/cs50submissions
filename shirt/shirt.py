@@ -6,9 +6,10 @@ def main():
 
 
 def input_check():
+    ext = [".jpg", ".jpeg", "png"]
     if len(sys.argv) == 3:
-        if sys.argv[1].endswith(tuple[".jpg", ".jpeg", ".png"]):
-            if sys.argv[2].endswith(tuple[".jpg", ".jpeg", ".png"]):
+        if sys.argv[1].endswith(tuple(ext)):
+            if sys.argv[2].endswith(tuple(ext)):
                 _, ext1 = sys.argv[1].split(".")
                 _, ext2 = sys.argv[2].split(".")
                 if ext1 == ext2:
