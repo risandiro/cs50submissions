@@ -9,6 +9,7 @@ def main():
             reader = csv.DictReader(file)
             for row in reader:
                 first_name, last_name = row["name"].strip().split(",")
+                data
 
 
     except FileNotFoundError:
