@@ -2,7 +2,7 @@ import sys, csv
 
 def main():
     cma_check()
-    data = {}
+    data = []
     try:
 
         with open(sys.argv[1]) as file:
@@ -10,6 +10,7 @@ def main():
             for row in reader:
                 first_name, last_name = row["name"].strip().split(",")
                 data.append({"first name": first_name, "last name": last_name, "house": row["house"]})
+                print(data)
 
 
     except FileNotFoundError:
