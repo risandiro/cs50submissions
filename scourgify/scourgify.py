@@ -1,11 +1,12 @@
-import sys
+import sys, csv
 
 def main():
     cma_check()
     try:
 
         with open(sys.argv[1]) as file:
-            
+            reader = csv.DictReader(file)
+
 
     except FileNotFoundError:
         sys.exit(f"Could not read {sys.argv[1]}")
