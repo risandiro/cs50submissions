@@ -18,13 +18,13 @@ def main():
 
 
 def cma_check():
-    if sys.argv == 3:
+    if len(sys.argv) == 3:
         return
-    elif sys.argv < 3:
+    elif len(sys.argv) < 3:
         sys.exit("Too few command-line arguments")
-    elif sys.argv > 3:
+    elif len(sys.argv) > 3:
         sys.exit("Too many command-line arguments")
 
 
-if __name__ == __"main"__:
+if __name__ == "__main__":
     main()
