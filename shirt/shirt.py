@@ -1,4 +1,4 @@
-import sys
+import sys, Pillow
 
 def main():
     input_check()
