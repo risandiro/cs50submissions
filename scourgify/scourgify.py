@@ -8,7 +8,7 @@ def main():
         with open(sys.argv[1]) as file:
             reader = csv.DictReader(file)
             for row in reader:
-                name, house = 
+                first_name, last_name = row["name"].strip().split(",")
 
 
     except FileNotFoundError:
