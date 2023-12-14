@@ -2,9 +2,12 @@ import sys, os
 
 def main():
     input_check()
+    try:
+        shirt =
 
 
-
+    except FileNotFoundError:
+        sys.exit("Input does not exist")
 
 
 def input_check():
