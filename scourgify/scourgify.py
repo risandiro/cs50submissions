@@ -9,7 +9,7 @@ def main():
             reader = csv.DictReader(file)
             for row in reader:
                 first_name, last_name = row["name"].strip().split(",")
-                data.append({"first name": first_name, "last name": last_name, "house": row[house]})
+                data.append({"first name": first_name, "last name": last_name, "house": row["house"]})
 
 
     except FileNotFoundError:
