@@ -13,8 +13,10 @@ def main():
     except FileNotFoundError:
         sys.exit(f"Could not read {sys.argv[1]}")
 
-    with open(sys.argv[2], "w") as file:
-        
+    with open(sys.argv[2], "a") as file:
+        writer = csv.writer(file)
+        writer.writerow()
+
 
 
 
