@@ -5,6 +5,8 @@ def main():
 
 
 
+
+
 def input_check():
     ext = [".jpg", ".jpeg", "png"]
     if len(sys.argv) == 3:
@@ -15,8 +17,8 @@ def input_check():
                 if ext1 == ext2:
                     return
 
-
-
+                else:
+                    sys.exit("Input and output have different extensions")
             else:
                 sys.exit("Invalid output")
         else:
@@ -25,8 +27,6 @@ def input_check():
         sys.exit("Too few command-line arguments")
     elif len(sys.argv) > 3:
         sys.exit("Too many command-line arguments")
-
-
 
 
 if __name__ == "__main__":
