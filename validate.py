@@ -8,5 +8,5 @@ username, domain = email.split("@")
 # if username and "." in domain: --> means --> if (username) and ("." in domain):
 
 import re
-
+# re.search(pattern #string)
 re.search("@", email):
