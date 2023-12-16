@@ -19,12 +19,16 @@ import re
     ^     matches the start of the string
     $     matches the end of the string just before the newline at the end of the string
 
-    []    set of characters
-    [^]   complementing the set '''
+    []    set of characters to allow
+    [^]   set of characters not to allow '''
+
+# re.search(pattern #string)
 
 # backslash before means literally a dot, not a dot from the list above
 # r" or raw string means to not interpret any backslashes as a escape sequance
-# re.search(pattern #string)
 re.search(r"^.+@.+\.edu$", email):
 
+# exclude "@" to both sides from the divider
 re.search(r"^[^@]+@[^@]+\.edu$", email):
+
+re.search(r"^[a-zA-Z0-9_]+@[a-zA-Z0-9_]+\.edu$", email):
