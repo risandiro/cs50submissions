@@ -9,7 +9,7 @@ def main():
 
 
     except FileNotFoundError:
-        sys.exit("Input does not exist"):
+        sys.exit("Input does not exist")
 
 
 def input_check():
