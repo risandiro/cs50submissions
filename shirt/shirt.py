@@ -4,11 +4,12 @@ from PIL import Image
 def main():
     input_check()
     try:
-        shirt =
+        with Image.open(sys.argv[1]) as im:
+            print(im)
 
 
     except FileNotFoundError:
-        sys.exit("Input does not exist")
+        sys.exit("Input does not exist"):
 
 
 def input_check():
