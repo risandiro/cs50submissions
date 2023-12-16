@@ -1,12 +1,14 @@
 import sys, os
-from pil import Image
+from PIL import Image
 
 def main():
     input_check()
     try:
+        image = Image.open(sys.argv[1])
         shirt = Image.open("shirt.png")
         size = shirt.size
-        photo.paste
+        print(size)
+        photo.paste(image, shirt)
         image.save("name")
 
 
