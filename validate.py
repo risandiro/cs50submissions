@@ -4,4 +4,4 @@
 
 username, domain = email.split("@")
 
-# if username: (anything except None and "")
+# if username: (  anything except None and "")
