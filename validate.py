@@ -16,5 +16,6 @@ import re
    {m}    m repetitions
    {m,n}  m-n repetitions '''
 
+# backslash before means literally a dot, not a dot from the list above
 # re.search(pattern #string)
 re.search("..*@.+\.edu ", email):
