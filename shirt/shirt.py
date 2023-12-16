@@ -1,10 +1,11 @@
 import sys, os
-from PIL import Image
+from pil import Image
 
 def main():
     input_check()
     try:
         image = Image.open(sys.argv[1])
+        ImageOps.fit
         image.save("name")
 
 
