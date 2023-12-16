@@ -4,8 +4,8 @@ from PIL import Image
 def main():
     input_check()
     try:
-        with Image.open(sys.argv[1]) as im:
-            print(im)
+        image = Image.open(sys.argv[1])
+        
 
 
     except FileNotFoundError:
