@@ -5,7 +5,7 @@ def main():
     input_check()
     try:
         image = Image.open(sys.argv[1])
-        
+        image.save
 
 
     except FileNotFoundError:
