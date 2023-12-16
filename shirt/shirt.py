@@ -1,4 +1,5 @@
 import sys, os
+from PIL import Image
 
 def main():
     input_check()
