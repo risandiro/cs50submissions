@@ -10,6 +10,7 @@ def main():
         image = Image.open(sys.argv[1])
         PIL.ImageOps.fit(image, size)
         image.paste(image, shirt)
+        Image.save(")
 
 
 
