@@ -4,13 +4,13 @@ from PIL import Image, ImageOps
 def main():
     input_check()
     try:
+        image = Image.open(sys.argv[1])
         shirt = Image.open("shirt.png")
         size = shirt.size
 
-        image = Image.open(sys.argv[1])
         image = ImageOps.fit(image, size)
-        
-        image.paste(image, shirt)
+        image.paste(image, mask=shirt)
+
         image.save(sys.argv[2])
 
 
