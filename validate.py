@@ -25,7 +25,7 @@ import re
     \d    decimal digit (0-9)
     \D    not a decimal digit
     \s    whitespace characters (space, tab)
-    \w    word character (alphanumeric and underscore)
+    \w    word character (upper and lower alphanumeric and underscore)
     \W    not a word character
 
     A|B   either A or B
