@@ -8,8 +8,8 @@ def main():
         shirt = Image.open("shirt.png")
         size = shirt.size
         print(size)
-        photo.paste(image, shirt)
-        image.save("name")
+        image.paste(image, shirt)
+        Image.save("name")
 
 
     except FileNotFoundError:
