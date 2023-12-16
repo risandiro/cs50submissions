@@ -9,7 +9,7 @@ def main():
         size = shirt.size
         print(size)
         image.paste(image, shirt)
-        Image.save("name")
+        image.save("name")
 
 
     except FileNotFoundError:
