@@ -6,8 +6,9 @@ def main():
     try:
         image = Image.open(sys.argv[1])
         shirt = Image.open("shirt.png")
-        size = shirt.size
+        PIL.ImageOps.fit()
         image.paste(image, shirt)
+
 
 
     except FileNotFoundError:
