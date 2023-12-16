@@ -31,4 +31,5 @@ re.search(r"^.+@.+\.edu$", email):
 # exclude "@" to both sides from the divider
 re.search(r"^[^@]+@[^@]+\.edu$", email):
 
+# include restricted version of characters
 re.search(r"^[a-zA-Z0-9_]+@[a-zA-Z0-9_]+\.edu$", email):
