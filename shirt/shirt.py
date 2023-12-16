@@ -9,7 +9,8 @@ def main():
 
         image = Image.open(sys.argv[1])
         image = ImageOps.fit(image, size)
-        image.paste(image, mask=shirt).save(sys.argv[2])
+        image.paste(image, mask=shirt)
+        image.save(sys.argv[2])
 
 
 
