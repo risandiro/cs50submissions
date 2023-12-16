@@ -14,7 +14,10 @@ import re
     +     1 or more repetitions
     ?     0 or 1 repetition
    {m}    m repetitions
-   {m,n}  m-n repetitions '''
+   {m,n}  m-n repetitions
+
+    ^     matches the start of the string
+    $     matches the end of the string just before the newline at the end of the string '''
 
 # backslash before means literally a dot, not a dot from the list above
 # r" or raw string means to not interpret any backslashes as a escape sequance
