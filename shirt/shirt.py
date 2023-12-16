@@ -4,8 +4,9 @@ from pil import Image
 def main():
     input_check()
     try:
-        image = Image.open(sys.argv[1])
-        ImageOps.fit
+        shirt = Image.open("shirt.png")
+        size = shirt.size
+        photo.paste
         image.save("name")
 
 
