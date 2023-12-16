@@ -7,6 +7,7 @@ def main():
         image = Image.open(sys.argv[1])
         shirt = Image.open("shirt.png")
         size = shirt.size
+        image.paste(image, shirt)
 
 
     except FileNotFoundError:
