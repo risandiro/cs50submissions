@@ -30,7 +30,7 @@ import re
 
 # re.search(pattern #string)
 
-# backslash before means literally a dot, not a dot from the list above
+# backslash before means literally
 # r" or raw string means to interpret any backslashes as a escape sequence
 re.search(r"^.+@.+\.edu$", email):
 
