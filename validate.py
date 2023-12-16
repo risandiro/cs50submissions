@@ -17,4 +17,4 @@ import re
    {m,n}  m-n repetitions '''
 
 # re.search(pattern #string)
-re.search("..*@.+.edu ", email):
+re.search("..*@.+\.edu ", email):
