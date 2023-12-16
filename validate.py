@@ -9,4 +9,4 @@ username, domain = email.split("@")
 
 import re
 
-re.search
+re.search("@", email):
