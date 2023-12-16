@@ -44,4 +44,7 @@ re.search(r"^[^@]+@[^@]+\.edu$", email):
 # include only alphanumeric and underscore
 re.search(r"^[a-zA-Z0-9_]+@[a-zA-Z0-9_]+\.edu$", email):
 re.search(r"^\w+@\w+\.edu$", email):
-# \w is expression for a word character (alphanumeric and underscore)
+
+# more options
+re.search(r"^\w+@\w+\.(com|edu|gov|net|org)$", email):
+
