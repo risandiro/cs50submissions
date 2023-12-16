@@ -17,5 +17,6 @@ import re
    {m,n}  m-n repetitions '''
 
 # backslash before means literally a dot, not a dot from the list above
+# r" string means to not interpret any backslashes as a escape sequance
 # re.search(pattern #string)
-re.search("..*@.+\.edu ", email):
+re.search(r"..*@.+\.edu ", email):
