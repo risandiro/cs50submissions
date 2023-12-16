@@ -26,7 +26,11 @@ import re
     \D    not a decimal digit
     \s    whitespace characters (space, tab)
     \w    word character (alphanumeric and underscore)
-    \W    not a word character '''
+    \W    not a word character
+
+    A|B   either A or B
+    (...) a group
+    (?:...) non-capturing version '''
 
 # re.search(pattern #string)
 
