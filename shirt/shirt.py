@@ -1,5 +1,5 @@
 import sys, os
-from PIL import Image
+from PIL import Image, ImageOps
 
 def main():
     input_check()
@@ -8,8 +8,8 @@ def main():
         size = shirt.size
 
         image = Image.open(sys.argv[1])
-        image.fit(image, size)
-        image.paste(image, shirt)
+        image = ImageOps.fit(image, size)
+        image = Image.paste(image, shirt)
         image.save(sys.argv[2])
 
 
