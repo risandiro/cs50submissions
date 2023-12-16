@@ -20,7 +20,13 @@ import re
     $     matches the end of the string just before the newline at the end of the string
 
     []    set of characters to allow
-    [^]   set of characters not to allow '''
+    [^]   set of characters not to allow
+
+    \d    decimal digit (0-9)
+    \D    not a decimal digit
+    \s    whitespace characters (space, tab)
+    \w    word character (alphanumeric and underscore)
+    \W    not a word character '''
 
 # re.search(pattern #string)
 
