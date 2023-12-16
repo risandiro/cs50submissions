@@ -9,11 +9,9 @@ def main():
         size = shirt.size
 
         image = ImageOps.fit(image, size)
-        image.paste(image, shirt)
+        image.paste(shirt, mask=shirt)
 
         image.save(sys.argv[2])
-
-
 
     except FileNotFoundError:
         sys.exit("Input does not exist")
