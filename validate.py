@@ -30,9 +30,13 @@ import re
 
     A|B   either A or B
     (...) a group
-    (?:...) non-capturing version '''
+    (?:...) non-capturing version
 
-# re.search(pattern #string)
+    re.IGNORECASE   case insensitively
+    re.MULTILINE
+    re.DOTALL '''
+
+# re.search(pattern #string #flag)
 
 # backslash before means literally
 # r" or raw string means to interpret any backslashes as a escape sequence
@@ -50,6 +54,6 @@ re.search(r"^\w+@\w+\.(com|edu|gov|net|org)$", email):
 
 # include space in two variations
 re.search(r"^(\w|\s)+@\w+\.(com|edu|gov|net|org)$", email):
-re.search(r"^[a-zA-Z0-9_ ]+@\w+\.(com|edu|gov|net|org)$", email):
+re.search(r"^[a-zA-Z0-9_ ]+@\w+\.(com|edu|gov|net|org)$", email, re.IGNORECASE):
 
 
