@@ -32,9 +32,9 @@ import re
     (...) a group
     (?:...) non-capturing version
 
-    re.IGNORECASE   case insensitively
-    re.MULTILINE
-    re.DOTALL '''
+    re.IGNORECASE   treat case insensitively
+    re.MULTILINE    when you want to match a multiple lines of input
+    re.DOTALL       to represent a dot as any character with a newline included '''
 
 # re.search(pattern #string #flag)
 
