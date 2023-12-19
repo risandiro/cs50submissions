@@ -5,7 +5,11 @@ def main():
     print(validate(input("IPv4 Address: ")))
 
 def validate(ip):
-    re.search
+    try:
+        
+
+    except ValueError:
+       return False
 
 
 
