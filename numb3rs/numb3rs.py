@@ -6,11 +6,13 @@ def main():
 
 def validate(ip):
     try:
-        a, b, c, d = ip.split(".")
-        a, b, c, d = int(a), int(b), int(c), int(d)
-        if 0 <= a <= 255 and 0 <= b <= 255 and 0 <= c <= 255 and 0 <= d <= 255:
-            return True
-        return False
+        try:
+            a, b, c, d = ip.split(".")
+            a, b, c, d = int(a), int(b), int(c), int(d)
+            if 0 <= a <= 255 and 0 <= b <= 255 and 0 <= c <= 255 and 0 <= d <= 255:
+                return True
+            return False
+        except 
     except ValueError:
        return False
 
