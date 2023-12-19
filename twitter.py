@@ -23,4 +23,4 @@ if matches := re.search(r"(?:https?://)?(?:www\.)?twitter\.com/[a-z0-9_]", url, 
     print(f"Username:", matches.group(1))
 
 # re.split() allows to split a string on multiple possible characters
-# re.
+# re.findall allows to search for multiple copies of the same pattern in different places in a string
