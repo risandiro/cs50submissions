@@ -7,4 +7,8 @@ def test_validate_range():
     assert validate("1.2.3.4") == True
 
 def test_validate_input():
-    assert validate(".1.2.3.4)
+    assert validate(".1.2.3.4") == False
+    assert validate("255.255.45") == False
+    assert validate("....") == False
+    assert validate("7.7.7.7.7") == False
+    
