@@ -11,6 +11,6 @@ username = url.removeprefix("https://twitter.com/")
 
 # re.sub(pattern, repl, string, count=0, flags=0)
 
-username = re.sub(r"https://twitter.com/", "", url)
+username = re.sub(r"^https://twitter.com/", "", url)
 
 print(username)
