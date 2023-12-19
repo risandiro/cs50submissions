@@ -6,7 +6,8 @@ def main():
 
 def validate(ip):
     try:
-        
+        a, b, c, d = ip.split(".")
+        return True
 
     except ValueError:
        return False
