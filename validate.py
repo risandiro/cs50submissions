@@ -57,6 +57,6 @@ re.search(r"^(\w|\s)+@\w+\.(com|edu|gov|net|org)$", email):
 re.search(r"^[a-zA-Z0-9_ ]+@\w+\.(com|edu|gov|net|org)$", email, re.IGNORECASE):
 
 # make optional argument
-re.search
+re.search(r"^\w+@(\w\.)?\w+\.edu$)
 
 
