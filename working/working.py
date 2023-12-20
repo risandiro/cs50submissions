@@ -10,9 +10,18 @@ def convert(s):
         first_ampm = matches.group(2)
         second_number = matches.group(3)
         second_ampm = matches.group(4)
+
         if ":" in first_number:
             f_h, f_m = first_number.split(":")
-            
+            if first_ampm == "PM":
+                f_h = int(f_h)
+                fh += 12
+                f_h = str(f_h)
+                first_number = f"{f_h}:{f_m}
+
+
+
+
 
 
     else:
