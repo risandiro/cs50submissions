@@ -2,11 +2,11 @@ import re
 import sys
 
 def main():
-    print(parse(input("HTML: ")))
+    print(parse(input("HTML: ").strip()))
 
 
 def parse(s):
-    re.search()
+    if matches := re.search(r")
 
 
 if __name__ == "__main__":
