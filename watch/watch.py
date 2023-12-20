@@ -7,7 +7,8 @@ def main():
 
 def parse(s):
     if matches := re.search(r"^<iframe .+ src=\"https?://(?:www.)?youtube.com/embed/([a-zA-Z0-9]+)\".+></iframe>$", s):
-        
+        return f"
+    return None
 
 if __name__ == "__main__":
     main()
