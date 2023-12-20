@@ -10,7 +10,9 @@ def convert(s):
         first_ampm = matches.group(2)
         second_number = matches.group(3)
         second_ampm = matches.group(4)
-        if first_ampm
+        if ":" in first_number:
+            f_h, f_m = first_number.split(":")
+            
 
 
     else:
