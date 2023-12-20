@@ -8,8 +8,11 @@ def convert(s):
     # if matches := re.search(r"^ (AM|PM) to  (AM|PM)$", s):
     if matches := re.search(r"^([0-9]{1,2}) (AM|PM) to ([0-9]{1,2}) (AM|PM)$", s):
         a, b, x, y = matches.groups()
-        print(a, b, x, y, sep="\n")
-        return True
-    return False
+        a, b, x, y = int(a), int(b), int(x), int(y)
+        if
+    else:
+        raise ValueError
+
+
 if __name__ == "__main__":
     main()
