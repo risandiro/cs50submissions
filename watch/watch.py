@@ -6,7 +6,7 @@ def main():
 
 
 def parse(s):
-    if matches := re.search(r".+ src=\"https?://(?:www.)?youtube.com/embed/.+\".+</iframe>$", s):
+    if matches := re.search(r"<iframe.+ src=\"https?://(?:www.)?youtube.com/embed/.+\".+></iframe>$", s):
         return True
     return False
 
