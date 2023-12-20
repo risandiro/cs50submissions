@@ -5,7 +5,8 @@ def main():
     print(convert(input("Hours: ").strip()))
 
 def convert(s):
-    if matches := re.search(r"^([0-9](:[0-6][0-9])?|(10|11))(:[0-6][0-9])?|12) (AM|PM) to ([0-9](:[0-6][0-9])?|(10|11))(:[0-6][0-9])?|12) (AM|PM)$", s):
+    # if matches := re.search(r"^ (AM|PM) to  (AM|PM)$", s):
+    if matches := re.search(r"^[0-9]{1-2} (AM/PM) to $", s):
         return True
     return False
 
