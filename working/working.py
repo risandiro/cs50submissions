@@ -6,7 +6,7 @@ def main():
 
 def convert(s):
     # if matches := re.search(r"^ (AM|PM) to  (AM|PM)$", s):
-    if matches := re.search(r"^[0-9]| $", s):
+    if matches := re.search(r"^([0-9]|10|11) $", s):
         return True
     else:
         raise ValueError
