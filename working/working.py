@@ -5,7 +5,7 @@ def main():
     print(convert(input("Hours: ").strip()))
 
 def convert(s):
-    if matches := re.search(r" to (?:[0-9]|(?:10|11|12)", s):
+    if matches := re.search(r".+ to .+", s):
         return True
     return False
 
