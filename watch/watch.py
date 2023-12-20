@@ -6,7 +6,7 @@ def main():
 
 
 def parse(s):
-    if matches := re.search(r")
+    if matches := re.search(r"/embed/[a-zA-Z0-9]+\"></iframe>$", s)
 
 
 if __name__ == "__main__":
