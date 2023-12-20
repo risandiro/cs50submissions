@@ -5,7 +5,7 @@ def main():
     print(convert(input("Hours: ").strip()))
 
 def convert(s):
-    if matches := re.search(r".+ to .+", s):
+    if matches := re.search(r".+ (AM|PM) to .+ (AM|PM)", s):
         return True
     return False
 
