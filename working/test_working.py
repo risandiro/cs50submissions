@@ -44,7 +44,10 @@ def test_invalid():
         convert("9 to 5")
         convert("9 PM to")
         convert("9 PM to ")
-                convert("9 PM to")
+        convert("to")
+        convert(" to ")
+        convert("")
+        convert()
 
 
 
