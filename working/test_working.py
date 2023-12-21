@@ -30,4 +30,7 @@ def test_invalid():
         convert("9 AM ui 11 AM")
         convert("9 AM TO 11 AM")
         convert("9 AM 11 AM")
+        convert()
+        convert("9 AM11 AM")
+
 
