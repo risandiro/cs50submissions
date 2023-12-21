@@ -13,13 +13,16 @@ def convert(s):
 
         if ":" in first_number:
             first_number, f_m = first_number.split(":")
-            if first_ampm == "PM":
-                first_number = int(f_h)
-                first_number += 12
-                first_number = str(f_h)
-                first_number = f"{first_number}:{f_m}"
-        return first_number
 
+        if first_ampm == "PM":
+            first_number = int(first_number)
+            first_number += 12
+            first_number = str(f_h)
+
+        if f_m:
+            return f"{first_number}:{f_m}"
+        else:
+            return first_number
 
 
 
