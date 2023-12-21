@@ -30,6 +30,7 @@ def convert(s):
             if first_number == 12:
                 first_number = str(first_number)
                 first_number = "00"
+                
 
 
         if f_m:
