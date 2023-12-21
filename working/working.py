@@ -23,6 +23,8 @@ def convert(s):
 
         if f_m:
             first_number = f"{first_number}:{f_m}"
+        else:
+            first_number = f"{first_number}:00"
 
 
         s_m = None
@@ -36,6 +38,8 @@ def convert(s):
 
         if s_m:
             second_number = f"{second_number}:{s_m}"
+        else:
+            second_number = f"{second_number}:00"
 
 
         return f"{first_number} to {second_number}"
