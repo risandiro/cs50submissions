@@ -5,7 +5,7 @@ def main():
     print(convert(input("Hours: ").strip()))
 
 def convert(s):
-    if matches := re.search(r"^((?:[1-9]|10|11)(?::[0-5][0-9])?|12(?::00)?) (AM|PM) to ((?:[1-9]|10|11)(?::[0-5][0-9])?|12(?::00)?) (AM|PM)", s):
+    if matches := re.search(r"^((?:[1-9]|10|11)(?::[0-5][0-9])?|12(?::00)?) (AM|PM) to ((?:[1-9]|10|11)(?::[0-5][0-9])?|12(?::00)?) (AM|PM)$", s):
         first_number = matches.group(1)
         first_ampm = matches.group(2)
         second_number = matches.group(3)
