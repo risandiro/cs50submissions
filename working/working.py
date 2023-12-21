@@ -20,19 +20,19 @@ def convert(s):
         if first_ampm == "PM":
             first_number += 12
 
+
         if first_number <= 10:
             first_number = str(first_number)
             first_number = f"0{first_number}"
         else:
             first_number = str(first_number)
 
+
         if first_ampm == "AM":
-            if first_number == 12:
-                first_number = str(first_number)
+            if first_number == "12":
                 first_number = "00"
 
-        if first_number == 24:
-            first_number = str(first_number)
+        elif first_number == "24":
             first_number = "12"
 
 
@@ -50,19 +50,19 @@ def convert(s):
         if second_ampm == "PM":
             second_number += 12
 
+
         if second_number <= 10:
             second_number = str(second_number)
             second_number = f"0{second_number}"
         else:
             second_number = str(second_number)
 
+
         if second_ampm == "AM":
-            if second_number == 12:
-                second_number = str(second_number)
+            if second_number == "12":
                 second_number = "00"
 
-        if second_number == 24:
-                second_number = str(second_number)
+        elif second_number == "24":
                 second_number = "12"
 
 
