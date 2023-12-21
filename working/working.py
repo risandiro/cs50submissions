@@ -21,6 +21,8 @@ def convert(s):
             first_number += 12
             first_number = str(first_number)
 
+        if first_number
+
         if f_m:
             first_number = f"{first_number}:{f_m}"
         else:
