@@ -12,12 +12,12 @@ def convert(s):
         second_ampm = matches.group(4)
 
         if ":" in first_number:
-            f_h, f_m = first_number.split(":")
+            first_number, f_m = first_number.split(":")
             if first_ampm == "PM":
-                f_h = int(f_h)
-                f_h += 12
-                f_h = str(f_h)
-                first_number = f"{f_h}:{f_m}"
+                first_number = int(f_h)
+                first_number += 12
+                first_number = str(f_h)
+                first_number = f"{first_number}:{f_m}"
         return first_number
 
 
