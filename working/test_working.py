@@ -1,6 +1,11 @@
 from working import convert
 import pytest
 
+def main():
+    test_normal()
+    test_abnormal()
+    test_invalid()
+
 def test_normal():
     assert convert("9 AM to 5 PM") == "09:00 to 17:00"
     assert convert("9:00 AM to 5 PM") == "09:00 to 17:00"
@@ -25,3 +30,8 @@ def test_invalid():
         convert("9 AM to  11 AM")
         convert("9 AM  to 11 AM")
         convert("9 AM to  11 AM")
+        convert("9 AM too 11 AM")
+
+
+if __name__ == "__main__":
+    main()
