@@ -10,8 +10,8 @@ def convert(s):
         first_ampm = matches.group(2)
         second_number = matches.group(3)
         second_ampm = matches.group(4)
-        f_m = None
 
+        f_m = None
         if ":" in first_number:
             first_number, f_m = first_number.split(":")
 
