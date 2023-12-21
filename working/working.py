@@ -30,7 +30,10 @@ def convert(s):
             if first_number == 12:
                 first_number = str(first_number)
                 first_number = "00"
-                
+        else:
+            if first_number == 24:
+                first_number = str(first_number)
+                first_number = "12"
 
 
         if f_m:
@@ -57,6 +60,10 @@ def convert(s):
             if second_number == 12:
                 second_number = str(second_number)
                 second_number = "00"
+        else:
+            if second_number == 24:
+                second_number = str(second_number)
+                second_number = "12"
 
 
         if s_m:
