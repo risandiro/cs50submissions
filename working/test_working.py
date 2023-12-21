@@ -37,3 +37,5 @@ def test_invalid():
         convert("9 AM to 11:52 SM")
         convert("11:47 PM .. 1 PM")
         convert("10:01 AM10:02 PM")
+        convert("4 AM ")
+
