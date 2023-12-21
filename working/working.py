@@ -29,7 +29,7 @@ def convert(s):
 
         s_m = None
         if ":" in second_number:
-            second_number, s_m = first_number.split(":")
+            second_number, s_m = second_number.split(":")
 
         if second_ampm == "PM":
             second_number = int(second_number)
