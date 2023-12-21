@@ -38,10 +38,16 @@ def convert(s):
         if ":" in second_number:
             second_number, s_m = second_number.split(":")
 
+        second_number = int(second_number)
         if second_ampm == "PM":
-            second_number = int(second_number)
             second_number += 12
+
+        if second_number <= 10:
             second_number = str(second_number)
+            second_number = f"0{second_number}"
+        else:
+            second_number = str(second_number)
+
 
         if s_m:
             second_number = f"{second_number}:{s_m}"
