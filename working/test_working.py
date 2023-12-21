@@ -12,12 +12,7 @@ def test_normal():
 
 def test_abnormal():
     with pytest.raises(ValueError):
-        convert("9:60 AM to 5:60 PM")
-        convert("12:01 AM to 12:00 PM")
-        convert("12:00 AM to 12:01 PM")
-        convert("13:00 AM to 12:00 PM")
-        convert("12:00 AM to 13:00 PM")
-        convert("9:60 AM - 9:60 PM")
+        convert("13 AM to 15 PM")
 
 
 
