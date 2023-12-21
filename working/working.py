@@ -17,7 +17,7 @@ def convert(s):
                 f_h = int(f_h)
                 fh += 12
                 f_h = str(f_h)
-                first_number = f"{f_h}:{f_m}
+                first_number = f"{f_h}:{f_m}"
         return first_number
 
 
