@@ -11,6 +11,7 @@ def convert(s):
         second_number = matches.group(3)
         second_ampm = matches.group(4)
 
+
         f_m = None
         if ":" in first_number:
             first_number, f_m = first_number.split(":")
@@ -21,13 +22,23 @@ def convert(s):
             first_number = str(first_number)
 
         if f_m:
-            return f"{first_number}:{f_m}"
-        else:
-            return first_number
+            first_number = f"{first_number}:{f_m}"
 
 
+        s_m = None
+        if ":" in second_number:
+            second_number, s_m = first_number.split(":")
+
+        if second_ampm == "PM":
+            second_number = int(second_number)
+            second_number += 12
+            second_number = str(second_number)
+
+        if s_m:
+            second_number = f"{second_number}:{s_m}"
 
 
+        return f"{first_number} to {second_number}"
 
     else:
         raise ValueError
