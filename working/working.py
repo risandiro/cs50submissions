@@ -17,7 +17,7 @@ def convert(s):
         if first_ampm == "PM":
             first_number = int(first_number)
             first_number += 12
-            first_number = str(f_h)
+            first_number = str(first_number)
 
         if f_m:
             return f"{first_number}:{f_m}"
