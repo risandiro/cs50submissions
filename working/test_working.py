@@ -17,6 +17,7 @@ def test_abnormal():
         convert("12:00 AM to 12:01 PM")
         convert("13:00 AM to 12:00 PM")
         convert("12:00 AM to 13:00 PM")
+        convert("9:60 AM - 9:60 PM")
 
 
 def test_invalid():
