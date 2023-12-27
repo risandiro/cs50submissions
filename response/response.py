@@ -5,7 +5,7 @@ def main():
 
 
 def validate(email):
-    
+    email_address = validators.email(email)
 
 
 if __name__ == "__main__":
