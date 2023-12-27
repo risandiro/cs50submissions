@@ -5,7 +5,7 @@ def main():
     print(count(input("Text: ")))
 
 def count(s):
-    re.findall( , s)
+    re.findall(r"\bum\b" , s)
 
 
 
