@@ -5,8 +5,8 @@ def main():
 
 
 def validate(email):
-    if validators.email(email) != True
-        return "Valid"
+    if validators.email(email) != True: return "Invalid"
+    return "Invalid"
 
 
 
