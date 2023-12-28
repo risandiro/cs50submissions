@@ -29,6 +29,7 @@ class Student:
 
 def main3():
     student = get_student3()
+    print(f"{student.name} from {student.house}")
 
 
 def get_student3():
