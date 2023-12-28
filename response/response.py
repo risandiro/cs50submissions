@@ -5,9 +5,9 @@ def main():
 
 
 def validate(email):
-    try:
-        return validators.email(email)
-    except ValidationError
+    if validators.email(email) != True
+        return "Valid"
+
 
 
 if __name__ == "__main__":
