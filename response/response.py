@@ -5,7 +5,10 @@ def main():
 
 
 def validate(email):
-    return validators.email(email)
+    try:
+        return validators.email(email)
+    except ValidationError
+
 
 if __name__ == "__main__":
     main()
