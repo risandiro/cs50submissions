@@ -1,6 +1,7 @@
+# class creates a custom data type, contains attributes
 class Student:
     ...
-    
+
 
 
 def main():
@@ -10,7 +11,11 @@ def main():
     print(f"{student['name']} from {student['house']}")
 
 def get_student():
-    return {"name": input("Name: "), "house": input("House: ")}
+    student = Student()
+    student.name = input("Name: ")
+    student.house = input("House: ")
+    return student
+    # return {"name": input("Name: "), "house": input("House: ")}
 
 # ---------------------------------------------
 
@@ -29,4 +34,4 @@ def get_student2():
 # ---------------------------------------------
 
 
-main2()
+main()
