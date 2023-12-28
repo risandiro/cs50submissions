@@ -29,6 +29,7 @@ def get_student2():
 class Student:
     # instance method called Dunder innit method
     def __init__(self, name, house):
+        # what we are doing is adding variables to objects
         self.name = name
         self.house = house
 
@@ -47,6 +48,8 @@ def get_student3():
     student.house = input("House: ") '''
     name = input("Name: ")
     house = input("House: ")
+    # we are treating Student as a function, passing in two values
+    # construct call, a call that is going to construct(instantiate) a student object for me
     student = Student(name, house)
     return student
 
