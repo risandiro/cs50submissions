@@ -1,14 +1,13 @@
+
 def main():
     student = get_student()
     print(f"{student['name']} from {student['house']}")
 
 def get_student():
-    student = {}
-    student["name"] = input("Name: ")
-    student["house"] = input("House: ")
-    return student # returns a dictionary
+    return {"name": input("Name: "), "house": input("House: ")}
 
 # ---------------------------------------------
+'''
 def main():
     student = get student()
     if student[0] == "Padma":
@@ -20,3 +19,6 @@ def get_student():
     house = input("House: ")
     # return (name, house) -> a tuple
     return [name, house] # returns a list
+'''
+
+main()
