@@ -27,7 +27,7 @@ def get_student2():
 # besides attributes and instance variables it can contain methods(functions)
 # with a class you get also a function, whose name is identical to the class name
 class Student:
-    ...
+    # instance method called Dunder innit method
 
 def main3():
     student = get_student3()
