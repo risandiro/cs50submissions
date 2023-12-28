@@ -8,5 +8,10 @@ def get_student():
     student = {}
     student["name"] = input("Name: ")
     student["house"] = input("House: ")
-    return student
+    # return student -> a dictionary
 
+def get_student():
+    name = input("Name: ")
+    house = input("House: ")
+    # return (name, house) -> a tuple
+    # return [name, house] -> a list
