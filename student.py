@@ -24,7 +24,7 @@ def get_student2():
 # ---------------------------------------------
 
 # class creates a custom data type, contains attributes
-# classes creates objects
+# classes creates objects/instances
 class Student:
     ...
 
