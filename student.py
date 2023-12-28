@@ -23,8 +23,7 @@ def get_student2():
 
 # ---------------------------------------------
 
-# class creates a custom data type, contains attributes
-# classes creates objects/instances
+# class creates a custom new data type, contains attributes
 class Student:
     ...
 
@@ -34,6 +33,7 @@ def main3():
 
 
 def get_student3():
+    # classes creates objects(instances), you create objects from classes
     student = Student()
     student.name = input("Name: ")
     student.house = input("House: ")
