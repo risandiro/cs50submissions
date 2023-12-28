@@ -29,13 +29,14 @@ class Student:
 
 def main3():
     student = get_student3()
+    # access attributes from the class
     print(f"{student.name} from {student.house}")
 
 
 def get_student3():
     # classes creates objects(instances), you create objects from classes
     student = Student()
-    # store attributes inside 
+    # store attributes inside of the class
     student.name = input("Name: ")
     student.house = input("House: ")
     return student
