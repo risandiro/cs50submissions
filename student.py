@@ -24,15 +24,15 @@ def get_student2():
 # ---------------------------------------------
 
 # class defines a custom new data type, contains attributes
+# besides attributes and instance variables it can contain methods(functions)
 # with a class you get also a function, whose name is identical to the class name
 class Student:
     ...
 
 def main3():
     student = get_student3()
-    # access attributes from the class
     # name and house are variables inside of an object whose type is Student
-    # more precisely name and house are attributes/instance variables
+    # more precisely name and house are instance variables
     print(f"{student.name} from {student.house}")
 
 
