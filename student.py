@@ -1,5 +1,6 @@
 def main():
-
+    student = get_student()
+    print(f"{student["name"]}")
 
 def get_student():
     student = {}
