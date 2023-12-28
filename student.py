@@ -29,7 +29,8 @@ class Student:
 
 def main3():
     student = get_student3()
-    # access attributes from the class
+    # access attributes(instance variables) from the class
+    # name and house are instance variables
     print(f"{student.name} from {student.house}")
 
 
