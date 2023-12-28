@@ -28,6 +28,7 @@ def get_student2():
 # with a class you get also a function, whose name is identical to the class name
 class Student:
     # instance method called Dunder innit method
+    # if we call Student as a function, this function is going to be called
     def __init__(self, name, house):
         # what we are doing is adding variables to objects
         self.name = name
