@@ -5,7 +5,7 @@ def main():
 
 
 def validate(email):
-    return validators.email(email)
+    return validators.email.(email)
 
 if __name__ == "__main__":
     main()
