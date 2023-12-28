@@ -35,6 +35,7 @@ def main3():
 def get_student3():
     # classes creates objects(instances), you create objects from classes
     student = Student()
+    # store attributes inside 
     student.name = input("Name: ")
     student.house = input("House: ")
     return student
