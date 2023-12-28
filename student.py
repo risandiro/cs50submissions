@@ -23,7 +23,7 @@ def get_student2():
 
 # ---------------------------------------------
 
-# class creates a custom new data type, contains attributes
+# class defines a custom new data type, contains attributes
 class Student:
     ...
 
