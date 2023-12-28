@@ -24,6 +24,7 @@ def get_student2():
 # ---------------------------------------------
 
 # class defines a custom new data type, contains attributes
+# with a class you get also a function, whose name is identical to the class name
 class Student:
     ...
 
