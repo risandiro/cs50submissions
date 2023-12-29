@@ -31,7 +31,7 @@ class Student:
     # if we call Student as a function, this function is going to be called
     # self gives to access to the currect object that has been created (name can be different)
     def __init__(self, name, house):
-        # what we are doing is adding variables to objects
+        # what we are doing is adding instance variables to objects
         self.name = name
         self.house = house
 
