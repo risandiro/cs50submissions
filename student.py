@@ -39,7 +39,7 @@ def main3():
     student = get_student3()
     # name and house are variables inside of an object whose type is Student
     # more precisely name and house are instance variables
-    print(f"{student.name} from {student.house}")
+    print(f"{student.name} from {student.houske}")
 
 
 def get_student3():
