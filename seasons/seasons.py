@@ -12,12 +12,11 @@ def get_date():
 
     try:
         prompt = input("Date of Birth: ").strip()
-        if matches := re.search(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}$", prompt):
-            
+        if not re.search(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}$", prompt): raise ValueError
+        year, month, day = prompt.split("-")
+        year, month, day = int(year), int(month), int(day)
 
-        else:
-            raise ValueError
-
+        if month > 12 or year > y or year
 
     except ValueError:
         sys.exit("Invalid date")
