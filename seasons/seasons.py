@@ -7,8 +7,8 @@ def main():
 
 def get_input():
     try:
-        date = input("Date of Birth: ")
-        year, month, day = date.split("-")
+        prompt = input("Date of Birth: ")
+        year, month, day = prompt.split("-")
 
     except ValueError:
         sys.exit("Invalid date")
