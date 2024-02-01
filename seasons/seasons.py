@@ -25,6 +25,14 @@ def get_date():
     except ValueError:
         sys.exit("Invalid date")
 
+def get_date():
+     try:
+        prompt = input("Date of Birth: ").strip()
+        if not re.search(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}$", prompt): sys.exit("Invalid date")
+        year, month, day = prompt.split("-")
+        return (year, month, day)
+
+
 def validate_date()
     today = str(date.today())
     y, m, d = today.split("-")
@@ -35,8 +43,7 @@ def validate_date()
     except ValueError:
         sys.exit("Invalid date")
 
-
-
+...
 
 if __name__ == "__main__":
     main()
