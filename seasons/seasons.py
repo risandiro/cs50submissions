@@ -2,8 +2,8 @@ import sys, re
 from datetime import date
 
 def main():
-    validated = validate(get_date())
-    yy, mm, dd = validated[0], validated[1], validated[2]
+    yy_mm_dd = validate(get_date())
+    yy, mm, dd = yy_mm_dd[0], yy_mm_dd[1], yy_mm_dd[2]
     
 
 
