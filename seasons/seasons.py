@@ -2,8 +2,11 @@ import sys, re
 from datetime import date
 
 def main():
-    x = get_date()
-    validate_date(x)
+    today = str(date.today())
+    y, m, d = today.split("-")
+    y, m, d = int(y), int(m), int(d)
+    validate_date(get_date())
+    
 
 def get_date():
      try:
@@ -12,10 +15,6 @@ def get_date():
         return (prompt)
 
 def validate_date(s):
-    today = str(date.today())
-    y, m, d = today.split("-")
-    y, m, d = int(y), int(m), int(d)
-
     try:
         year, month, day = s.split("-")
         year, month, day = int(year), int(month), int(day)
