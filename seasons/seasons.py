@@ -15,7 +15,7 @@ def get_date():
         if not re.search(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}$", prompt): raise ValueError
         year, month, day = prompt.split("-")
         year, month, day = int(year), int(month), int(day)
-        if 1 > year: raise ValueError
+        if year < 1 or year > y or month < 1 or month > 12 or day < 1 or day > 31: raise ValueError
 
     except ValueError:
         sys.exit("Invalid date")
