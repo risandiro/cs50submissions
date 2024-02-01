@@ -6,7 +6,7 @@ def main():
     y, m, d = today.split("-")
     y, m, d = int(y), int(m), int(d)
     validate_date(get_date())
-    
+
 
 def get_date():
      try:
@@ -23,10 +23,10 @@ def validate_date(s):
             if month > m: raise ValueError
             if month == m:
                 if day > d: raise ValueError
+        return [year, month, day]
     except ValueError:
         sys.exit("Invalid date")
 
-...
 
 if __name__ == "__main__":
     main()
