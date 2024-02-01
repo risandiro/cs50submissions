@@ -2,11 +2,9 @@ import sys, re
 from datetime import date
 
 def main():
-    today = str(date.today())
-    y, m, d = today.split("-")
-    y, m, d = int(y), int(m), int(d)
     validated = validate(get_date())
     yy, mm, dd = validated[0], validated[1], validated[2]
+    
 
 
 def get_date():
@@ -15,6 +13,9 @@ def get_date():
         return prompt
 
 def validate(s):
+    today = str(date.today())
+    y, m, d = today.split("-")
+    y, m, d = int(y), int(m), int(d)
     try:
         year, month, day = s.split("-")
         year, month, day = int(year), int(month), int(day)
@@ -24,6 +25,7 @@ def validate(s):
             if month == m:
                 if day > d: raise ValueError
         return [year, month, day]
+
     except ValueError:
         sys.exit("Invalid date")
 
