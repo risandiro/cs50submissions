@@ -10,9 +10,11 @@ def get_input():
         date = input("Date of Birth: ")
         year, month, day = date.split("-")
 
-
     except ValueError:
         sys.exit("Invalid date")
+
+    today = datetime.date.today
+    print(today)
 
 
 
