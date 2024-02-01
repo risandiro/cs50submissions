@@ -7,12 +7,12 @@ def main():
     y, m, d = today.split("-")
     y, m, d = int(y), int(m), int(d)
     '''
-    y, m, d = 2000, 1, 1
 
     prompt = get_date()
     validate(prompt)
-    year, month, day = prompt.split("-")
-    x = datetime.strptime(f"{year}/{month}/{day}", "%y/%m/%d")
+    x = datetime.strptime(prompt, r"%y-%m-%d")
+    y = datetime.strptime("2000-01-01", r"%y-%m-%d")
+    print(x-y)
 
 
 
