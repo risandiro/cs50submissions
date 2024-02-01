@@ -26,9 +26,14 @@ def get_date():
         sys.exit("Invalid date")
 
 def validate_date()
+    today = str(date.today())
+    y, m, d = today.split("-")
+    y, m, d = int(y), int(m), int(d)
 
+    try:
 
-
+    except ValueError:
+        sys.exit("Invalid date")
 
 
 
