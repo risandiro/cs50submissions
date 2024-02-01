@@ -11,9 +11,12 @@ def get_date():
     y, m, d = int(y), int(m), int(d)
 
     try:
-        prompt = input("Date of Birth: ")
+        prompt = input("Date of Birth: ").strip()
         if matches := re.search(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}$", prompt):
-            print(matches)
+            
+
+        else:
+            raise ValueError
 
 
     except ValueError:
