@@ -6,15 +6,15 @@ def main():
 
 
 def get_date():
-    today = date.today()
+    today = str(date.today())
     y, m, d = today.split("-")
-    y, m, d = int(x), int(y), int(z)
+    y, m, d = int(y), int(m), int(d)
 
     try:
         prompt = input("Date of Birth: ")
         year, month, day = prompt.split("-")
-        year, month, day = int(year), int(month), int(day)
-        if 
+        if len(year) == 4 and len(month) == 2 and len(day) == 2:
+            year, month, day = int(year), int(month), int(day)
 
 
     except ValueError:
