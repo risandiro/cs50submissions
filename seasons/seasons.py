@@ -1,5 +1,5 @@
-import sys, re, inflect
-from datetime import date
+import sys, re
+from datetime import date, datetime
 
 def main():
     '''
@@ -11,6 +11,7 @@ def main():
 
     yy_mm_dd = validate(get_date())
     yy, mm, dd = yy_mm_dd[0], yy_mm_dd[1], yy_mm_dd[2]
+    x = datetime.strptime(f"")
 
 
 
