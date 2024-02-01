@@ -2,19 +2,22 @@ import sys
 from datetime import date
 
 def main():
-    get_input()
+    get_date()
 
 
-def get_input():
+def get_date():
+    today = date.today()
+    
+
     try:
         prompt = input("Date of Birth: ")
         year, month, day = prompt.split("-")
+        year, month, day = int(year), int(month), int(day)
 
     except ValueError:
         sys.exit("Invalid date")
 
-    today = date.today()
-    print(today)
+
 
 
 
