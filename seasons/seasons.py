@@ -14,7 +14,8 @@ def get_date():
         prompt = input("Date of Birth: ")
         year, month, day = prompt.split("-")
         year, month, day = int(year), int(month), int(day)
-        if
+        if 
+
 
     except ValueError:
         sys.exit("Invalid date")
