@@ -5,13 +5,11 @@ def main():
     get_input()
 
 def get_input():
-    try:
-        date = input("Date of Birth: ")
-        day, month, year = date.split("-")
-        print(day)
-        
-    except ValueError:
-        sys.exit()
+    date = input("Date of Birth: ")
+    day, month, year = date.split("-")
+    print(day)
+
+
 
 
 
