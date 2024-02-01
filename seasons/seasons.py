@@ -4,10 +4,15 @@ from datetime import date
 def main():
     get_input()
 
+
 def get_input():
-    date = input("Date of Birth: ")
-    day, month, year = date.split("-")
-    print(day)
+    try:
+        date = input("Date of Birth: ")
+        day, month, year = date.split("-")
+
+
+    except ValueError:
+        sys.exit("Invalid date")
 
 
 
