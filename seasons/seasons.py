@@ -13,7 +13,7 @@ def get_input():
     except ValueError:
         sys.exit("Invalid date")
 
-    today = datetime.date.today
+    today = date.today()
     print(today)
 
 
