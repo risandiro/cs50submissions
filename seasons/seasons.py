@@ -3,6 +3,7 @@ from datetime import date
 
 def main():
     get_date()
+    validate_date()
 
 
 def get_date():
@@ -23,6 +24,8 @@ def get_date():
 
     except ValueError:
         sys.exit("Invalid date")
+
+def validate_date()
 
 
 
