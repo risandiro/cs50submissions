@@ -12,10 +12,6 @@ def main():
     yy_mm_dd = validate(get_date())
     yy, mm, dd = yy_mm_dd[0], yy_mm_dd[1], yy_mm_dd[2]
 
-    yir = (y - yy) * 525960
-    mont = (m - mm) * 43800
-    dej = (d - dd) * 1440
-    print(y - yy, m - mm, d - dd, yir + mont + dej)
 
 
 
