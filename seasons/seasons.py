@@ -2,10 +2,17 @@ import sys, re, inflect
 from datetime import date
 
 def main():
+    today = str(date.today())
+    y, m, d = today.split("-")
+    y, m, d = int(y), int(m), int(d)
+
     yy_mm_dd = validate(get_date())
     yy, mm, dd = yy_mm_dd[0], yy_mm_dd[1], yy_mm_dd[2]
-    yir = y - yy
-    print(yir)
+
+    yir = (y - yy) * 525960
+    mont = (m - mm) * 43800
+    dej = (d - dd) * 1440
+    print(yir + mont + dej)
 
 
 
