@@ -15,7 +15,7 @@ def main():
     yir = (y - yy) * 525960
     mont = (m - mm) * 43800
     dej = (d - dd) * 1440
-    print(yir + mont + dej)
+    print(y - yy, m - mm, d - dd, yir + mont + dej)
 
 
 
