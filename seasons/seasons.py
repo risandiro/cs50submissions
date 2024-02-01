@@ -5,16 +5,16 @@ def main():
     today = str(date.today())
     y, m, d = today.split("-")
     y, m, d = int(y), int(m), int(d)
-    validate_date(get_date())
+    validated = validate(get_date())
+    yy, mm, dd = validated[0], validated[1], validated[2]
 
 
 def get_date():
-     try:
         prompt = input("Date of Birth: ").strip()
         if not re.search(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}$", prompt): sys.exit("Invalid date")
-        return (prompt)
+        return prompt
 
-def validate_date(s):
+def validate(s):
     try:
         year, month, day = s.split("-")
         year, month, day = int(year), int(month), int(day)
