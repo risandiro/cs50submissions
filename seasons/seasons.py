@@ -8,7 +8,7 @@ def main():
 def get_input():
     try:
         date = input("Date of Birth: ")
-        day, month, year = date.split("-")
+        year, month, day = date.split("-")
 
 
     except ValueError:
