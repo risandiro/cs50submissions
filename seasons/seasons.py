@@ -16,6 +16,7 @@ def get_date():
         year, month, day = prompt.split("-")
         year, month, day = int(year), int(month), int(day)
         if year < 1 or year > y or month < 1 or month > 12 or day < 1 or day > 31: raise ValueError
+        if year == y: 
 
     except ValueError:
         sys.exit("Invalid date")
