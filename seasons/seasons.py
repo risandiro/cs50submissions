@@ -9,9 +9,10 @@ def main():
     '''
     y, m, d = 2000, 1, 1
 
-    yy_mm_dd = validate(get_date())
-    yy, mm, dd = yy_mm_dd[0], yy_mm_dd[1], yy_mm_dd[2]
-    x = datetime.strptime(f"")
+    prompt = get_date()
+    validate(prompt)
+    year, month, day = prompt.split("-")
+    x = datetime.strptime(f"{year}/{month}/{day}", "%y/%m/%d")
 
 
 
@@ -33,7 +34,6 @@ def validate(s):
             if month > m: raise ValueError
             if month == m:
                 if day > d: raise ValueError
-        return [year, month, day]
 
     except ValueError:
         sys.exit("Invalid date")
