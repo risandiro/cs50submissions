@@ -7,7 +7,7 @@ def main():
     y, m, d = today.split("-")
     y, m, d = int(y), int(m), int(d)
     '''
-    y, m, d = 1999, 1, 1
+    y, m, d = 2000, 1, 1
 
     yy_mm_dd = validate(get_date())
     yy, mm, dd = yy_mm_dd[0], yy_mm_dd[1], yy_mm_dd[2]
