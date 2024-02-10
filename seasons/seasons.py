@@ -10,8 +10,8 @@ def main():
 
 def validate(inp):
     current = str(date.today())
-    print(current)
-    yyyy = int(yyyy)
+    current = current.split("-", maxsplit=1)
+    yyyy = int(current[0])
 
     try:
         if re.search(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}$", inp):
