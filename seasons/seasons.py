@@ -1,11 +1,11 @@
-import sys, re
+import sys, re, inflect
 from datetime import date
 
 def main():
     user_input = input("Date of Brith: ")
     user_input = validate(user_input)
     user_input = minutes(user_input)
-    print(user_input)
+    print(time_to_words(user_input))
 
 
 def validate(inp):
@@ -39,6 +39,8 @@ def minutes(inp):
     current = date.today()
     time = current - inp
     return int(time.days)
+
+def time_to_words(inp):
 
 
 if __name__ == "__main__":
