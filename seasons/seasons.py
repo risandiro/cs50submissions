@@ -2,9 +2,10 @@ import sys, re
 from datetime import date
 
 def main():
-    current = date.today()
     user_input = input("Date of Brith: ")
     user_input = validate(user_input)
+    user_input = minutes(user_input)
+
     difference = current - user_input
     print(difference.days)
 
@@ -34,6 +35,11 @@ def validate(inp):
 
     except ValueError:
         sys.exit("Invalid date")
+
+
+def minutes(inp):
+    inp -
+
 
 
 if __name__ == "__main__":
