@@ -5,7 +5,8 @@ def main():
     user_input = input("Date of Brith: ")
     user_input = validate(user_input)
     user_input = minutes(user_input)
-    print(time_to_words(user_input))
+    user_input = time_to_words(user_input)
+    print(user_input, "minutes")
 
 
 def validate(inp):
