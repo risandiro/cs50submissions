@@ -10,13 +10,18 @@ def main():
 
 def validate(inp):
     current = date.today()
+    yyyy, mm, dd = current.split("-")
+
     try:
         if re.search(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}$", inp):
             year, month, day = inp.split("-")
-            if year
             year, month, day = int(year), int(month), int(day)
-            user_input = date(year, month, day)
-            return user_input
+            if year <= yyyy:
+                user_input = date(year, month, day)
+                return user_input
+
+            else:
+                raise ValueError
         else:
             raise ValueError
 
