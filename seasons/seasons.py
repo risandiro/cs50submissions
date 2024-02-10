@@ -6,7 +6,7 @@ def main():
     user_input = input("Date of Brith: ")
     user_input = validate(user_input)
     difference = current - user_input
-    print(time)
+    print(difference.days)
 
 
 def validate(inp):
