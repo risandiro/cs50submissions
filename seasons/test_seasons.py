@@ -9,4 +9,4 @@ def test_validate():
         validate("xx-xx-xx")
 
 def test_time_to_words():
-    assert time_to_words(1444) == ("One thousand, four hundred forty minutes")
+    assert time_to_words(1444) == ("One thousand, four hundred forty-four minutes")
