@@ -4,9 +4,8 @@ from datetime import date
 def main():
     user_input = input("Date of Brith: ")
     user_input = validate(user_input)
-    user_input = minutes(user_input)
-    print(time_to_words(user_input))
-
+    minutes = convert(user_input)
+    print(time_to_words(minutes))
 
 
 def validate(inp):
@@ -36,10 +35,11 @@ def validate(inp):
         sys.exit("Invalid date")
 
 
-def minutes(inp):
+def convert(inp):
     current = date.today()
     time = current - inp
     return int(time.days * 24 * 60)
+
 
 def time_to_words(inp):
     p = inflect.engine()
