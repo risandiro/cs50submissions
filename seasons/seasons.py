@@ -45,7 +45,8 @@ def time_to_words(inp):
     p = inflect.engine()
     words = p.number_to_words(inp)
     words = words.capitalize() + " minutes"
-    words = words.replace("and", None)
+
+    words = re.sub(" and", "", words)
     return words
 
 
