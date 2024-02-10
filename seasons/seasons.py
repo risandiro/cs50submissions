@@ -11,7 +11,7 @@ def main():
 def validate(inp):
     try:
         year, month, day = inp.split("-")
-        year, month, day =
+        year, month, day = int(year), int(month), int(day)
         user_input = date(year, month, day)
         return user_input
 
