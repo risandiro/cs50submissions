@@ -1,4 +1,4 @@
-from seasons import validate, convert, time_to_words
+from seasons import validate, time_to_words
 import pytest
 
 def test_validate():
@@ -8,9 +8,5 @@ def test_validate():
         validate("1111-11-40")
         validate("xx-xx-xx")
 
-def test_convert():
-    with pytest.raises(ValueError):
-        
-
 def test_time_to_words():
-
+    assert time_to_words(1444) == ("One thousand, four hundred forty minutes")
