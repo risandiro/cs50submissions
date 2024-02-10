@@ -5,9 +5,7 @@ def main():
     user_input = input("Date of Brith: ")
     user_input = validate(user_input)
     user_input = minutes(user_input)
-
-    difference = current - user_input
-    print(difference.days)
+    print(user_input)
 
 
 def validate(inp):
@@ -38,8 +36,9 @@ def validate(inp):
 
 
 def minutes(inp):
-    inp -
-
+    current = date.today()
+    time = current - inp
+    return int(time.days)
 
 
 if __name__ == "__main__":
