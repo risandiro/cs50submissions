@@ -10,7 +10,8 @@ def main():
 
 def validate(inp):
     current = str(date.today())
-    yyyy = current.split("-")
+    yyyy = current.split("-", maxsplit=1)
+    print(yyyy)
     yyyy = int(yyyy)
 
     try:
