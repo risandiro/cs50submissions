@@ -10,6 +10,7 @@ def test_validate():
 
 def test_convert():
     with pytest.raises(ValueError):
+        
 
 def test_time_to_words():
 
