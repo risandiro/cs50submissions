@@ -42,8 +42,7 @@ def minutes(inp):
 
 def time_to_words(inp):
     p = inflect.engine()
-    words = p.number_to_words()
-
+    return p.number_to_words(inp)
 
 
 if __name__ == "__main__":
