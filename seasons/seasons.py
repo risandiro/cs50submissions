@@ -5,7 +5,7 @@ def main():
     current = date.today()
     user_input = input("Date of Brith: ")
     user_input = validate(user_input)
-    time = current - user_input
+    difference = current - user_input
     print(time)
 
 
