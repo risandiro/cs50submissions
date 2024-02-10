@@ -17,12 +17,17 @@ def validate(inp):
         if re.search(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}$", inp):
             year, month, day = inp.split("-")
             year, month, day = int(year), int(month), int(day)
-            if year <= c_year:
-                user_input = date(year, month, day)
-                return user_input
 
-            else:
+            if year > c_year:
+                 raise ValueError
+            if year == c_year and month > c_month:
+                 raise ValueError
+            if year == c_year and month == c_month and day > c_day:
                 raise ValueError
+
+            user_input = date(year, month, day)
+            return user_input
+
         else:
             raise ValueError
 
