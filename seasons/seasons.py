@@ -39,7 +39,7 @@ def validate(inp):
 def minutes(inp):
     current = date.today()
     time = current - inp
-    return int(time.days)
+    return int(time.days * 24 * 60)
 
 def time_to_words(inp):
     p = inflect.engine()
