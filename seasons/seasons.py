@@ -11,8 +11,6 @@ def main():
 def validate(inp):
     current = str(date.today())
     print(current)
-    yyyy = current.split("-", maxsplit=1)
-    print(yyyy)
     yyyy = int(yyyy)
 
     try:
