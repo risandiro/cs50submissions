@@ -1,4 +1,4 @@
-import sys
+import sys, re
 from datetime import date
 
 def main():
@@ -9,7 +9,9 @@ def main():
 
 
 def validate(inp):
+
     try:
+        re.search(r"")
         year, month, day = inp.split("-")
         year, month, day = int(year), int(month), int(day)
         user_input = date(year, month, day)
