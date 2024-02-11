@@ -1,7 +1,7 @@
 class Jar:
     def __init__(self, capacity=12):
         if capacity < 0:
-            raise ValueError
+            raise ValueError("Capacity is too small")
         self._capacity = capacity
         self._size = 0
 
@@ -27,7 +27,7 @@ class Jar:
         return self._size
 
 
-
+'''
 jar = Jar(10)
 print(f"{jar.size} / {jar.capacity}")
 jar.deposit(5)
@@ -37,3 +37,4 @@ print(jar)
 jar.withdraw(6)
 print(jar)
 print(f"{jar.size} / {jar.capacity}")
+'''
