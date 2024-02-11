@@ -9,7 +9,7 @@ def test_init():
     assert jar.size == 0
 
     with pytest.raises(ValueError):
-        jar = Jar(x)
+        jar = Jar(-5)
 
 def test_str():
     jar = Jar()
