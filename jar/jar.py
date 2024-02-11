@@ -3,9 +3,9 @@ class Jar:
         if capacity < 0:
             raise ValueError("Wrong capacity")
         self.capacity = capacity
-        self.size = 0
+        self.size = 3
 
-    def ___str___(self):
+    def ___str__(self):
         return self.size * "🍪"
 
 '''
