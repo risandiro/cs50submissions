@@ -23,8 +23,9 @@ class Jar:
     @capacity.setter
     def capacity(self, capacity):
         if capacity < 0:
-            raise ValueError("Capacity is too small")
+            raise ValueError
         self.capacity = capacity
+
 
 
 jar = Jar()
