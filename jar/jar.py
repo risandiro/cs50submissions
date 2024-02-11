@@ -16,7 +16,7 @@ class Jar:
     def withdraw(self, n):
         if self.size < n:
             raise ValueError("Not enough cookies in the jar")
-        self.size = self.size - n
+        self._size = self.size - n
 
     @property
     def capacity(self):
@@ -24,13 +24,16 @@ class Jar:
 
     @property
     def size(self):
-        return size.self
+        return self._size
 
 
 
 jar = Jar(10)
+print(f"{jar.size} / {jar.capacity}")
 jar.deposit(5)
 print(jar)
-jar.withdraw(2)
+jar.deposit(3)
+print(jar)
+jar.withdraw(6)
 print(jar)
 print(f"{jar.size} / {jar.capacity}")
