@@ -27,14 +27,13 @@ class Jar:
         return self._size
 
 
-'''
-jar = Jar(10)
-print(f"{jar.size} / {jar.capacity}")
-jar.deposit(5)
-print(jar)
-jar.deposit(3)
-print(jar)
-jar.withdraw(6)
-print(jar)
-print(f"{jar.size} / {jar.capacity}")
-'''
+def main():
+    jar_fred = Jar(10)
+    print(f"{jar_fred.size} / {jar_fred.capacity}")
+    jar_fred.deposit(5)
+    print("+5", jar)
+    jar_fred.deposit(3)
+    print("+3", jar)
+    jar_fred.withdraw(6)
+    print("-6", jar)
+    print(f"{jar.size} / {jar.capacity}")
