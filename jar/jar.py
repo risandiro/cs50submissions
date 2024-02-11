@@ -1,10 +1,14 @@
 class Jar:
     def __init__(self, capacity=12):
-        if self.capacity
+        if capacity < 0:
+            raise ValueError("Wrong capacity")
+        self.capacity = capacity
+        self.size = 0
 
     def ___str___(self):
-        ...
+        return self.size * "🍪"
 
+'''
     def deposit(self, n):
         ...
 
@@ -16,5 +20,7 @@ class Jar:
 
     @property
     def size(self):
+'''
 
-
+jar = Jar()
+print(jar)
