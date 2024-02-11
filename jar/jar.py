@@ -1,5 +1,7 @@
 class Jar:
     def __init__(self, capacity=12):
+        if type(capacity) != int:
+            raise ValueError("Capacity must be an integer")
         if capacity < 0:
             raise ValueError("Capacity is too small")
         self._capacity = capacity
@@ -28,7 +30,7 @@ class Jar:
 
 
 def main():
-    jar_fred = Jar(9)
+    jar_fred = Jar("")
     print(f"{jar_fred.size} / {jar_fred.capacity}")
     jar_fred.deposit(5)
     print("+5", jar_fred)
