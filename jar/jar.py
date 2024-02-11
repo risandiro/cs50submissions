@@ -30,7 +30,7 @@ class Jar:
 
 
 def main():
-    jar_fred = Jar("")
+    jar_fred = Jar(10)
     print(f"{jar_fred.size} / {jar_fred.capacity}")
     jar_fred.deposit(5)
     print("+5", jar_fred)
