@@ -29,12 +29,5 @@ class Jar:
 
 jar = Jar()
 jar.capacity()
-jar.deposit(2)
-jar.size()
-jar.deposit(8)
-print(jar)
-jar.withdraw(5)
-print(jar)
-jar.withdraw(4)
-print(jar)
+
 
