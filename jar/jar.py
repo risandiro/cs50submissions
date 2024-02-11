@@ -2,7 +2,7 @@ class Jar:
     def __init__(self, capacity=12):
         if capacity < 0:
             raise ValueError
-        self.capacity = capacity
+        self._capacity = capacity
         self.size = 0
 
     def __str__(self):
