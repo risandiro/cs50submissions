@@ -1,6 +1,6 @@
 class Jar:
     def __init__(self, capacity=12):
-        ...
+        if self.capacity
 
     def ___str___(self):
         ...
