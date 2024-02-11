@@ -1,14 +1,15 @@
 from jar import Jar
 
 def test_init():
-    ...
+    jar = Jar(7)
+    assert capacity(jar) == 7
 
 def test_str():
     jar = Jar()
     assert str(jar) == ""
     jar.deposit(1)
     assert str(jar) ==  "🍪"
-    jar deposit(11)
+    jar.deposit(11)
     assert str(jar) ==  "🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪"
 
 def test_deposit():
