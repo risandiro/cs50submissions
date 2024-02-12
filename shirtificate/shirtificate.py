@@ -1,6 +1,6 @@
 from fpdf import FPDF
 
-class PDF():
+class Shirt():
     def __init__(self, name):
         self._pdf = FPDF(orientation="portrait", format="A4")
         self._pdf.add_page()
@@ -14,6 +14,6 @@ class PDF():
 
 
 name = input("Name: ")
-pdf = PDF(name)
+pdf = Shirt(name)
 pdf.save("shirtificate.pdf")
 
