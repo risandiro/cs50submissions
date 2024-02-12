@@ -10,7 +10,7 @@ class Shirt():
 
         self.shirt.set_font_size(25)
         self.shirt.set_text_color(255, 255, 255)
-        self.shirt.text(x=57.5, y= 120, text=f"{name} took CS50")
+        self.shirt.text(x=57.5, y= 130, text=f"{name} took CS50")
 
     def save(self, title):
         self.shirt.output(title)
