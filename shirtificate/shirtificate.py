@@ -1,4 +1,9 @@
-from fpdf import FPDF
+from fpdf import FPDF 
+
+class PDF():
+    def __init__(self, name):
+
+
 
 name = input("Name: ")
 pdf = PDF(name)
