@@ -8,17 +8,18 @@ class Shirt():
         self.shirt.cell(0, 40, "CS50 Shirtificate", align="C")
         self.shirt.image("../shirtificate/shirtificate.png", w=160, h=150, x=25, y=60)
 
-        self.shirt.set_font_size(40)
+        self.shirt.set_font_size(25)
         self.shirt.set_text_color(255, 255, 255)
-        self.shirt.text(x=42, y= 120, txt={name})
+        self.shirt.text(x=67.5, y= 120, text=f"{name} took CS50")
 
     def save(self, title):
         self.shirt.output(title)
 
 
+def main():
+    name = input("Name: ")
+    pdf = Shirt(name)
+    pdf.save("shirtificate.pdf")
 
-
-name = input("Name: ")
-pdf = Shirt(name)
-pdf.save("shirtificate.pdf")
-
+if __name__ == "__main__":
+    main()
