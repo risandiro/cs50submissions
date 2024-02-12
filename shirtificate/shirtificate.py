@@ -2,13 +2,13 @@ from fpdf import FPDF
 
 class Shirt():
     def __init__(self, name):
-        self._pdf = FPDF(orientation="portrait", format="A4")
-        self._pdf.add_page()
-        self._pdf.set_font("helvetica", "", 40)
-        self._pdf.cell(0, 60, "CS50 Shirtificate", align="C")
+        self.shirt = FPDF(orientation="portrait", format="A4")
+        self.shirt.add_page()
+        self.shirt.set_font("helvetica", "", 40)
+        self.shirt.cell(0, 60, "CS50 Shirtificate", align="C")
 
     def save(self, title):
-        self._pdf.output(title)
+        self.shirt.output(title)
 
 
 
