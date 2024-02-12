@@ -10,7 +10,7 @@ class Shirt():
 
         self.shirt.set_font_size(25)
         self.shirt.set_text_color(255, 255, 255)
-        self.shirt.cell(text=f"{name} took CS50", align="C")
+        self.shirt.multi_cell(w=self.shirt.epw, text=f"{name} took CS50", new_x="LEFT", fill=True, align="C")
         # self.shirt.text(x=57.5, y= 130, text=f"{name} took CS50")
 
     def save(self, title):
