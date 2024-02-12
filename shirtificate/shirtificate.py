@@ -1,7 +1,8 @@
-from fpdf import FPDF 
+from fpdf import FPDF
 
 class PDF():
     def __init__(self, name):
+        self._pdf = FPDF()
 
 
 
