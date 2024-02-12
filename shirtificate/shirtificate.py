@@ -9,7 +9,7 @@ class Shirt():
         self.shirt.image("../shirtificate/shirtificate.png", w=160, h=150, x=25, y=60)
 
         self.shirt.set_font_size(40)
-        self.shirt.set_color(255, 255, 255)
+        self.shirt.set_text_color(255, 255, 255)
         self.shirt.text(x=42, y= 120, txt={name})
 
     def save(self, title):
