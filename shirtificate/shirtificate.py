@@ -16,10 +16,6 @@ class Shirt():
         self.shirt.output(title)
 
 
-def main():
-    name = input("Name: ")
-    pdf = Shirt(name)
-    pdf.save("shirtificate.pdf")
-
-if __name__ == "__main__":
-    main()
+name = input("Name: ")
+pdf = Shirt(name)
+pdf.save("shirtificate.pdf")
