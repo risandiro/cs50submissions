@@ -1,8 +1,6 @@
-balance = 0
+def meow(n: int)
+    for _ in range(n):
+        print("meow")
 
-def main():
-    balance = 1
-    global balance
-    print(balance)
-
-main()
+number: int = input("Number: ")
+meow(number)
