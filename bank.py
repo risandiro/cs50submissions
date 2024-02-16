@@ -1,4 +1,4 @@
-def meow(n: int)
+def meow(n: int) -> None:
     for _ in range(n):
         print("meow")
 
