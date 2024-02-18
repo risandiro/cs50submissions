@@ -4,3 +4,12 @@ def meow(n: int) -> str:
 number: int = int(input("Number: "))
 meows: str = meow(number)
 print(meows, end="")
+
+
+
+"""
+Meow n times.
+
+:param n: Number of times to meow
+
+
