@@ -7,8 +7,8 @@ students = [
 
 gryffindor = [
 
-    # add student "name" value to this list, when you iterate over every key
-    # in "students" list, if "house" value 
-
+    # add students "name" value to this list, when you iterate over every dictionary
+    # in the list called students, if that dictionary has a key named "house" and
+    # it's value is "Gryffindor"
     student["name"] for student in students if student["house"] == "Gryffindor"
 ]
