@@ -10,7 +10,7 @@ def is_gryffindor(s):
 
 gryffindors = filter(is_gryffindor, students)
 
-sorted = []
+sort = []
 for gryffindor in sorted(gryffindors, key=lambda s: s["name"]):
-    sorted.append(gryffindor["name"])
-print (*sorted)
+    sort.append(gryffindor["name"])
+print (*sort, sep="\n")
