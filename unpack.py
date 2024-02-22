@@ -19,3 +19,9 @@ f(galleons=100, sickles=50, knuts=25)
 def print(*objects, sep=" ", end="\n", ...):
     for object in objects:
         ...
+
+def yell():
+    uppercased = []
+    for word in words:
+        uppercased.append(word.upper())
+    print(*uppercased)
