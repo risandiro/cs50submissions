@@ -9,4 +9,8 @@ def is_gryffindor(s):
     return s["house"] == "Gryffindor"
 
 gryffindors = filter(is_gryffindor, students)
-print(gryffindors["name"])
+
+sorted = []
+for gryffindor in sorted(gryffindors, key=lambda s: s["name"]):
+    sorted.append(gryffindor["name"])
+print (*sorted)
