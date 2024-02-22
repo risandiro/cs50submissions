@@ -25,3 +25,7 @@ def yell():
     for word in words:
         uppercased.append(word.upper())
     print(*uppercased)
+
+def yell(words):
+    uppercased = map(str.upper, words)
+    print(*uppercased)
