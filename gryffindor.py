@@ -5,10 +5,10 @@ students = [
     {"name": "Draco", "house": "Slytherin", "patronus": None}
 ]
 
-gryffindor = [
+def is_gryffindor(s):
+    return s["house"] == "Gryffindor"
 
-    # add students "name" value to this list, when you iterate over every dictionary
-    # in the list called students, if that dictionary has a key named "house" and
-    # it's value is "Gryffindor"
-    student["name"] for student in students if student["house"] == "Gryffindor"
-]
+gryffindors = filter(is_gryffindor, students)
+
+for gryffindor in gryffindors:
+	print(gryffindor["name"]
