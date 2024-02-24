@@ -20,3 +20,5 @@ gryffindors = [{"name": student, "house": "Gryffindor"} for student in students]
 # I want a list, inside of that list I want a dictionary with key "name",
 # containing a value of each iteration of the students list, and another
 # key "house", containing a fixed string "Gryffindor"
+
+gryffindors = {student: "Gryffindor" for student in students}
