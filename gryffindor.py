@@ -21,4 +21,7 @@ gryffindors = [{"name": student, "house": "Gryffindor"} for student in students]
 # containing a value of each iteration of the students list, and another
 # key "house", containing a fixed string "Gryffindor"
 
-gryffindors = {student: "Gryffindor" for student in students}
+students = ["Hermione", "Harry", "Ron"]
+
+for i, student in enumerate(students):
+    print(i + 1, student)
