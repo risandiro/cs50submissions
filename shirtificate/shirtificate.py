@@ -6,7 +6,7 @@ class Shirt():
         self.shirt.add_page()
         self.shirt.set_font("helvetica", "", 40)
         self.shirt.cell(0, 40, "CS50 Shirtificate", align="C", new_x="LMARGIN", new_y="NEXT")
-        self.shirt.image("../shirtificate/shirtificate.png", w=self.shirt.epw, y=60)
+        self.shirt.image("shirtificate.png", w=self.shirt.epw, y=60)
 
         self.shirt.set_font_size(25)
         self.shirt.set_text_color(255, 255, 255)
