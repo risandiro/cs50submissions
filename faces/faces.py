@@ -3,8 +3,7 @@ def main():
 
 def convert(s) -> str:
     value = str(s).replace(":)", "🙂")
-    value.replace(":(", "🙁")
-    return value
+    return value.replace(":(", "🙁")
 
 if __name__ == "__main__":
     main()
