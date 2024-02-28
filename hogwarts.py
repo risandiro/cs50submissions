@@ -1,26 +1,11 @@
-# a 'list' variable
-students = ["Hermione", "Harry", "Ron"]
+# 1 list filled with collection of 4 dictionaries, with 3 keys and 3 definitions in each one
+students = [
+    {"name": "Hermione", "house": "Gryffindor", "patronus": "Otter"},
+    {"name": "Harry", "house": "Gryffindor", "patronus": "Stag"},
+    {"name": "Ron", "house": "Gryffindor", "patronus": "Jack Russel terrier"},
+    {"name": "Draco", "house": "Slytherin", "patronus": None},
+    # 'None' represents the absense of a value
+]
 
-# python starts counting from 0, not from 1
-# print(students[0])
-
-# python automatically assigns the variable to be 0 in a 'for' loop
-# for student in students:
-#    print(student, end="\n")
-
-# command 'len' tells you the lenght of a list
-for i in range(len(students)):
-    print(i + 1, students[i])
-
-print("\n-----------------------\n")
-
-# a 'dictionary' variable
-students2 = {
-    "Hermione": "Gryffindor",
-    "Harry": "Gryffindor",
-    "Ron": "Gryffindor",
-    "Draco": "Slytherin",
-}
-
-for student in students2:
-    print(student, students2[student], sep=", ")
+for student in students:
+    print(student["name"], student["house"], student["patronus"], sep=", ")
