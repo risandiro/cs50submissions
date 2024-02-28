@@ -1,1 +1,2 @@
-print(input(str().replace(" ", "...")))
+prompt = input()
+print(str(prompt.replace(" ", "...")))
