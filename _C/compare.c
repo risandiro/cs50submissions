@@ -19,3 +19,6 @@ int main(void)
         printf("x is equal to y\n");
     }
 }
+
+// C generally tends to "trust" that the user has inputed a correct input and
+// therefore it makes C more vulnerable to hacking than other language
