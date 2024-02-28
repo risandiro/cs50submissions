@@ -1,5 +1,4 @@
-c = 300000000
 value = input("m: ")
-e = value * c
+e = int(value) * 300000000
 print(e)
 
