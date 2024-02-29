@@ -10,7 +10,7 @@ int main(void)
     {
         printf("Agreed.\n");
     }
-    else if (c =='n' || c == 'N') // single quotes should be used for a single character
+    else if (c == 'n' || c == 'N') // single quotes should be used for a single character
     {
         printf("Not agreed.\n");
     }
