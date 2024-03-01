@@ -1,4 +1,4 @@
-'''# move the last item in the list to the beginning
+# move the last item in the list to the beginning
 
 list = [1, 0, 2, 0, 4, 6]
 new_list = []
@@ -10,10 +10,4 @@ for item in list:
         new_list.append(item)
         i += 1
 
-print(new_list)'''
-
-
-def f(**kwargs):
-    print("Named:", kwargs)
-
-f(galleons=100, sickles=50, knuts=25)
+print(new_list)
