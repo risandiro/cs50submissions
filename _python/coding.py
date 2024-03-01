@@ -1,4 +1,4 @@
-'''# move the last item in the list to the beginning
+# move the last item in the list to the beginning
 
 list = [1, 0, 2, 0, 4, 6]
 new_list = []
@@ -11,12 +11,3 @@ for item in list:
         i += 1
 
 print(new_list)
-'''
-# filter(function, iterable)
-students = [{...}, {...}]
-new_list =filter(lambda s: s["house"] == "Gryffindor", students)
-
-sort = []
-for item in new_list:
-    sort.append(item["name"])
-print(*sort)
