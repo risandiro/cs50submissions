@@ -9,4 +9,8 @@ values = []
 for key, value in stocks.items():
     keys.append(key)
     values.append(value)
-print("Keys:", *keys, "Values:", *values, sep=", ")
+    
+print("Keys: ", end="")
+print(*keys, sep=", ")
+print("Values: ", end="")
+print(*values, sep=", ")
