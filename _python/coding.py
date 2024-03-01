@@ -13,6 +13,10 @@ for item in list:
 print(new_list)
 '''
 # filter(function, iterable)
-students = [{"name": "Harry", "house": "Gryffindor"}, {"name": "Draco", "house": "Slytherin"}]
-new_list = filter(lambda stud: stud["house"] == "Gryffindor", students)
-print(new_list)
+students = [{...}, {...}]
+new_list =filter(lambda s: s["house"] == "Gryffindor", students)
+
+sort = []
+for item in new_list:
+    sort.append(item["name"])
+print(*sort)
