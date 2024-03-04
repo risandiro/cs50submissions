@@ -32,12 +32,12 @@ class Jar:
 def main():
     jar_fred = Jar(10)
     print(f"{jar_fred.size} / {jar_fred.capacity}")
-    jar_fred.deposit(5)
-    print("+5", jar_fred)
+    jar_fred.deposit(1)
+    print("+1", jar_fred)
     jar_fred.deposit(3)
     print("+3", jar_fred)
-    jar_fred.withdraw(6)
-    print("-6", jar_fred)
+    jar_fred.withdraw(1)
+    print("-1", jar_fred)
     print(f"{jar_fred.size} / {jar_fred.capacity}")
 
 if __name__ == "__main__":
