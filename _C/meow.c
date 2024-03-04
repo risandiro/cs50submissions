@@ -1,17 +1,16 @@
 #include <stdio.h>
 
+void meow(int n);
+
 int main(void)
 {
-    int i = 0;
-    while (i < 3)
+    meow(10);
+}
+
+void meow(int n)
+{
+    for (int i = 0; i < n; i++)
     {
         printf("meow\n");
-        i++;
     }
-
-    printf("-----\n");
-
-    // if you have only one line of code in a loop, you can skip {}
-    for(int in = 0; in < 3; in++)
-        printf("meow\n");
 }
