@@ -12,7 +12,8 @@ int main(void)
     }
     while (cents < 0);
 
-    printf(calculate_coins(cents));
+    int sum = calculate_coins(cents);
+    printf("%d\n", sum);
 }
 
 int calculate_coins(int cents)
