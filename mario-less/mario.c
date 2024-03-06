@@ -14,8 +14,9 @@ int main(void)
 
 
     for (int i = n; i > 0; i--) {
+        int counter = 0
         for (int j = n; j > 0; j--) {
-            
+
             printf("#");
         }
         printf("\n");
