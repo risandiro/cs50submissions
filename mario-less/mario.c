@@ -15,7 +15,7 @@ int main(void)
 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
-            if (   > 0) {
+            if ((j + i) < n-1) {
                 printf(" ");
             }
             else {
@@ -29,8 +29,8 @@ int main(void)
 
 
 // n = 4
-// j=4, j=3, j=2, j=1
-    // i=4, i=3, i=2, i=1
+// j=1, j=2, j=3, j=4
+    // i=1, i=2, i=3, i=4
 
 //   #
 //  ##
@@ -38,4 +38,4 @@ int main(void)
 //####
 
 
-// 
+// (j + i) <= n - 1
