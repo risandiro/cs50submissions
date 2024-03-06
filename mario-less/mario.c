@@ -11,18 +11,15 @@ int main(void)
     while(n < 1);
 
 
-    for (int j = 0; j < n; j++) {
-        for (int i = 0; i < n; i++) {
+    for (int j = n; j > 0; j--) {
+        for (int i = n; i > 0; i--) {
             for (int k = j - 1; k > 0; k--) {
                 printf(" ");
-            }
-            for (int l = n - (j-1); l > 0; l--) {
-                printf("#");
-            }
+
         }
     }
 }
-
+}
 
 
 // n = 4
