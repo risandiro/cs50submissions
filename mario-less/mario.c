@@ -16,9 +16,13 @@ int main(void)
     {
         for (int j = 0; j < value; j++)
         {
-            printf(" ")
+            do
+            {
+                printf()
+            }
+            while (counter < 0);
         }
-        value--;
+        counter--;
     }
 }
 
