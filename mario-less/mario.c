@@ -12,9 +12,19 @@ int main(void)
 
 
     for (int j = n; j > 0; j--) {
-        printf(" ");
+        for (int k = j - 1; k > 0; k--) {
+            printf(" ");
+        }
+
+        for (int l = n - (j - 1); l > 0; l-- ) {
+            printf("#");
+        }
+
+
     }
+    printf("\n");
 }
+
 
 
 // n = 4
