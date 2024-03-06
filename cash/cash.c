@@ -16,5 +16,8 @@ int main(void)
 int calculate_coins(int cents)
 {
     int counter_quarters = 0
-    if (cents - 25)
+    while (cents - 25 >= 0)
+    {
+        
+    }
 }
