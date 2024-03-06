@@ -13,10 +13,15 @@ int main(void)
 
 
 
-    for (int i = n; i > 0; i--) {
-        int counter = 0
-        for (int j = n; j > 0; j--) {
-            
+    for (int i = 0; i < n; i++) {
+        int counter = 0;
+        for (int j = 0; j < n; j++) {
+            if (j- (i-1) < 0) {
+                printf("#");
+            }
+            else {
+                printf(" ");
+            }
 
         }
         printf("\n");
