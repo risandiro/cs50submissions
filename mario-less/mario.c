@@ -11,7 +11,6 @@ int main(void)
     while(height < 1);
 
 
-    int counter = height - 1;
     for (int j = 0; j < height; j++) {
         for (int i = 0; i < height; i++) {
             if (i + 1 < height) {
@@ -20,7 +19,6 @@ int main(void)
             } else {
                 printf("#");
             }
-            counter--;
         }
         printf("\n");
     }
