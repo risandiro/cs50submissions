@@ -3,7 +3,8 @@
 
 int main(void)
 {
-    char card[] = get_char("Number: ");
+    int card[18] = get_long("Numbers: ");
+
 }
 
 
