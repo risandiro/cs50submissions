@@ -10,18 +10,16 @@ int main(void)
     }
     while(n < 1);
 
+
+
+
     for (int i = n; i > 0; i--) {
         for (int j = n; j > 0; j--) {
-            if ( j > 1) {
-                printf(" ");
-            } else {
-                printf("#");
-            }
+            printf("#");
         }
         printf("\n");
     }
 }
-
 
 
 // n = 4
