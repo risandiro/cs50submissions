@@ -3,13 +3,7 @@
 
 int main(void)
 {
-    int card;
-    do
-    {
-        card = get_long("Change owed: ");
-    }
-    while ();
+    card = get_long("Number: ");
 
-    int sum = calculate_coins(cents);
-    printf("%d\n", sum);
+    
 }
