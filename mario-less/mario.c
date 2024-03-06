@@ -18,8 +18,8 @@ int main(void)
     }
 }
 
-void print_row(int spaces, int bricks) {
-
+void print_row(int spaces, int bricks)
+{
     for (int x = 0; x < spaces; x++)
     {
         printf(" ");
