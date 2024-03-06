@@ -4,6 +4,8 @@
 int main(void)
 {
     card = get_long("Number: ");
-
-    
+    if (invalid)
+    {}
 }
+
+int invalid
