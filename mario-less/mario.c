@@ -13,8 +13,14 @@ int main(void)
 
     int counter = height - 1;
     for (int i = 0; i < height; i++) {
-        
-    }
+        if (counter > 0) {
+            printf(" ");
 
+        } else {
+            printf("#");
+        }
+        counter--;
+    }
+    printf("\n");
 
 }
