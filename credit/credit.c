@@ -4,8 +4,17 @@
 int main(void)
 {
     card = get_long("Number: ");
-    if (invalid)
-    {}
+    card = test_invalid(card;)
+    if (card == "INVALID")
+    {
+        printf("INVALID");
+
+    } else {
+        
+    }
 }
 
-int invalid
+int test_invalid(text)
+{
+
+}
