@@ -3,19 +3,26 @@
 
 int main(void)
 {
-    int value;
+    int height;
     do
     {
-        value = get_int("Height: ");
+        height = get_int("Height: ");
     }
-    while(value < 1);
+    while(height < 1);
 
 
-    int counter = value - 1;
-    for (int i = 0; i < value; i++)
+    int counter = height - 1;
+    for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < value; j++)
+        for (int j = 0; j < height; j++)
         {
+            if (counter > 0) {
+                printf(" ");
+            }
+
+            else {
+                printf("#");
+            }
         }
         counter--;
     }
