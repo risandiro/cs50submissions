@@ -11,7 +11,7 @@ int main(void)
     while(height < 1);
 
 
-    int counter = height - 1;
+    int counter;
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < height; j++)
@@ -24,19 +24,7 @@ int main(void)
                 printf("#");
             }
         }
+        printf("\n");
         counter--;
     }
 }
-
-
-
-
-'''
-height = 5
-
-print 4x space 1x hash
-print 3x space 2x hash
-print 2x space 3x hash
-print 1x space 4x hash
-print 0x space 5x hash
-'''
