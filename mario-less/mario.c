@@ -12,19 +12,9 @@ int main(void)
 
 
     int counter = height - 1;
-    for (int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < height; j++)
-        {
-            if (counter > 0) {
-                printf(" ");
-            }
-
-            else {
-                printf("#");
-            }
-        }
-        printf("\n");
-        counter--;
+    for (int i = 0; i < height; i++) {
+        
     }
+
+
 }
