@@ -16,7 +16,7 @@ int main(void)
     {
         for (int j = 0; j < value; j++)
         {
-            printf("")
+            printf(" ")
         }
         value--;
     }
