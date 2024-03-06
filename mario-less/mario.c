@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    int height;
+    int n;
     do
     {
         n = get_int("Height: ");
@@ -13,10 +13,15 @@ int main(void)
 
     for (int j = 0; j < n; j++) {
         for (int i = 0; i < n; i++) {
-            
+            for (int k = j - 1; k > 0; k--) {
+                printf(" ");
+            }
+            for (int l = n - (j-1); l > 0; l--) {
+                printf("#");
+            }
+        }
     }
 }
-
 
 
 
