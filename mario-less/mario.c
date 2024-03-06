@@ -12,10 +12,8 @@ int main(void)
 
     for (int i = 0; i < value; i++)
     {
-        for(int j = 0; j < value; j++)
-        {
-            printf("#");
-        }
-        printf("\n");
+        
+
+
     }
 }
