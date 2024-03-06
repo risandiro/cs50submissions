@@ -15,7 +15,7 @@ int main(void)
 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
-            if (n - (j - i)  > 0) {
+            if (   > 0) {
                 printf(" ");
             }
             else {
@@ -37,7 +37,5 @@ int main(void)
 // ###
 //####
 
-// print j-1 (3) space + n - (j-1) hash (4 - 3 = 1) + \n
-// print j-1 (2) space + n - (j-1) hash (4 - 2 = 2) + \n
-// print j-1 (1) space + n - (j-1) hash (4 - 1 = 3) + \n
-// print j-1 (0) space + n - (j-1) hash (4 - 0 = 4) + \n
+
+// 
