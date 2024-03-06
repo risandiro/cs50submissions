@@ -10,12 +10,11 @@ int main(void)
     }
     while(value < 1);
 
+
+
     for (int i = 0; i < value; i++)
     {
-        for (int j = 0; j < value; j++)
-        {
-            printf(" ");
-        }
+        
 
 
     }
@@ -23,14 +22,13 @@ int main(void)
 
 
 
+
 '''
 height = 5
 
-print 4x space 1 x hash
+print 4x space 1x hash
 print 3x space 2x hash
 print 2x space 3x hash
 print 1x space 4x hash
-
-
-
+print 0x space 5x hash
 '''
