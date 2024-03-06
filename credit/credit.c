@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    long card = get_long("Number: ");
+    long card[] = get_long("Number: ");
     printf("%ld", card);
 }
 
