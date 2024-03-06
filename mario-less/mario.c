@@ -11,13 +11,14 @@ int main(void)
     while(value < 1);
 
 
-
+    int counter = value - 1;
     for (int i = 0; i < value; i++)
     {
         for (int j = 0; j < value; j++)
         {
-            
+            printf("")
         }
+        value--;
     }
 }
 
