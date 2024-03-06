@@ -11,13 +11,17 @@ int main(void)
         cents = get_int("Change owed: ");
     }
     while (cents < 0);
+
+    printf(calculate_coins(cents));
 }
 
 int calculate_coins(int cents)
 {
-    int counter_quarters = 0
+    int counter_quarters = 0;
     while (cents - 25 >= 0)
     {
-        
+        counter_quarters++;
+        cents = cents - 25;
     }
+    return counter_quarters;
 }
