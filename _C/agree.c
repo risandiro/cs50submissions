@@ -3,14 +3,13 @@
 
 int main(void)
 {
-    char c = get_char("Do you agree? "); // double quotes should be used for multiple characters
+    char c = get_char("Do you agree? ");
 
-    // || means 'or' operation, && means 'and' operation
     if (c == 'y' || c == 'Y')
     {
         printf("Agreed.\n");
     }
-    else if (c == 'n' || c == 'N') // single quotes should be used for a single character
+    else if (c == 'n' || c == 'N')
     {
         printf("Not agreed.\n");
     }

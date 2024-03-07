@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <cs50.h>
 
-int add(int a, int b);
-
 int main(void)
 {
     int x = get_int("x: ");
@@ -11,4 +9,3 @@ int main(void)
     float z = (float) x / (float) y;
     printf("%.5f\n", z);
 }
-
