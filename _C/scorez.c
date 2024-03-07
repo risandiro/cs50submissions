@@ -6,3 +6,5 @@ const int N = 3;
 
 // Prototype
 float average(int lenght, int array[]);
+
+int main(void)
