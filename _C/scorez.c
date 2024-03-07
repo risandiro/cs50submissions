@@ -20,7 +20,13 @@ int main(void)
     printf("Average: %f\n", average(N, scores));
 }
 
-float average(int lenght, int array[])
+float average(int length, int array[])
 {
-    
+    // Calculat average
+    int sum = 0;
+    for (int i = 0; i < length; i++)
+    {
+        sum += array[i];
+    }
+    return sum / (float) length;
 }
