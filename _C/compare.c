@@ -1,4 +1,4 @@
-#include <stdio.h> //standart input/output -> stdio
+#include <stdio.h>
 #include <cs50.h>
 
 int main(void)
