@@ -17,18 +17,18 @@ int main(void)
     scores[2] = get_int("Score: ");
     */
 
-    int repetitions = get_int("How many scores? ");
-    int scores[repetitions];
-    for (int i = 0; i < repetitions; i++)
+    int reps = get_int("How many scores? ");
+    int scores[reps];
+    for (int i = 0; i < reps; i++)
     {
         scores[i] = get_int("Score %i: ", i + 1);
     }
 
     int sum = 0;
-    for (int i = 0; i < reperitions; i++)
+    for (int i = 0; i < reps; i++)
     {
         sum = sum + scores[i];
     }
 
-    printf("Average: %f\n", (sum / repetitions);
+    printf("Average: %f\n", float(sum) / reps);
 }
