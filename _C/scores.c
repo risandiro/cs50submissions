@@ -17,8 +17,9 @@ int main(void)
     scores[2] = get_int("Score: ");
     */
 
-    int scores[3];
-    for (int i = 0; i < 3; i++)
+    int repetitions = get_int("How many scores? ");
+    int scores[repetitions];
+    for (int i = 0; i < repetitions; i++)
     {
         scores[i] = get_int("Score: ");
     }
