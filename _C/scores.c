@@ -30,5 +30,5 @@ int main(void)
         sum = sum + scores[i];
     }
 
-    printf("Average: %.2f\n", (float) sum / (float) reps);
+    printf("Average: %.2f\n",  sum / (float) reps);
 }
