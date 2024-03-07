@@ -21,7 +21,7 @@ int main(void)
     int scores[repetitions];
     for (int i = 0; i < repetitions; i++)
     {
-        scores[i] = get_int("Score: ");
+        scores[i] = get_int("Score %i: ", i + 1);
     }
 
     printf("Average: %f\n", (scores[0] + scores[1] + scores[2]) / 3.0);
