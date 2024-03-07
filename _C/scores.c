@@ -18,12 +18,13 @@ int main(void)
     */
 
     int repetitions = get_int("How many scores? ");
-    int scores[repetitions], sum;
+    int scores[repetitions];
     for (int i = 0; i < repetitions; i++)
     {
         scores[i] = get_int("Score %i: ", i + 1);
     }
 
+    int sum = 0;
     for (int i = 0; i < reperitions; i++)
     {
         sum = sum + scores[i];
