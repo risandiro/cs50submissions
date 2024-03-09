@@ -60,6 +60,8 @@ int compute_score(string word)
         // after that, we pair the number with the index in our array
         // indexes in the array represent the values aplhabetically
         // once we get the value of the letter we add it to a counter
+
+        //checking the case also doesn't assign value to non letters
     }
 
     return score;
