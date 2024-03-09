@@ -47,7 +47,8 @@ int compute_score(string word)
         if (isupper(word[i]))
         {
             // h is 8th char in the POINTS array
-            // 
+            // char h can be also interpreted as 104 in ASCII
+            // if we convert the first letter to be a we substract by 97
             score += POINTS[word[i] - 65];
         }
         else if (islower(word[i]))
