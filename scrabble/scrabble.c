@@ -43,18 +43,20 @@ int compute_score(string word)
     // do for as many times as the array is long
     for (int i = 0, len = strlen(word); i < len; i++)
     {
-        // if the [i] character in h
+        // if the [i] character in 'h'
         if (isupper(word[i]))
         {
-            // h is 8th char in the POINTS array
-            // char h can be also interpreted as 104 in ASCII
-            // if we convert the first letter to be a we substract by 97
             score += POINTS[word[i] - 65];
         }
         else if (islower(word[i]))
         {
             score += POINTS[word[i] - 97];
         }
+
+        // ASCII 'a' is at index 97
+        // in order to get it to index 0, we substract by 97
+        // from there on, it goes alphabetically until 'z'
+        // after that, we get index 
     }
 
     return score;
