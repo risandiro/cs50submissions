@@ -7,6 +7,7 @@
 int compute_score(string word);
 
 int POINTS[] = {
+    // A == 1; B == 3; C == 3; D == 2; E == 1...
     1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10
 };
 
@@ -56,7 +57,9 @@ int compute_score(string word)
         // ASCII 'a' is at index 97
         // in order to get it to index 0, we substract by 97
         // from there on, it goes alphabetically until 'z'
-        // after that, we get index 
+        // after that, we pair the number with the index in our array
+        // indexes in the array represent the values aplhabetically
+        // once we get the value of the letter we add it to a counter
     }
 
     return score;
