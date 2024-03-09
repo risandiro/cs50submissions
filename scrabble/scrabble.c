@@ -61,7 +61,9 @@ int compute_score(string word)
         // indexes in the array represent the values aplhabetically
         // once we get the value of the letter we add it to a counter
 
-        //checking the case also doesn't assign value to non letters
+        // we need to check for the case of letters, because uppercased
+        // letters use different indexes in the ASCII
+        // checking the case also doesn't add any value to any non letters
     }
 
     return score;
