@@ -43,7 +43,14 @@ int compute_score(string word)
     // do for as many times as the array is long
     for (int i = 0, len = strlen(word); i < len; i++)
     {
-        score += POINTS[word[i] - 32];
+        if (isupper(word[i]))
+        {
+            score += POINTS[word[i] - 65];
+        }
+        else if (islower(word[i]))
+        {
+            score += POINTS[word[i] - 97];
+        }
     }
 
     return score;
