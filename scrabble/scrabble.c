@@ -46,7 +46,8 @@ int compute_score(string word)
         // if the [i] character in h
         if (isupper(word[i]))
         {
-            // h is index 7 char in the array
+            // h is 8th char in the POINTS array
+            // 
             score += POINTS[word[i] - 65];
         }
         else if (islower(word[i]))
