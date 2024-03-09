@@ -12,11 +12,11 @@ int POINTS[] = {
 
 int main(void)
 {
-    string word1 = get_string("Player 1: ");
-    string word2 = get_string("Player 2: ");
+    string player1 = get_string("Player 1: ");
+    string player2 = get_string("Player 2: ");
 
-    int score1 = compute_score(word1);
-    int score2 = compute_score(word2);
+    int score1 = compute_score(player1);
+    int score2 = compute_score(player2);
 
     if (score1 > score2)
     {
@@ -43,8 +43,10 @@ int compute_score(string word)
     // do for as many times as the array is long
     for (int i = 0, len = strlen(word); i < len; i++)
     {
+        // if the [i] character in h
         if (isupper(word[i]))
         {
+            // h is index 7 char in the array
             score += POINTS[word[i] - 65];
         }
         else if (islower(word[i]))
