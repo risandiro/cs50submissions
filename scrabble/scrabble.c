@@ -38,5 +38,5 @@ int main(void)
 
 int compute_score(string word)
 {
-
+int score = 0;
 }
