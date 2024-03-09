@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <string.h>
 
-
 int compute_score(string word);
 
 // A == 1; B == 3; C == 3; D == 2; E == 1...
@@ -23,7 +22,7 @@ int main(void)
     }
     else if (score1 < score2)
     {
-         printf("Player 2 wins!");
+        printf("Player 2 wins!");
     }
     else
     {
