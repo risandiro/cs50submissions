@@ -8,7 +8,7 @@ int compute_score(string word);
 
 int POINTS[] = {
     1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10
-}
+};
 
 int main(void)
 {
@@ -40,8 +40,11 @@ int compute_score(string word)
 {
     int score = 0;
 
+    // do for as many times as the array is long
     for (int i = 0, len = strlen(word); i < len; i++)
     {
-        
+        score += POINTS[word[i] - 32];
     }
+
+    return score;
 }
