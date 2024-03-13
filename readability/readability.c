@@ -34,7 +34,8 @@ int main(void)
 
 int count_letters(string text)
 {
-
+    string array[100];
+    
 }
 
 int count_words(string text)
