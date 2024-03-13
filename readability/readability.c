@@ -12,9 +12,12 @@ int main(void)
 {
     string text = get_string("Text: ");
 
-    int L = count_letters(text);
+    int letters = count_letters(text);
     int words = count_words(text);
-    int S = count_sentances(text);
+    int sentances = count_sentances(text);
+
+    float L = letters / 100.00;
+    float S = sentances / 100.00;
 
     float index = 0.0588 * L - 0.296 * S - 15.8;
     index = round(index);
@@ -35,7 +38,7 @@ int main(void)
 
 int count_letters(string text)
 {
-
+    int counter
 }
 
 int count_words(string text)
@@ -44,9 +47,10 @@ int count_words(string text)
     for (int i = 0, len = strlen(text); i < len; i++)
     {
         if (text[i] == ' ' && text[i+1] != ' ')
-            count++
-        
+            counter++;
+
     }
+    return counter;
 }
 
 int count_sentances(string text)
