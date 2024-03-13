@@ -35,10 +35,10 @@ int compute_score(string word)
 {
     int score = 0;
 
-    // do for as many times as the array is long
+    // do for as many times as the string has characters
     for (int i = 0, len = strlen(word); i < len; i++)
     {
-        // if the [i] character in 'h'
+        // if the [i] character is uppercase or lowercase
         if (isupper(word[i]))
         {
             score += POINTS[word[i] - 65];
