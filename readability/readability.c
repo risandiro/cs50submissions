@@ -35,7 +35,7 @@ int main(void)
 
 int count_letters(string text)
 {
-    
+
 }
 
 int count_words(string text)
@@ -43,12 +43,8 @@ int count_words(string text)
     int counter = 0;
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-        if (i == " " || i == ".")
-        {
-            counter++;
-        }
+        
     }
-    return counter;
 }
 
 int count_sentances(string text)
