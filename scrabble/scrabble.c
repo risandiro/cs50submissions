@@ -57,7 +57,7 @@ int compute_score(string word)
 
         // we need to check for the case of letters, because uppercased
         // letters use different indexes in the ASCII
-        // checking the case also doesn't add any value to any non letters
+        // checking the case also doesn't add in any value, that isn't a letter
     }
 
     return score;
