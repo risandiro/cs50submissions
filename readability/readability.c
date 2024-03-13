@@ -16,7 +16,7 @@ int main(void)
     int words = count_words(text);
     int S = count_sentances(text);
 
-    int index = 0.0588 * L - 0.296 * S - 15.8;
+    float index = 0.0588 * L - 0.296 * S - 15.8;
 
     if (index >= 16)
     {
@@ -35,7 +35,7 @@ int main(void)
 int count_letters(string text)
 {
     string array[100];
-    
+
 }
 
 int count_words(string text)
