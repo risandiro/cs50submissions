@@ -16,8 +16,8 @@ int main(void)
     int words = count_words(text);
     int sentances = count_sentances(text);
 
-    float L = (float)letters / (float)words;
-    float S = (float)sentances / (float)words;
+    float L = (letters / words) * 100.00
+    float S = (words / sentances) * 100.00
 
     float index = 0.0588 * L - 0.296 * S - 15.8;
     int grade = round(index);
