@@ -39,7 +39,7 @@ int count_letters(string text)
     int counter = 1;
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-        if (i == " ")
+        if (i == " " or )
     }
 
 }
