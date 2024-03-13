@@ -4,6 +4,10 @@
 #include <stdio.h>
 #include <string.h>
 
+int count_letters(text);
+int count_words(text);
+int count_sentances(text);
+
 int main(void)
 {
     string text = get_string("Text: ");
@@ -24,6 +28,21 @@ int main(void)
     }
     else
     {
-        printf("Grade %i", );
+        printf("Grade %i", index);
     }
+}
+
+int count_letters(text)
+{
+
+}
+
+int count_words(text)
+{
+
+}
+
+int count_sentances(text)
+{
+    
 }
