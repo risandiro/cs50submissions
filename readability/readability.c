@@ -35,18 +35,20 @@ int main(void)
 
 int count_letters(string text)
 {
-    string array[100];
-    int counter = 1;
-    for (int i = 0, len = strlen(text); i < len; i++)
-    {
-        if (i == " " or )
-    }
-
+    
 }
 
 int count_words(string text)
 {
-
+    int counter = 0;
+    for (int i = 0, len = strlen(text); i < len; i++)
+    {
+        if (i == " " || i == ".")
+        {
+            counter++;
+        }
+    }
+    return counter;
 }
 
 int count_sentances(string text)
