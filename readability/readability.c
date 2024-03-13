@@ -67,6 +67,10 @@ int count_sentances(string text)
     {
         if (text[i] == '.' && text[i+1] != '.')
             counter++;
+        else if (text[i] == '?' && text[i+1] != '?')
+            counter++;
+        else if (text[i] == '!' && text[i+1] != '!')
+            counter++;
     }
     return counter;
 }
