@@ -32,17 +32,17 @@ int main(void)
     }
 }
 
-int count_letters(text)
+int count_letters(string text)
 {
 
 }
 
-int count_words(text)
+int count_words(string text)
 {
 
 }
 
-int count_sentances(text)
+int count_sentances(string text)
 {
-    
+
 }
