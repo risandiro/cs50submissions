@@ -20,19 +20,19 @@ int main(void)
     float S = (float)sentances / (float)words;
 
     float index = 0.0588 * L - 0.296 * S - 15.8;
-    index = round(index);
+    int grade = round(index);
 
-    if (index >= 16)
+    if (grade >= 16)
     {
         printf("Grade 16+");
     }
-    else if (index < 1)
+    else if (grade < 1)
     {
         printf("Before Grade 1");
     }
     else
     {
-        printf("Grade %i", index);
+        printf("Grade %i", grade);
     }
 }
 
@@ -63,10 +63,11 @@ int count_words(string text)
 
 int count_sentances(string text)
 {
-    int counter 0;
-    for (int = 0, len = strlen(text); i < len; i++)
+    int counter = 0;
+    for (int i = 0, len = strlen(text); i < len; i++)
     {
         if (text[i] == '.' && text[i+1] != '.')
             counter++;
     }
+    return counter;
 }
