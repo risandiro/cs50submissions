@@ -38,7 +38,11 @@ int main(void)
 
 int count_letters(string text)
 {
-    int counter
+    int counter = 0;
+    for (int i = 0, len = strlen(text); i < len; i++)
+    {
+        if text[i]
+    }
 }
 
 int count_words(string text)
