@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include <stdlib.h>
 
 int main(int argc, char *argv[])
 {
@@ -10,8 +11,7 @@ int main(int argc, char *argv[])
         return printf("Usage: ./caesar key\n");
     }
 
-    if (argv[1] == int &&)
-    {
-        return printf("juhuu");
-    }
+    int val;
+    val = atoi(argv[1]);
+    if (
 }
