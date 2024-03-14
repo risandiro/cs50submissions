@@ -1,5 +1,5 @@
-#include <ctype.h>
 #include <cs50.h>
+#include <ctype.h>
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
@@ -12,9 +12,9 @@ int main(void)
 {
     string text = get_string("Text: ");
 
-    int letters = count_letters(text);
-    int words = count_words(text);
-    int sentances = count_sentances(text);
+    float letters = count_letters(text);
+    float words = count_words(text);
+    float sentances = count_sentances(text);
 
     float L = letters / words * 100.00;
     float S = sentances / words * 100.00;
@@ -54,7 +54,7 @@ int count_words(string text)
     int counter = 1;
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-        if (text[i] == ' ' && text[i+1] != ' ')
+        if (text[i] == ' ' && text[i + 1] != ' ')
             counter++;
     }
     return counter;
@@ -65,11 +65,11 @@ int count_sentances(string text)
     int counter = 0;
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-        if (text[i] == '.' && text[i+1] != '.')
+        if (text[i] == '.' && text[i + 1] != '.')
             counter++;
-        else if (text[i] == '?' && text[i+1] != '?')
+        else if (text[i] == '?' && text[i + 1] != '?')
             counter++;
-        else if (text[i] == '!' && text[i+1] != '!')
+        else if (text[i] == '!' && text[i + 1] != '!')
             counter++;
     }
     return counter;

@@ -1,0 +1,17 @@
+#include <cs50.h>
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+
+int main(int argc, char* argv[])
+{
+    if (argc != 2)
+    {
+        return printf("Usage: ./caesar key\n");
+    }
+
+    if (isdigit(argv[1]) && argv[1] >= 0)
+    {
+        return printf("juhuu");
+    }
+}
