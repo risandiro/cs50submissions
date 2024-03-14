@@ -42,6 +42,13 @@ string ciphertext(string text)
     char ciphertext[len];
     for (int i = 0; i < len; i++)
     {
-        if (is)
+        if (isalpha(i))
+        {
+
+        }
+        else
+        {
+            ciphertext[i] = i;
+        }
     }
 }
