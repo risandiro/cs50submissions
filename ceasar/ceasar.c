@@ -47,7 +47,6 @@ string ciphertext(string text, int key)
             if(isupper(i))
             {
                 int index = i % 26;
-                index - 
             }
             else
             {
