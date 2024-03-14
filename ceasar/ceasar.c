@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
     {
         if (isalpha(plaintext[j]))
         {
-            printf("%i", (plaintext[j] - 97) % 26 + (key % 26));
+            printf("%i", ((plaintext[j] - 97) % 26 ) + (key % 26));
         }
         else
         {
