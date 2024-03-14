@@ -44,7 +44,10 @@ string ciphertext(string text)
     {
         if (isalpha(i))
         {
-
+            if(isupper(i))
+            {
+                
+            }
         }
         else
         {
