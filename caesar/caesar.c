@@ -1,8 +1,8 @@
 #include <cs50.h>
-#include <stdio.h>
 #include <ctype.h>
-#include <string.h>
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main(int argc, char *argv[])
 {
@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     for (int i = 0, len = strlen(argv[1]); i < len; i++)
     {
         if (isdigit(argv[1][i]))
-        ;
+            ;
         else
         {
             printf("Usage: ./caesar key\n");
