@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 string cipher_text(string text, int key)
 {
     int len = strlen(text);
-    char ciphertext[len];
+    string ciphertext = NULL;
     for (int i = 0; i < len; i++)
     {
         if (isalpha(i))
@@ -62,5 +62,5 @@ string cipher_text(string text, int key)
             ciphertext[i] = i;
         }
     }
-    return (string)ciphertext;
+    return ciphertext;
 }
