@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
     {
         if (isaplha(plaintext[j]))
         {
-            printf("%c", plaintext[j] + (key % 26));
+            printf("%c", (plaintext[j] % 26) + key);
         }
         else
         {
