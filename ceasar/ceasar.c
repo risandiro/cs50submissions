@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 
     for (int i = 0, len = strlen(argv[1]); i < len; i++)
     {
-        if (isdigit(i) != True)
+        if (isdigit(i) == False)
         {
             return printf("Usage: ./caesar key\n");
         }
@@ -23,8 +23,6 @@ int main(int argc, char *argv[])
     val = atoi(argv[1]);
     if (val < 0)
     {
-        
+        return printf("Usage: ./caesar key\n");
     }
-
-
 }
