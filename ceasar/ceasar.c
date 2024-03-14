@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
         }
         else
         {
-            printf("%c", plaintext[j] + (key % 26));
+            printf("%c", ((plaintext[j] - 65) % 26) + (key % 26)) + 65;
         }
     }
     printf("\n");
