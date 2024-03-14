@@ -30,5 +30,9 @@ int main(int argc, char *argv[])
 
     string plaintext = get_string("plaintext:  ");
 
+    for (int j = 0, len = strlen(argv[1]); j < len; j++)
+    {
+        printf("ciphertext: %c", plaintext[j] + key);
+    }
 }
 
