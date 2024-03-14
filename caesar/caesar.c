@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     if (argc != 2)
     {
         printf("Usage: ./caesar key\n");
-        return;
+        return 1;
     }
 
     for (int i = 0, len = strlen(argv[1]); i < len; i++)
@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
         else
         {
             printf("Usage: ./caesar key\n");
-            return;
+            return 1;
         }
     }
 
@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
     if (key < 0)
     {
         printf("Usage: ./caesar key\n");
-        return;
+        return 1;
     }
 
     string plaintext = get_string("plaintext:  ");
