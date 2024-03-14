@@ -35,11 +35,11 @@ int main(int argc, char *argv[])
     {
         if (isaplha(plaintext[j]))
         {
-            printf("%c", plaintext[j]
+            printf("%c", plaintext[j] - 97
         }
         else
         {
-            printf("%c", (plaintext[j] - 97)
+            printf("choj do pici")
         }
     }
     printf("\n");
