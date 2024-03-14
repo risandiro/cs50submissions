@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
             return printf("Usage: ./caesar key\n");
         }
     }
-
+    
     int val;
     val = atoi(argv[1]);
     if (val < 0)
