@@ -21,5 +21,10 @@ int main(int argc, char *argv[])
 
     int val;
     val = atoi(argv[1]);
-    if (
+    if (val < 0)
+    {
+        
+    }
+
+
 }
