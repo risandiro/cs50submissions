@@ -15,10 +15,14 @@ int main(int argc, char *argv[])
     {
         if (isdigit(i))
         {
+            
+        }
+        else
+        {
             return printf("Usage: ./caesar key\n");
         }
     }
-    
+
     int val;
     val = atoi(argv[1]);
     if (val < 0)
