@@ -4,9 +4,6 @@
 #include <string.h>
 #include <stdlib.h>
 
-string cipher_text(string text, int key);
-
-
 int main(int argc, char *argv[])
 {
     if (argc != 2)
@@ -24,43 +21,14 @@ int main(int argc, char *argv[])
         }
     }
 
-    int val;
-    val = atoi(argv[1]);
-    if (val < 0)
+    int key;
+    key = atoi(argv[1]);
+    if (key < 0)
     {
         return printf("Usage: ./caesar key\n");
     }
 
-    string user_input = get_string("plaintext:  ");
-    string user_output = cipher_text(user_input, val);
-    printf("ciphertext: %s", user_output);
+    string plaintext = get_string("plaintext:  ");
+
 }
 
-string cipher_text(string text, int key)
-{
-    int len = strlen(text);
-    string ciphertext = "";
-    for (int i = 0; i < len; i++)
-    {
-        if (isalpha(text[i]))
-        {
-            if(isupper(text[i]))
-            {
-                int index = text[i] % 26;
-                char convert = text[i] - 66 + index;
-                strcat(ciphertext, &text[i]);
-            }
-            else
-            {
-                int index = text[i] % 26;
-                char convert = text[i] - 98 + index;
-                strcat(ciphertext, &text[i]);
-            }
-        }
-        else
-        {
-            strcat(ciphertext, &text[i]);
-        }
-    }
-    return ciphertext;
-}
