@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 
 string ciphertext(string text)
 {
-    char ciphertext = 
+    char ciphertext[];
     for (int i = 0, len = strlen(text); i < len i++)
     {
 
