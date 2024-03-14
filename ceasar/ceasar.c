@@ -28,6 +28,6 @@ int main(int argc, char *argv[])
         return printf("Usage: ./caesar key\n");
     }
 
-    string user_input = get_string("plaintext:  ")
-    string user_output =
+    string user_input = get_string("plaintext:  ");
+    string user_output = ciphertext(user_input);
 }
