@@ -4,6 +4,9 @@
 #include <string.h>
 #include <stdlib.h>
 
+string ciphertext(string text);
+
+
 int main(int argc, char *argv[])
 {
     if (argc != 2)
@@ -33,4 +36,7 @@ int main(int argc, char *argv[])
     printf("%s", user_output);
 }
 
+string ciphertext(string text)
+{
 
+}
