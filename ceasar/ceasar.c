@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
         }
         else
         {
-            printf("%c", (plaintext[j] + key)
+            printf("%c", (plaintext[j] - 97)
         }
     }
     printf("\n");
