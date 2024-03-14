@@ -33,6 +33,7 @@ int main(int argc, char *argv[])
 
     for (int j = 0, len = strlen(plaintext); j < len; j++)
     {
+        
         printf("%c", plaintext[j] + key);
     }
     printf("\n");
