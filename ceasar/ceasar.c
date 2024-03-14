@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 
     string user_input = get_string("plaintext:  ");
     string user_output = cipher_text(user_input, val);
-    printf("%s", user_output);
+    printf("ciphertext:  %s", user_output);
 }
 
 string cipher_text(string text, int key)
