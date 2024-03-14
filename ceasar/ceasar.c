@@ -27,4 +27,6 @@ int main(int argc, char *argv[])
     {
         return printf("Usage: ./caesar key\n");
     }
+
+    string user_input = get_string("plaintext:  ")
 }
