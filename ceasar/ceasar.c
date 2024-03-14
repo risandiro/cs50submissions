@@ -33,9 +33,13 @@ int main(int argc, char *argv[])
 
     for (int j = 0, len = strlen(plaintext); j < len; j++)
     {
-        if (isalpha(plaintext[j]))
+        if (islower(plaintext[j]))
         {
             printf("%c", ((plaintext[j] - 97 + (key % 26)) % 26) + 97);
+        }
+        else if (isupper(plaintext[j]))
+        {
+            printf("%c", ((plaintext[j] - 65 + (key % 26)) % 26) + 65);
         }
         else
         {
