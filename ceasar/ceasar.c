@@ -33,13 +33,13 @@ int main(int argc, char *argv[])
 
     for (int j = 0, len = strlen(plaintext); j < len; j++)
     {
-        if (isaplha(plaintext[j]))
+        if (isalpha(plaintext[j]))
         {
-            printf("%c", plaintext[j] - 97
+            printf("%c", plaintext[j] + (key % 26));
         }
         else
         {
-            printf("choj do pici")
+            printf("choj do pici");
         }
     }
     printf("\n");
