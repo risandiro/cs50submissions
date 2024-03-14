@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
         }
         else
         {
-            printf("choj do pici");
+            printf("%c", plaintext[j]);
         }
     }
     printf("\n");
