@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
     printf("%s", user_output);
 }
 
-string ciphertext(string text)
+string ciphertext(string text, int key)
 {
     int len = strlen(text);
     char ciphertext[len];
@@ -46,7 +46,11 @@ string ciphertext(string text)
         {
             if(isupper(i))
             {
-                
+                i % 26
+            }
+            else
+            {
+
             }
         }
         else
