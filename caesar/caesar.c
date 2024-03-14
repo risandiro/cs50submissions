@@ -8,7 +8,8 @@ int main(int argc, char *argv[])
 {
     if (argc != 2)
     {
-        return printf("Usage: ./caesar key\n");
+        printf("Usage: ./caesar key\n");
+        return;
     }
 
     for (int i = 0, len = strlen(argv[1]); i < len; i++)
@@ -17,7 +18,8 @@ int main(int argc, char *argv[])
         ;
         else
         {
-            return printf("Usage: ./caesar key\n");
+            printf("Usage: ./caesar key\n");
+            return;
         }
     }
 
@@ -25,7 +27,8 @@ int main(int argc, char *argv[])
     key = atoi(argv[1]);
     if (key < 0)
     {
-        return printf("Usage: ./caesar key\n");
+        printf("Usage: ./caesar key\n");
+        return;
     }
 
     string plaintext = get_string("plaintext:  ");
