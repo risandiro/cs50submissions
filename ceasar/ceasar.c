@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
     {
         if (isalpha(plaintext[j]))
         {
-            printf("%c", plaintext[j] - 97);
+            printf("%i", plaintext[j] - 97);
         }
         else
         {
