@@ -47,10 +47,14 @@ string ciphertext(string text, int key)
             if(isupper(i))
             {
                 int index = i % 26;
+                char convert = i - 66 + index;
+                ciphertext[i] = convert;
             }
             else
             {
-
+                int index = i % 26;
+                char convert = i - 98 + index;
+                ciphertext[i] = convert;
             }
         }
         else
@@ -58,4 +62,5 @@ string ciphertext(string text, int key)
             ciphertext[i] = i;
         }
     }
+    return ciphertext;
 }
