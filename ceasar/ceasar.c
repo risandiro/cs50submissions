@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
         return printf("Usage: ./caesar key\n");
     }
 
-    if (isdigit(argv[1]) && argv[1] >= 0)
+    if (argv[1] == int)
     {
         return printf("juhuu");
     }
