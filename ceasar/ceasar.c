@@ -52,8 +52,8 @@ string cipher_text(string text, int key)
             }
             else
             {
-                int index = i % 26;
-                char convert = i - 98 + index;
+                int index = text[i] % 26;
+                char convert = text[i] - 98 + index;
                 strcat(ciphertext, &text[i]);
             }
         }
