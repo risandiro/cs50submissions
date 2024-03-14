@@ -39,27 +39,27 @@ int main(int argc, char *argv[])
 string cipher_text(string text, int key)
 {
     int len = strlen(text);
-    string ciphertext = NULL;
+    string ciphertext;
     for (int i = 0; i < len; i++)
     {
-        if (isalpha(i))
+        if (isalpha(text[i]))
         {
-            if(isupper(i))
+            if(isupper(text[i]))
             {
-                int index = i % 26;
-                char convert = i - 66 + index;
-                ciphertext[i] = convert;
+                int index = text[i] % 26;
+                char convert = text[i] - 66 + index;
+                strncat(cipthertext, text[i], 1);
             }
             else
             {
                 int index = i % 26;
                 char convert = i - 98 + index;
-                ciphertext[i] = convert;
+                strncat(cipthertext, text[i], 1);
             }
         }
         else
         {
-            ciphertext[i] = i;
+            strncat(ciphertext, text[i], 1);
         }
     }
     return ciphertext;
