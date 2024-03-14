@@ -38,9 +38,10 @@ int main(int argc, char *argv[])
 
 string ciphertext(string text)
 {
-    char ciphertext[];
-    for (int i = 0, len = strlen(text); i < len i++)
+    int len = strlen(text);
+    char ciphertext[len];
+    for (int i = 0; i < len; i++)
     {
-
+        
     }
 }
