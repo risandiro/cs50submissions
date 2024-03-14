@@ -4,7 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-string ciphertext(string text);
+string cipher_text(string text, int key);
 
 
 int main(int argc, char *argv[])
@@ -32,11 +32,11 @@ int main(int argc, char *argv[])
     }
 
     string user_input = get_string("plaintext:  ");
-    string user_output = ciphertext(user_input, val);
+    string user_output = cipher_text(user_input, val);
     printf("%s", user_output);
 }
 
-string ciphertext(string text, int key)
+string cipher_text(string text, int key)
 {
     int len = strlen(text);
     char ciphertext[len];
@@ -62,5 +62,5 @@ string ciphertext(string text, int key)
             ciphertext[i] = i;
         }
     }
-    return ciphertext;
+    return (string)ciphertext;
 }
