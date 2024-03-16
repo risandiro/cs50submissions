@@ -10,7 +10,7 @@ int main(void)
     long int number = get_long("Number: ");
     int len = longlen(number);
 
-    if (len |= 13; 14; 16)
+    if (len == 13 || len == 15 || len == 16)
     {
         printf("INVALID");
         return 1;
