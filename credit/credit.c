@@ -11,12 +11,22 @@ int main(void)
     int len = longlen(number);
 
     char strnum[len];
-    int sum = 0;
+    int sum_mul = 0, sum_nor = 0;
     sprintf(strnum, "%li", number);
+
     for (int i = len - 2; i >= 0; i-=2)
     {
-        sum += srtnum[i] * 2;
+        sum_mul += strnum[i] * 2;
     }
+
+    for (int i = len - 1; i >= 0; i-=2)
+    {
+        sum_nor += strnum[i];
+    }
+
+    printf("multiplied: %i", sum_mul);
+    printf("\nnormal: %i\n", sum_nor);
+
 }
 
 int longlen(long num)
