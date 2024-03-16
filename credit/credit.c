@@ -12,7 +12,7 @@ int main(void)
 
     char strnum[len + 1];
     sprintf(strnum, "%li", number);
-    for (int i = len - 1; i >= 0; i-=2)
+    for (int i = len - 2; i >= 0; i-=2)
     {
         printf("%c", strnum[i]);
     }
