@@ -6,8 +6,15 @@
 int main(void)
 {
     number = get_long("Number: ");
+    len = strlen(number);
 
-    for (int i = 0, len = strlen(number); i < len; i++)
+    if (len != 13 || 15 || 16)
+    {
+        printf("INVALID");
+        return 1;
+    }
+
+    for (int i = 0; i < len; i++)
     {
         
     }
