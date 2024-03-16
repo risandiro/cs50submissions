@@ -10,7 +10,7 @@ int main(void)
     long int number = get_long("Number: ");
     int len = longlen(number);
 
-    char strnum[20];
+    char strnum[len + 1];
     sprintf(strnum, "%li", number);
     for (int i = len - 1; i >= 0; i-=2)
     {
