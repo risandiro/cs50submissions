@@ -10,12 +10,6 @@ int main(void)
     long int number = get_long("Number: ");
     int len = longlen(number);
 
-    if (len =! 13 || 15 || 16)
-    {
-        printf("INVALID");
-        return 1;
-    }
-
     string strnum = NULL;
     sprintf(strnum, "%li", number);
     for (int i = len - 1; i >= 0; i-=2)
