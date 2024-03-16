@@ -16,6 +16,7 @@ int main(void)
     {
         printf("%c", strnum[i]);
     }
+    printf("\n");
 }
 
 int longlen(long num)
