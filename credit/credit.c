@@ -10,13 +10,13 @@ int main(void)
     long int number = get_long("Number: ");
     int len = longlen(number);
 
-    char strnum[len + 1];
+    char strnum[len];
+    int sum = 0;
     sprintf(strnum, "%li", number);
     for (int i = len - 2; i >= 0; i-=2)
     {
-        printf("%c", strnum[i]);
+        sum += srtnum[i] * 2;
     }
-    printf("\n");
 }
 
 int longlen(long num)
