@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
-int long_length(long number);
+int longlen(long number);
 
 int main(void)
 {
@@ -28,7 +28,15 @@ int longlen(long num)
 
     if(num < 0)
     {
-        return -1
+        printf("longlen error - negative number");
+        return -1;
     }
 
+    while (num > 10)
+    {
+        num /= 10;
+        digits++;
+    }
+
+    return digits;
 }
