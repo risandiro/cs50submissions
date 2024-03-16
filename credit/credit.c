@@ -16,6 +16,7 @@ int main(void)
         return 1;
     }
 
+    string strnum =
     for (int i = len - 1; i >= 0; i-=2)
     {
         printf("%li", number[i]);
