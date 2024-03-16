@@ -7,5 +7,8 @@ int main(void)
 {
     number = get_long("Number: ");
 
-    
+    for (int i = 0, len = strlen(number); i < len; i++)
+    {
+        
+    }
 }
