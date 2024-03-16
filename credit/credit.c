@@ -18,7 +18,7 @@ int main(void)
 
     for (int i = len - 1; i >= 0; i-=2)
     {
-        printf("%ld", number[i]);
+        printf("%li", number[i]);
     }
 }
 
