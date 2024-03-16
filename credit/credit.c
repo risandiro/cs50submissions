@@ -3,6 +3,8 @@
 #include <string.h>
 #include <ctype.h>
 
+int long_length(long number);
+
 int main(void)
 {
     long number = get_long("Number: ");
@@ -18,4 +20,15 @@ int main(void)
     {
         printf("%i", number[i]);
     }
+}
+
+int longlen(long num)
+{
+    int digits = 1;
+
+    if(num < 0)
+    {
+        return -1
+    }
+
 }
