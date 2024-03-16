@@ -6,4 +6,6 @@
 int main(void)
 {
     number = get_long("Number: ");
+
+    
 }
