@@ -16,7 +16,7 @@ int main(void)
         return 1;
     }
 
-    string strnum;
+    string strnum = NULL;
     sprintf(strnum, "%li", number);
     for (int i = len - 1; i >= 0; i-=2)
     {
