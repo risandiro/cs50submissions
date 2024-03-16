@@ -7,10 +7,10 @@ int longlen(long number);
 
 int main(void)
 {
-    long number = get_long("Number: ");
+    long int number = get_long("Number: ");
     int len = longlen(number);
 
-    if (len != 13 || 15 || 16)
+    if (len != 13 || len != 15 || len != 16)
     {
         printf("INVALID");
         return 1;
@@ -18,7 +18,7 @@ int main(void)
 
     for (int i = len - 1; i >= 0; i-=2)
     {
-        printf("%i", number[i]);
+        printf("%ld", number[i]);
     }
 }
 
