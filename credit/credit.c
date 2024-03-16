@@ -14,8 +14,8 @@ int main(void)
         return 1;
     }
 
-    for (int i = 0; i < len; i++)
+    for (int i = len; i < 0; i -=2)
     {
-        
+
     }
 }
