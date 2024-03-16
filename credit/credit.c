@@ -5,8 +5,8 @@
 
 int main(void)
 {
-    number = get_long("Number: ");
-    len = strlen(number);
+    long number = get_long("Number: ");
+    int len = longlen(number);
 
     if (len != 13 || 15 || 16)
     {
@@ -14,8 +14,8 @@ int main(void)
         return 1;
     }
 
-    for (int i = len; i < 0; i -=2)
+    for (int i = len - 1; i >= 0; i-=2)
     {
-
+        printf("%i", number[i]);
     }
 }
