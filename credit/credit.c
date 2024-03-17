@@ -67,7 +67,12 @@ int main(void)
 
             else if (array[0] == '5')
             {
-                if
+                if (array[1] == '1' || array[1] == '2' array[1] == '3')
+                    printf("MASTERCARD\n");
+                else if (array[1] == '4' || array[1] == '5')
+                    printf("MASTERCARD\n");
+                else
+                     printf("INVALID\n");
             }
             else
                 printf("INVALID\n");
