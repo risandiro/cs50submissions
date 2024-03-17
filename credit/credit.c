@@ -74,7 +74,7 @@ int main(void)
                 else if (array[1] == '4' || array[1] == '5')
                     printf("MASTERCARD\n");
                 else
-                     printf("INVALID\n");
+                    printf("INVALID\n");
             }
             else
                 printf("INVALID\n");
