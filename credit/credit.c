@@ -50,7 +50,11 @@ int main(void)
     //step 3
     if (final % 10 == 0)
     {
-        if (len ==)
+        if (len == 15)
+        {
+            printf("AMEX\n");
+        }
+        else if (len ==)
     }
     else
     {
