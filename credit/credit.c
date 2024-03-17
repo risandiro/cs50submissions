@@ -50,16 +50,19 @@ int main(void)
     // step 3
     if (final % 10 == 0)
     {
-        if ((len == 15 && array[0] == '3') || (len == 15 && array[0] == '5'))
+        if (len == 15)
         {
-            printf("AMEX\n");
+            if ((array[0] == '3' && array[1] == '4') || (array[0] == '3' && array[1] == '7'))
+                printf("AMEX\n");
         }
         else if (len == 16 && array[0] != '4')
-        {
             printf("MASTERCARD\n");
-        }
+
         else if ((len == 13 && array[0] == '4') || (len == 16 && array[0] == '4'))
             printf("VISA\n");
+
+        else
+            printf("INVALID\n");
     }
     else
     {
