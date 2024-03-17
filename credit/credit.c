@@ -11,7 +11,7 @@ int main(void)
     long int number = get_long("Number: ");
     int len = longlen(number);
 
-    // convert long into array of chars + string conversion
+    // convert long into array of chars
     int k = len - 1;
     char array[len];
     array[len + 1] = '\0';
