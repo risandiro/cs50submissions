@@ -11,9 +11,9 @@ int main(void)
     long int number = get_long("Number: ");
     int len = longlen(number);
 
-    // convert long into string (array of chars + sentinel value)
-    int i = len;
-    char array[20];
+    // convert long into array of chars + string conversion
+    int i = len - 1;
+    char array[len];
     array[len+1] = '\0';
 
     while (i >= 0)
@@ -23,9 +23,7 @@ int main(void)
         i--;
     }
 
-    printf("%s\n", array);
-
-   /* for (int i = len - 2, sum_mul = 0; i >= 0; i-=2)
+    for (int i = len - 2, sum_mul = 0; i >= 0; i-=2)
     {
         sum_mul += array[i] * 2;
     }
