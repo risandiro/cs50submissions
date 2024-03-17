@@ -10,14 +10,6 @@ int main(void)
     long int number = get_long("Number: ");
     int len = longlen(number);
 
-    char arr[len + 1];
-    int array[len];
-    if (sprintf(arr, len + 1, %d, number) == len)
-    {
-        
-    }
-
-
 
 
 
@@ -56,4 +48,11 @@ int longlen(long num)
     }
 
     return digits;
+}
+
+int longtoarray(long long)
+{
+    int array[25];
+    int i = 0, count = 0;
+    
 }
