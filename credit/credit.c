@@ -10,8 +10,10 @@ int main(void)
     long int number = get_long("Number: ");
     int len = longlen(number);
 
+    char arr[len + 1];
     int array[len];
-    
+    if (sprintf(arr, len + 1, %d, number))
+
 
 
 
