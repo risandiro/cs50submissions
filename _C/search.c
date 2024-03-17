@@ -55,7 +55,8 @@ int main(void)
 }
 */
 
-// Pseudo code for selection sort
-for i from 0 to n-1
-    Find smallest number between numbers[i] and numbers [i-1]
-    Swap smallest number with numbers[i]
+// Pseudo code for bubble sort
+Repeat n times
+    For i from 0 to n-2
+        If nums[i] and nums[i+1] out of order
+            Swap them
