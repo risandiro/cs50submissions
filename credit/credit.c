@@ -50,17 +50,21 @@ int main(void)
     //step 3
     if (final % 10 == 0)
     {
-        if (len == 15)
+        if (len == 15 && array[0] == 5)
         {
             printf("AMEX\n");
         }
-        else if (len == 16 && array[0] )
+        else if (len == 16 && array[0] != 4)
+        {
+            printf("MASTERCARD\n");
+        }
+        else if (len == 13 || len == 16 && array[0] == 4)
+            printf("VISA\n");
     }
     else
     {
         printf("INVALID\n");
     }
-
 }
 
 int longlen(long num)
