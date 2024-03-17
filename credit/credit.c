@@ -12,7 +12,10 @@ int main(void)
 
     char arr[len + 1];
     int array[len];
-    if (sprintf(arr, len + 1, %d, number))
+    if (sprintf(arr, len + 1, %d, number) == len)
+    {
+        
+    }
 
 
 
