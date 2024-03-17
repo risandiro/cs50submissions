@@ -55,19 +55,20 @@ int main(void)
             if ((array[0] == '3' && array[1] == '4') || (array[0] == '3' && array[1] == '7'))
                 printf("AMEX\n");
         }
-        else if (len == 16 && array[0] != '4')
-            printf("MASTERCARD\n");
-
-        else if ((len == 13 && array[0] == '4') || (len == 16 && array[0] == '4'))
-            printf("VISA\n");
-
+        else if (len == 13)
+        {
+            if (array[0] == '4')
+                printf("AMEX\n");
+        }
+        else if (len == 16)
+        {
+            if
+        }
         else
             printf("INVALID\n");
     }
     else
-    {
         printf("INVALID\n");
-    }
 }
 
 int longlen(long num)
