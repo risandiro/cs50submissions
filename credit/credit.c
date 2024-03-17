@@ -23,9 +23,11 @@ int main(void)
         k--;
     }
 
+    char l;
     for (int i = len - 2, sum_mul = 0; i >= 0; i-=2)
     {
-        printf("%c", array[i]);
+        l = array[i];
+        l = 
     }
 
     for (int i = len - 1, sum_nor = 0; i >= 0; i-=2)
