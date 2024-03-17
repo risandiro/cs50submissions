@@ -23,7 +23,7 @@ int main(void)
         k--;
     }
 
-    // step 1 + step 2
+    // step 1
     int sum_mul = 0;
     for (int i = len - 2, value; i >= 0; i-=2)
     {
@@ -39,11 +39,24 @@ int main(void)
         }
     }
 
+    // step 2
     int sum_nor = 0;
     for (int i = len - 1; i >= 0; i-=2)
     {
         sum_nor += (array[i] - 48);
     }
+    int final = sum_mul + sum_nor;
+
+    //step 3
+    if (final % 10 == 0)
+    {
+        if (len ==)
+    }
+    else
+    {
+        printf("INVALID\n");
+    }
+
 }
 
 int longlen(long num)
