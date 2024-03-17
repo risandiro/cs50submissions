@@ -14,10 +14,10 @@ int main(void)
     int sum_mul = 0, sum_nor = 0;
     sprintf(strnum, "%li", number);
 
-    for (int i = len - 2; i >= 0; i-=2)
+    for (int i = len - 2, val = 0; i >= 0; i-=2)
     {
-        int j = 0;
-        sum_mul += strnum[i] * 2;
+        val = atoi(strnum[i])
+        sum_mul += val * 2;
     }
 
     for (int i = len - 1; i >= 0; i-=2)
