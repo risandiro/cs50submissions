@@ -23,15 +23,23 @@ int main(void)
         k--;
     }
 
-    int sum_mul = 0, sum_nor = 0;
-    for (int i = len - 2; i >= 0; i-=2)
+    // step 1 + step 2
+    int sum_mul = 0;
+    for (int i = len - 2, value; i >= 0; i-=2)
     {
-        sum_mul += (array[i] - 48) * 2;
+        value = (array[i] - 48) * 2;
+        if (value >= 10)
+        {
+            sum_mul += value / 10;
+            sum value += value % 10;
+        }
+        else
+        {
+            sum_mul += value;
+        }
     }
 
-
-
-
+    int sum_nor = 0;
     for (int i = len - 1; i >= 0; i-=2)
     {
         sum_nor += (array[i] - 48);
