@@ -11,10 +11,13 @@ int main(void)
     long int number = get_long("Number: ");
     int len = longlen(number);
 
-    
+    char array[len];
+    itoa(number, array, 10);
+    printf("%s\n", array);
 
 
-    int sum_mul = 0, sum_nor = 0;
+
+    /*int sum_mul = 0, sum_nor = 0;
     sprintf(strnum, "%c", number);
 
     for (int i = len - 2; i >= 0; i-=2)
@@ -28,7 +31,7 @@ int main(void)
     }
 
     printf("multiplied: %i", sum_mul);
-    printf("\nnormal: %i\n", sum_nor);
+    printf("\nnormal: %i\n", sum_nor);*/
 
 }
 
