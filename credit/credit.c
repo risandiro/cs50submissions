@@ -16,7 +16,7 @@ int main(void)
 
     for (int i = len - 2, val = 0; i >= 0; i-=2)
     {
-        val = atoi(strnum[i])
+        val = strnum[i] - 0;
         sum_mul += val * 2;
     }
 
