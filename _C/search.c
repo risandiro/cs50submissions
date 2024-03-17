@@ -55,8 +55,7 @@ int main(void)
 }
 */
 
-// 6 people --> n = 6 (0,1,2,3,4,5)
-for (int i = 0, max = 0; i < n - 1; i++)
-{
-    for (int j = 0;)
-}
+// Pseudo code for selection sort
+for i from 0 to n-1
+    Find smallest number between numbers[i] and numbers [i-1]
+    Swap smallest number with numbers[i]
