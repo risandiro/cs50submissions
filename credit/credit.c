@@ -14,10 +14,9 @@ int main(void)
     int sum_mul = 0, sum_nor = 0;
     sprintf(strnum, "%li", number);
 
-    for (int i = len - 2, val = 0; i >= 0; i-=2)
+    for (int i = len - 2; i >= 0; i-=2)
     {
-        val = (int)strnum[i] - 0;
-        sum_mul += val * 2;
+        sum_mul += strnum[i];
     }
 
     for (int i = len - 1; i >= 0; i-=2)
