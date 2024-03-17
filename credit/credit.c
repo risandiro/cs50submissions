@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 int longlen(long number);
 
@@ -54,5 +55,5 @@ int longtoarray(long long)
 {
     int array[25];
     int i = 0, count = 0;
-    
+
 }
