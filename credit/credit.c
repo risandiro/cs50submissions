@@ -26,8 +26,7 @@ int main(void)
     char l;
     for (int i = len - 2, sum_mul = 0; i >= 0; i-=2)
     {
-        l = array[i];
-        l -= 0;
+        l = array[i] - 48;
         sum_mul += l;
     }
 
