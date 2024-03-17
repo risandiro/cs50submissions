@@ -16,7 +16,8 @@ int main(void)
 
     for (int i = len - 2; i >= 0; i-=2)
     {
-        sum_mul += strnum[i] * 2;
+
+        sum_mul += (int)strnum[i] * 2;
     }
 
     for (int i = len - 1; i >= 0; i-=2)
