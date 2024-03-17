@@ -27,7 +27,6 @@ int main(void)
     for (int i = len - 2, sum_mul = 0; i >= 0; i-=2)
     {
         l = array[i];
-        l = 
     }
 
     for (int i = len - 1, sum_nor = 0; i >= 0; i-=2)
