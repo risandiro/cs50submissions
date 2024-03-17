@@ -14,22 +14,27 @@ int main(void)
     // convert long into string (array of chars + sentinel value)
     char array[len+1] = '\0';
     int i = len;
+
     while (i >= 0)
     {
-        array[]
+        array[i] = number % 10 + 48;
+        number = number / 10;
+        i--;
     }
 
+    printf("%s", array);
 
 
 
-    for (int i = len - 2, sum_mul = 0; i >= 0; i-=2)
+
+   /* for (int i = len - 2, sum_mul = 0; i >= 0; i-=2)
     {
         sum_mul += array[i] * 2;
     }
 
     for (int i = len - 1, sum_nor = 0; i >= 0; i-=2)
     {
-        sum_nor += array[i] - 0;
+        sum_nor += array[i] - 0; */
     }
 }
 
