@@ -12,7 +12,7 @@ int main(void)
     int len = longlen(number);
 
     char array[len];
-    itoa(number, array, 10);
+    sprintf(array, "%ld", number);
     printf("%s\n", array);
 
 
@@ -52,11 +52,4 @@ int longlen(long num)
     }
 
     return digits;
-}
-
-int longtoarray(long long)
-{
-    int array[25];
-    int i = 0, count = 0;
-
 }
