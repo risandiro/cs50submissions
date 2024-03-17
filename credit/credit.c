@@ -13,13 +13,13 @@ int main(void)
 
     // convert long into string (array of chars + sentinel value)
     int i = len;
-    char array[len];
-    array[i + 1] = '\0';
+    char array[20];
+    array[len+1] = '\0';
 
     while (i >= 0)
     {
         array[i] = number % 10 + 48;
-        number = number / 10;
+        number /= 10;
         i--;
     }
 
