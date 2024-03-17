@@ -29,6 +29,9 @@ int main(void)
         sum_mul += (array[i] - 48) * 2;
     }
 
+
+
+
     for (int i = len - 1; i >= 0; i-=2)
     {
         sum_nor += (array[i] - 48);
