@@ -58,11 +58,19 @@ int main(void)
         else if (len == 13)
         {
             if (array[0] == '4')
-                printf("AMEX\n");
+                printf("VISA\n");
         }
         else if (len == 16)
         {
-            if
+            if (array[0] == '4')
+                printf("VISA\n");
+
+            else if (array[0] == '5')
+            {
+                if
+            }
+            else
+                printf("INVALID\n");
         }
         else
             printf("INVALID\n");
