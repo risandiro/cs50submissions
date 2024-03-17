@@ -9,8 +9,9 @@ int main(void)
 {
     long int number = get_long("Number: ");
     int len = longlen(number);
+    
+    int array[len];
 
-    char strnum[len];
     int sum_mul = 0, sum_nor = 0;
     sprintf(strnum, "%c", number);
 
