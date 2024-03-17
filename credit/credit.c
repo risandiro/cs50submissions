@@ -11,7 +11,7 @@ int main(void)
     long int number = get_long("Number: ");
     int len = longlen(number);
 
-
+    
 
 
     int sum_mul = 0, sum_nor = 0;
