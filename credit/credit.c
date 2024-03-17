@@ -54,6 +54,8 @@ int main(void)
         {
             if ((array[0] == '3' && array[1] == '4') || (array[0] == '3' && array[1] == '7'))
                 printf("AMEX\n");
+            else
+                printf("INVALID\n");
         }
         else if (len == 13)
         {
