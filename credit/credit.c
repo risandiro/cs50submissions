@@ -54,7 +54,7 @@ int main(void)
         {
             printf("AMEX\n");
         }
-        else if (len ==)
+        else if (len == 16 && array[0] )
     }
     else
     {
