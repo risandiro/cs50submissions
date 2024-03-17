@@ -54,3 +54,6 @@ int main(void)
     return 1;
 }
 */
+
+// 6 people --> n = 6 (0,1,2,3,4,5)
+for (int i = 0; i < n - 1; i++)
