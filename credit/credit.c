@@ -12,7 +12,7 @@ int main(void)
 
     char strnum[len];
     int sum_mul = 0, sum_nor = 0;
-    sprintf(strnum, "%li", number);
+    sprintf(strnum, "%c", number);
 
     for (int i = len - 2; i >= 0; i-=2)
     {
