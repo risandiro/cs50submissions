@@ -13,7 +13,7 @@ int main(void)
 
     // convert long into array of chars
     int k = len - 1;
-    int array[len];
+    char array[len];
     array[len + 1] = '\0';
 
     while (k >= 0)
