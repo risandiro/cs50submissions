@@ -23,7 +23,7 @@ int main(void)
         k--;
     }
 
-    sum_mul = 0, sum_nor = 0;
+    int sum_mul = 0, sum_nor = 0;
     for (int i = len - 2; i >= 0; i-=2)
     {
         sum_mul += (array[i] - 48) * 2;
