@@ -31,7 +31,7 @@ int main(void)
         if (value >= 10)
         {
             sum_mul += value / 10;
-            sum value += value % 10;
+            sum_mul += value % 10;
         }
         else
         {
