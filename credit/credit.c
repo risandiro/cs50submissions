@@ -50,7 +50,7 @@ int main(void)
     //step 3
     if (final % 10 == 0)
     {
-        if (len == 15 && array[0] == '5')
+        if ((len == 15 && array[0] == '3') || (len == 15 && array[0] == '5'))
         {
             printf("AMEX\n");
         }
