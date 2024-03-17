@@ -11,8 +11,16 @@ int main(void)
     long int number = get_long("Number: ");
     int len = longlen(number);
 
-    char array[len];
-    sprintf(array, "%ld", number);
+    // convert long into string (array of chars + sentinel value)
+    char array[len+1] = '\0';
+    int i = len;
+    while (i >= 0)
+    {
+        array[]
+    }
+
+
+
 
     for (int i = len - 2, sum_mul = 0; i >= 0; i-=2)
     {
