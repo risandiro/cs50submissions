@@ -23,13 +23,13 @@ int main(void)
         k--;
     }
 
-    char l;
-    for (int i = len - 2, sum_mul = 0; i >= 0; i-=2)
+    sum_mul = 0, sum_nor = 0;
+    for (int i = len - 2; i >= 0; i-=2)
     {
         sum_mul += (array[i] - 48) * 2;
     }
 
-    for (int i = len - 1, sum_nor = 0; i >= 0; i-=2)
+    for (int i = len - 1; i >= 0; i-=2)
     {
         sum_nor += (array[i] - 48);
     }
