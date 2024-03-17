@@ -12,15 +12,15 @@ int main(void)
     int len = longlen(number);
 
     // convert long into array of chars + string conversion
-    int i = len - 1;
+    int k = len - 1;
     char array[len];
-    array[len+1] = '\0';
+    array[len + 1] = '\0';
 
-    while (i >= 0)
+    while (k >= 0)
     {
-        array[i] = number % 10 + 48;
+        array[k] = number % 10 + 48;
         number /= 10;
-        i--;
+        k--;
     }
 
     for (int i = len - 2, sum_mul = 0; i >= 0; i-=2)
@@ -31,7 +31,7 @@ int main(void)
     for (int i = len - 1, sum_nor = 0; i >= 0; i-=2)
     {
         sum_nor += array[i] - 0;
-    } */
+    }
 }
 
 int longlen(long num)
