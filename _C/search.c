@@ -54,9 +54,3 @@ int main(void)
     return 1;
 }
 */
-
-// Pseudo code for bubble sort
-Repeat n times
-    For i from 0 to n-2
-        If nums[i] and nums[i+1] out of order
-            Swap them
