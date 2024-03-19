@@ -6,6 +6,28 @@ sort2 uses: TODO
 
 How do you know?: TODO
 
-sort3 uses: TODO
+sort3 uses: Selection sort
 
-How do you know?: TODO
+How do you know?:
+sorted 10000 omega:
+
+theory:
+merge - 132877
+bubble - 10000
+selection - 100000000
+
+actual:
+1 - 0.081s, 0.084s, 0.072s
+2 - 0.085s, 0.092s, 0.072s
+3 - 0.153s, 0.210s, 0.207s
+
+3 = selection sort
+random 50000 O / omega
+
+theory:
+merge - significantly faster (n log2 n)
+bubble - slow (n^2)
+selection - slow (n^2)
+
+actual:
+1 
