@@ -19,7 +19,7 @@ candidate candidates[MAX];
 int candidate_count;
 
 // Function prototypes
-bool vote(string name);
+bool vote(string name, int argc);
 void print_winner(void);
 
 int main(int argc, string argv[])
@@ -62,7 +62,6 @@ int main(int argc, string argv[])
         }
     }
 
-    // Display winner of election
     print_winner();
 }
 
