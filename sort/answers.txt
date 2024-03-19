@@ -2,9 +2,21 @@ sort1 uses: TODO
 
 How do you know?: TODO
 
-sort2 uses: TODO
+sort2 uses: Merge sort
 
-How do you know?: TODO
+How do you know?:
+
+theory:
+merge - significantly faster (n log2 n)
+bubble - slow (n^2)
+selection - slow (n^2)
+
+actual:
+1 - 5.883, 5.710
+2 - 0.457, 0.714
+3 - 2.203, 2.416
+
+2 = merge sort
 
 sort3 uses: Selection sort
 
@@ -24,16 +36,4 @@ actual:
 3 = selection sort
 
 
-random 50000 O / omega
 
-theory:
-merge - significantly faster (n log2 n)
-bubble - slow (n^2)
-selection - slow (n^2)
-
-actual:
-1 - 5.883, 5.710
-2 - 0.457, 0.714
-3 - 2.203, 2.416
-
-2 = merge sort
