@@ -86,14 +86,16 @@ void print_winner(void)
         }
     }
 
-    string winners[candidate_count];
+    string winners[candidate_count + 1];
     for (int j = 0; j < candidate_count; j++)
     {
         if (max == candidate[j].votes)
         {
-            winners[j] = 
+            winners[j] = candidate[j].name;
         }
     }
+
+    for (int k = 0; )
 
     return;
 }
