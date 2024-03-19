@@ -19,7 +19,7 @@ candidate candidates[MAX];
 int candidate_count;
 
 // Function prototypes
-bool vote(string name, int argc);
+bool vote(string name);
 void print_winner(void);
 
 int main(int argc, string argv[])
@@ -56,22 +56,18 @@ int main(int argc, string argv[])
         {
             printf("Invalid vote.\n");
         }
-        else
-        {
-            candidates[name].votes++;
-        }
-    }
 
     print_winner();
 }
 
 // Update vote totals given a new vote
-bool vote(string name, int argc)
+bool vote(string name)
 {
     for (int i = 1; i < argc; i++)
     {
         if (strcmp(argv[i], name) == 0)
         {
+            candidates[i].votes++
             return true;
         }
     }
