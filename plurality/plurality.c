@@ -58,7 +58,7 @@ int main(int argc, string argv[])
         }
         else
         {
-            vote(name);
+            candidates[name].votes++;
         }
     }
 
