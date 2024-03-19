@@ -5,34 +5,31 @@ How do you know?: TODO
 sort2 uses: Merge sort
 
 How do you know?:
-
 theory:
 merge - significantly faster (n log2 n)
 bubble - slow (n^2)
 selection - slow (n^2)
 
+--> random50000
 actual:
 1 - 5.883, 5.710
 2 - 0.457, 0.714
 3 - 2.203, 2.416
-
 2 = merge sort
 
 sort3 uses: Selection sort
 
 How do you know?:
-sorted 50000 omega:
-
 theory:
 merge - 132877
 bubble - 10000
 selection - 100000000
 
+--> sorted50000
 actual:
 1 - 0.774, 0.516, 0.574
 2 - 0.926, 0.562, 0.706
 3 - 2.378, 2.374, 2.379
-
 3 = selection sort
 
 
