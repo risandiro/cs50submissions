@@ -1,10 +1,7 @@
-sort1 uses: TODO
-
-How do you know?: TODO
-
-sort2 uses: Merge sort
+sort1 uses: Selection sort
 
 How do you know?:
+----------
 theory:
 merge - significantly faster (n log2 n)
 bubble - slow (n^2)
@@ -12,21 +9,27 @@ selection - slow (n^2)
 
 --> random50000
 actual:
-1 - 5.883, 5.710
-2 - 0.457, 0.714
-3 - 2.203, 2.416
-2 = merge sort, 1 = selection sort
+1 - 5.883, 5.710, 6.039, 6.079 (5.883 - 6.079)
+2 - 0.457, 0.714, 0.669, 0.675 (0.457 - 0.669)
+3 - 2.203, 2.416, 3.276, 2.616 (2.203 - 3.276)
+----------
+1 = selection sort
+speed on any roll is almost the same, because
+good rolls and bad rolls don't exist there
 
-sort3 uses: Selection sort
+sort2 uses: Merge sort
 
 How do you know?:
-theory: --> sorted10000
-merge - 132877 (n log2 n)
-bubble - 10000 (n)
-selection - 100000000 (n^2)
 
-actual: --> sorted50000
-1 - 0.774, 0.516, 0.574
-2 - 0.926, 0.562, 0.706
-3 - 2.378, 2.374, 2.379
-3 = selection sort
+--> random5000
+2 = merge sort (the fastest by far)
+
+sort3 uses: Bubble sort
+
+How do you know?:
+
+--> random50000
+3 = bubble sort
+on a bad roll speed similar to selection sort
+on a good roll speed can be twice as fast as selection sort
+but never as fast as merge sort
