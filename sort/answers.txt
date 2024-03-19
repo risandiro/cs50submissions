@@ -1,35 +1,29 @@
 sort1 uses: Bubble sort
 
 How do you know?:
+sort2 I know is merge sort
+sort3 I know is selection sort
 ----------
-theory:
-merge - significantly faster (n log2 n)
-bubble - slow (n^2)
-selection - slow (n^2)
-
---> random50000
-actual:
-1 - 5.883, 5.710, 6.039, 6.079 (5.883 - 6.079)
-2 - 0.457, 0.714, 0.669, 0.675 (0.457 - 0.669)
-3 - 2.203, 2.416, 3.276, 2.616 (2.203 - 3.276)
-----------
-1 = selection sort
-speed on any roll is almost the same, because
-good rolls and bad rolls don't exist there
+1 = bubble sort (has to be)
 
 sort2 uses: Merge sort
 
 How do you know?:
 
---> random5000
+--> random50000
+1 - 5.883, 5.710, 6.039, 6.079 (5.883 - 6.079)
+2 - 0.457, 0.714, 0.669, 0.675 (0.457 - 0.669)
+3 - 2.203, 2.416, 3.276, 2.616 (2.203 - 3.276)
+----------
 2 = merge sort (the fastest by far)
 
 sort3 uses: Selection sort
 
 How do you know?:
 
---> random50000
-3 = bubble sort
-on a bad roll speed similar to selection sort
-on a good roll speed can be twice as fast as selection sort
-but never as fast as merge sort
+--> sorted50000
+1 - 0.772, 0.906, 0.818, 0.563
+2 - 0.662, 0.515, 0.777, 0.672
+3 - 2.737, 2.393, 2.575, 2.541
+----------
+3 = selection sort (slowest when sorting sorted)
