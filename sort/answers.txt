@@ -15,7 +15,7 @@ actual:
 1 - 5.883, 5.710
 2 - 0.457, 0.714
 3 - 2.203, 2.416
-2 = merge sort
+2 = merge sort, 1 = selection sort
 
 sort3 uses: Selection sort
 
