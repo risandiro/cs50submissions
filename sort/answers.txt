@@ -36,4 +36,4 @@ actual:
 2 - 0.457, 0.714
 3 - 2.203, 2.416
 
-2 = merge sort
+2 = merge sort, 3 = bubble sort, 1 = selection sort
