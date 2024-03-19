@@ -20,13 +20,12 @@ actual:
 sort3 uses: Selection sort
 
 How do you know?:
-theory:
-merge - 132877
-bubble - 10000
-selection - 100000000
+theory: --> sorted10000
+merge - 132877 (n log2 n)
+bubble - 10000 (n)
+selection - 100000000 (n^2)
 
---> sorted50000
-actual:
+actual: --> sorted50000
 1 - 0.774, 0.516, 0.574
 2 - 0.926, 0.562, 0.706
 3 - 2.378, 2.374, 2.379
