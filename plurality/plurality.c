@@ -18,9 +18,6 @@ candidate candidates[MAX];
 // Number of candidates
 int candidate_count;
 
-// Number of votes
-int voter_count;
-
 // Function prototypes
 bool vote(string name);
 void print_winner(void);
@@ -80,10 +77,9 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    int sum[voter_count];
     for (int i = 0; i < candidate_count; i++)
     {
-        
+
     }
 
     return;
