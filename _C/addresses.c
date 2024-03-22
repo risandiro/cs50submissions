@@ -16,4 +16,12 @@ int main(void)
     printf("%c", s[0]);
     printf("%c", s[1]);
     printf("%c", s[2]);
+
+    printf("\n");
+
+    printf("%c", *s);
+    printf("%c", *(s + 1));
+    printf("%c", *(s + 2));
+
+     printf("\n");
 }
