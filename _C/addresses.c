@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void adresses(void)
+int main(void)
 {
     int n = 50;
     printf("%p\n", &n);
@@ -8,16 +8,12 @@ void adresses(void)
     int *p = &n;
     printf("%p\n", p);
 
-}
-
-int main(void)
-{
     char *s = "HI!";
     printf("%c", s[0]);
     printf("%c", s[1]);
-    printf("%c", s[2]);
+    printf("%c\n", s[2]);
 
     printf("%c", *s);
     printf("%c", *(s + 1));
-    printf("%c", *(s + 2));
+    printf("%c\n", *(s + 2));
 }
