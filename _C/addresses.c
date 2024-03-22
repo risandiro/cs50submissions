@@ -9,5 +9,3 @@ int main(void)
     printf("%p\n", p);
 
 }
-
-string s = "HI!";
