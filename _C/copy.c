@@ -6,7 +6,7 @@
 
 int main(void)
 {
-    char *original = "Hello!";
+    char *original = "hello!";
 
     char *new = malloc(strlen(original) + 1);
     if (new == NULL)
@@ -21,7 +21,7 @@ int main(void)
 
     if (strlen(new) > 0)
     {
-        new[0] = isupper(new[0]);
+        new[0] = toupper(new[0]);
     }
 
     printf("%s\n", original);
