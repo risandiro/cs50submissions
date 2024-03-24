@@ -127,6 +127,12 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     while (True)
+    {
+        for (int i = 0; i < candidate_count; i++)
+        {
+            if (strcmp(name, ))
+        }
+    }
     return false;
 }
 
