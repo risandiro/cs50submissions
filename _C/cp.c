@@ -14,9 +14,11 @@ int main(int argc, char *argv[])
     //allocate one byte
     BYTE b;
 
-    // read where to find the value -> &b,
-    //size of it -> 1 byte, how many bytes to read -> 1
-    //
+    // fread = one or more bytes
+    // where to load those bytes in memory = &b
+    // how big it is? = sizeof(b)
+    // how many of those you want to read
+    // do it until there's no more
     while (fread(&b, sizeof(b), 1, src) != 0)
     {
         fwrite(&b, sizeof(b), 1, dst);
