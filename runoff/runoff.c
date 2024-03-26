@@ -141,7 +141,9 @@ bool vote(int voter, int rank, string name)
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
-    // TODO
+    // prebehni cely prvy riadok
+    // pokial kandidat nebol eliminovany
+    // zvys jeho vlas o 1
     return;
 }
 
