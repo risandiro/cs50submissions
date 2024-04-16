@@ -94,7 +94,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             float sum_red = 0;
             float pixel_counter = 0;
 
-            for (int k = -1; k < 2; k++)//r
+            for (int k = -1; k < 2; k++)
             {
                 for (int l = -1; l < 2; l++)
                 {
@@ -125,8 +125,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rgbtGreen = temp[i][j].rgbtGreen;
             image[i][j].rgbtRed = temp[i][j].rgbtRed;
         }
-
     }
-
     return;
 }
