@@ -80,12 +80,37 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIPLE copy[height][width];
+    RGBTRIPLE temp[height][width];
+
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            copy[i][j] = image[i][j];
+            float sum_blue = 0;
+            float sum_green = 0;
+            float sum_red = 0;
+            float pixel_counter = 0;
+
+            for (int k = -1; k < 2; k++)//r
+            {
+                for (int l = -1; l < 2; l++)//c
+                {
+                    if (i + k < 0 || i + k > height - 1)
+                        continue;
+
+                    if (j + l < 0 || j + l > width - 1)
+                        continue;
+
+                    sum_blue += image[i + k][j + l].rgbtBlue;
+                    sum_green += image[i + k][j + l].rgbtGreen;
+                    sum_red += image[i + k][j + l].rgbtRed;
+                    pixel_counter++;
+                }
+            }
+
+            temp[i][j].rgbtBlue = round(sum_blue / pixel_counter);
+            temp[i][j].rgbtGreen = round(sum_green / pixel_counter);
+            temp[i][j].rgbtRed = round(sum_red / pixel_counter);
         }
     }
 
@@ -93,32 +118,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            int sum_red = 0;
-            int sum_green = 0;
-            int sum_blue = 0;
-            int pixel_count = 0;
-
-            sum_red += copy[i][j].rgbtRed;
-            sum_green += copy[i][j].rgbtGreen;
-            sum_blue += copy[i][j].rgbtBlue;
-            pixel_count++;
-
-            if (copy[i][(j-1)])
-            {
-                sum_red += copy[i][(j-1)].rgbtRed;
-                sum_green += copy[i][(j-1)].rgbtGreen;
-                sum_blue += copy[i][(j-1)].rgbtBlue;
-                pixel_count++;
-            }
-
-            if (copy[i][(j+1)])
-            {
-                sum_red += copy[i][(j+1)].rgbtRed;
-                sum_green += copy[i][(j+1)].rgbtGreen;
-                sum_blue += copy[i][(j+1)].rgbtBlue;
-                pixel_count++;
-            }
+            image[i][j].rgbtBlue = temp[i][j].rgbtBlue;
+            image[i][j].rgbtGreen = temp[i][j].rgbtGreen;
+            image[i][j].rgbtRed = temp[i][j].rgbtRed;
         }
+
     }
+
     return;
 }
