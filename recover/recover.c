@@ -26,5 +26,16 @@ int main(void)
     }
 
     list[3] = 4;
+
     free(list);
+    list = tmp;
+
+    for (int i = 0; i < 4; i++)
+    {
+        printf("%i\n", list[i]);
+    }
+
+    free(list);
+    return 0;
 }
+
