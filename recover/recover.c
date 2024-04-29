@@ -1,41 +1,10 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-int main(void)
+typedef struct node
 {
-    int *list = malloc(3 * sizeof(int));
-    if (list == NULL)
-    {
-        return 1;
-    }
+    int number;
+    struct node *next;
+} node;
 
-    list[0] = 1;
-    list[1] = 2;
-    list[2] = 3;
+node n*
 
-    int *tmp = malloc(4 * sizeof(int));
-    if (tmp == NULL)
-    {
-        free(list);
-        return 2;
-    }
-
-    for (int i = 0; i < 3; i++)
-    {
-        tmp[i] = list[i];
-    }
-
-    list[3] = 4;
-
-    free(list);
-    list = tmp;
-
-    for (int i = 0; i < 4; i++)
-    {
-        printf("%i\n", list[i]);
-    }
-
-    free(list);
-    return 0;
-}
-
+if we want to use node in the definition itself, we must
+declare it first by putting it's name after typedef struct
