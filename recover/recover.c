@@ -8,4 +8,5 @@ typedef struct node
 declare it first by putting it's name after typedef struct */
 
 node n* = malloc(sizeof(node));
-
+n -> number = 1;
+n -> next = NULL;
