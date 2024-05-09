@@ -1,14 +1,15 @@
-typedef struct node
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
 {
-    int number;
-    struct node *next;
-} node;
+    if (argc != 2)
+    {
+        printf("Usage: /recover FILE\n");
+        return 1;
+    }
 
-/* if we want to use node in the definition itself, we must
-declare it first by putting it's name after typedef struct */
+    FILE *card = fopen(argv[1], "r");
 
-node n* = malloc(sizeof(node));
-n -> number = 1;
-n -> next = NULL;
-
-/* if you don't declare NULL, it will point to garbage value*/
+    uint8_t buffer[512];
+}
