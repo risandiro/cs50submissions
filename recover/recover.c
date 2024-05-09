@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
     }
 
     uint8_t buffer[512];
+    unsigned int file_counter = 0;
 
     while(fread(buffer, 1, 512, card) == 512)
     {
@@ -27,7 +28,7 @@ int main(int argc, char *argv[])
                 if (buffer[2] == 0xff)
                     if ((buffer[3] & 0xf0) == 0xe0)
                         {
-                            
+
                         }
 
     }
