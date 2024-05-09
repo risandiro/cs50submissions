@@ -22,6 +22,13 @@ int main(int argc, char *argv[])
 
     while(fread(buffer, 1, 512, card) == 512)
     {
-        
+        if (buffer[0] == 0xff)
+            if (buffer[1] == 0xd8)
+                if (buffer[2] == 0xff)
+                    if ((buffer[3] & 0xf0) == 0xe0)
+                        {
+                            
+                        }
+
     }
 }
