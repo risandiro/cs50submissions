@@ -24,8 +24,6 @@ int main(int argc, char *argv[])
     unsigned int file_counter = 0;
     char file_name[8] = NULL;
     bool new_jpeg = false;
-    FILE *image = fopen()
-
 
     while(fread(buffer, 1, 512, card) == 512)
     {
@@ -33,7 +31,7 @@ int main(int argc, char *argv[])
             {
                 if (counter != 0)
                 {
-                    
+
                 }
             }
     }
