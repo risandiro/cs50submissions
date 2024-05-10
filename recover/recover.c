@@ -28,10 +28,10 @@ int main(int argc, char *argv[])
     {
         if ((buffer[0] == 0xff) && (buffer[1] == 0xd8) && (buffer[2] == 0xff) && ((buffer[3] & 0xf0) == 0xe0))
         {
-            if (counter == 0)
+            if (file_counter == 0)
             {
                 sprintf(file_name, "%03i.jpg", file_counter);
-                img = fopen(file_name, "w");
+                image = fopen(file_name, "w");
                 fwrite(buffer, 1, 512, image);
                 file_counter++;
             }
@@ -39,14 +39,15 @@ int main(int argc, char *argv[])
             {
                 fclose(image);
                 sprintf(file_name, "%03i.jpg", file_counter);
-                img = fopen(file_name, "w");
+                image = fopen(file_name, "w");
                 fwrite(buffer, 1, 512, image);
                 file_counter++;
             }
         }
-        else if (counter != 0)
+        else if (file_counter != 0)
         {
             fwrite(buffer, 1, 512, image);
         }
     }
+    fclose(card);
 }
