@@ -31,8 +31,10 @@ int main(int argc, char *argv[])
             {
                 if (counter != 0)
                 {
-
+                    FILE *image = fclose()
                 }
+
+                FILE *image = fopen(file_name, "w");
             }
     }
 }
