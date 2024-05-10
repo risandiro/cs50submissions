@@ -43,7 +43,10 @@ int main(int argc, char *argv[])
                 fwrite(buffer, 1, 512, image);
                 file_counter++;
             }
-
         }
-
+        else if (counter != 0)
+        {
+            fwrite(buffer, 1, 512, image);
+        }
+    }
 }
