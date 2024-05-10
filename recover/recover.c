@@ -32,6 +32,13 @@ int main(int argc, char *argv[])
             {
                 sprintf(file_name, "%03i.jpg", file_counter);
                 fwrite(buffer, 1, 512, image);
+                file_counter++;
+            }
+            else
+            {
+                fclose(image);
+                sprintf(file_name, "%03i.jpg", file_counter);
+                fwrite(buffer, 1, 512, image);
             }
 
         }
