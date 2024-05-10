@@ -22,8 +22,9 @@ int main(int argc, char *argv[])
     uint8_t buffer[512];
 
     unsigned int file_counter = 0;
-    char filename[8] = NULL;
+    char filename[8];
     bool new_jpeg = false;
+    FILE *image;
 
     while(fread(buffer, 1, 512, card) == 512)
     {
