@@ -31,6 +31,7 @@ int main(int argc, char *argv[])
             if (counter == 0)
             {
                 sprintf(file_name, "%03i.jpg", file_counter);
+                img = fopen(file_name, "w");
                 fwrite(buffer, 1, 512, image);
                 file_counter++;
             }
@@ -38,7 +39,9 @@ int main(int argc, char *argv[])
             {
                 fclose(image);
                 sprintf(file_name, "%03i.jpg", file_counter);
+                img = fopen(file_name, "w");
                 fwrite(buffer, 1, 512, image);
+                file_counter++;
             }
 
         }
