@@ -34,13 +34,6 @@ int main(int argc, char *argv[])
                 fwrite(buffer, 1, 512, image);
             }
 
-            sprintf(file_name, "%03i.jpg", file_counter);
-            FILE *image = fopen(file_name, "w");
-            fwrite(buffer, 1, 512, image);
         }
-        else
-        {
-             FILE *image = fwrite(buffer, 1, 512, image);
-        }
-    }
+
 }
