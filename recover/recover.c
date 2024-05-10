@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     uint8_t buffer[512];
 
     unsigned int file_counter = 0;
-    char file_name[8] = NULL;
+    char filename[8] = NULL;
     bool new_jpeg = false;
 
     while(fread(buffer, 1, 512, card) == 512)
@@ -34,7 +34,8 @@ int main(int argc, char *argv[])
                     FILE *image = fclose()
                 }
 
-                FILE *image = fopen(file_name, "w");
+                sprintf(filename, "%03i.jpg", file_counter)
+                FILE *image = fopen(filename, "w");
             }
     }
 }
