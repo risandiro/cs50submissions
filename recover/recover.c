@@ -22,9 +22,8 @@ int main(int argc, char *argv[])
     uint8_t buffer[512];
 
     unsigned int file_counter = 0;
+    char file_name[8] = NULL;
     bool new_jpeg = false;
-    char *
-
     FILE *image = fopen()
 
 
@@ -34,7 +33,7 @@ int main(int argc, char *argv[])
             {
                 if (counter != 0)
                 {
-                    f
+                    
                 }
             }
     }
