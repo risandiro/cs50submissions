@@ -1,7 +1,6 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 
 int main(int argc, char *argv[])
 {
@@ -22,22 +21,22 @@ int main(int argc, char *argv[])
     uint8_t buffer[512];
 
     unsigned int file_counter = 0;
-    char filename[8];
-    bool new_jpeg = false;
-    FILE *image;
+    char file_name[8];
+    FILE *image = NULL;
 
     while(fread(buffer, 1, 512, card) == 512)
     {
         if ((buffer[0] == 0xff) && (buffer[1] == 0xd8) && (buffer[2] == 0xff) && ((buffer[3] & 0xf0) == 0xe0))
         {
-            if (counter != 0)
+            if (counter == 0)
             {
-                FILE *image = fclose()
+                sprintf(file_name, "%03i.jpg", file_counter);
+                fwrite(buffer, 1, 512, image);
             }
 
-            sprintf(filename, "%03i.jpg", file_counter);
-            FILE *image = fopen(filename, "w");
-            FILE *image = fwrite(buffer, 1, 512, image);
+            sprintf(file_name, "%03i.jpg", file_counter);
+            FILE *image = fopen(file_name, "w");
+            fwrite(buffer, 1, 512, image);
         }
         else
         {
