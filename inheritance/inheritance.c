@@ -48,10 +48,12 @@ person *create_family(int generations)
         p->parents[1] = create_family(generations - 1);
 
         // childs -> parent[0] and his parent[0] (childs grandfather) -> alleles
+        // since the grandfather is our last generation (generation 3), we start from there
         p->parent[0] = p->parent[0]->alleles[rand() % 2];
         p->parent[1] = p->parent[1]->alleles[rand() % 2];
-        // since it is the last generation we have access to we choose by random what blood type they had
-        // alleles array of 2 characters can have either 0 or 1
+        // alleles array of 2 characters, there's alleles 0 and alleles 1
+        // we want to choose at random which one of them the child is going to inherit
+        // % 2 makes it to divide between odd and even so it's 50/50
     }
 
     // If there are no generations left to create
