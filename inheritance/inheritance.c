@@ -55,13 +55,16 @@ person *create_family(int generations)
         // we want to choose at random which one of them the child is going to inherit
         // % 2 makes it to divide between odd and even so it's 50/50
     }
-
-    // If there are no generations left to create
     else
     {
-        // TODO: Set parent pointers to NULL
+        // if we get to the  last generation after our recursive function comes to generations = 1
+        // we set it's parents to NULL, because that data will be unknown for us.
+        p->parents[0] = NULL;
+        p->parents[1] = NULL;
 
-        // TODO: Randomly assign alleles
+        p->alleles[0] = random_allele();
+        p->alleles[1] = random_allele();
+        // since we start our count from here, we must give them 2 random alleles
     }
 
     // TODO: Return newly created person
