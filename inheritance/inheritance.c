@@ -67,8 +67,8 @@ person *create_family(int generations)
         // since we start our count from here, we must give them 2 random alleles
     }
 
-    // TODO: Return newly created person
-    return NULL;
+    //return the pointer to newly created tree of people
+    return p;
 }
 
 // Free `p` and all ancestors of `p`.
