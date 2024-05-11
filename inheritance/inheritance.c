@@ -79,11 +79,12 @@ void free_family(person *p)
         return;
     }
 
-    //Free parents recursively
+    // Free parents recursively
+    // This will free every parent up to the last
     free_family(p->parents[0]);
     free_family(p->parents[1]);
 
-    // Free child
+    // Free child itself
     free(p);
 }
 
