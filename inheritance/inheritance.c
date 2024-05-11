@@ -49,8 +49,8 @@ person *create_family(int generations)
 
         // childs -> parent[0] and his parent[0] (childs grandfather) -> alleles
         // since the grandfather is our last generation (generation 3), we start from there
-        p->alleles[0] = p->parent[0]->alleles[rand() % 2];
-        p->alleles[1] = p->parent[1]->alleles[rand() % 2];
+        p->alleles[0] = p->parents[0]->alleles[rand() % 2];
+        p->alleles[1] = p->parents[1]->alleles[rand() % 2];
         // alleles array of 2 characters, there's alleles 0 and alleles 1
         // we want to choose at random which one of them the child is going to inherit
         // % 2 makes it to divide between odd and even so it's 50/50
@@ -67,7 +67,7 @@ person *create_family(int generations)
         // since we start our count from here, we must give them 2 random alleles
     }
 
-    //return the pointer to newly created tree of people
+    // return the pointer to newly created tree of people
     return p;
 }
 
