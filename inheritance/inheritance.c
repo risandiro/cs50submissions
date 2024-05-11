@@ -42,9 +42,12 @@ person *create_family(int generations)
 
     if (generations > 1)
     {
+        // for each parent create another 2 parents recursively until we get to last generation
+        // each parent is storing a pointer to another node
         p->parents[0] = create_family(generations - 1);
         p->parents[1] = create_family(generations - 1);
-        
+
+        p->parent[0] = p->parent[0]->alleles[rand() % 2];
     }
 
     // If there are no generations left to create
