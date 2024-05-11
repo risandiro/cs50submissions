@@ -47,9 +47,10 @@ person *create_family(int generations)
         p->parents[0] = create_family(generations - 1);
         p->parents[1] = create_family(generations - 1);
 
-        // childs -> parent[0] and his parent[0] (childs grandfather) -> alleles [choose random]
+        // childs -> parent[0] and his parent[0] (childs grandfather) -> alleles
         p->parent[0] = p->parent[0]->alleles[rand() % 2];
         p->parent[1] = p->parent[1]->alleles[rand() % 2];
+        // since it is the last generation we have access to we choose by random what blood type they had
         // alleles array of 2 characters can have either 0 or 1
     }
 
