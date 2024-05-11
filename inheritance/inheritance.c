@@ -50,6 +50,7 @@ person *create_family(int generations)
         // childs -> parent[0] and his parent[0] (childs grandfather) -> alleles [choose random]
         p->parent[0] = p->parent[0]->alleles[rand() % 2];
         p->parent[1] = p->parent[1]->alleles[rand() % 2];
+        // alleles array of 2 characters can have either 0 or 1
     }
 
     // If there are no generations left to create
