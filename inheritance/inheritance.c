@@ -43,11 +43,13 @@ person *create_family(int generations)
     if (generations > 1)
     {
         // for each parent create another 2 parents recursively until we get to last generation
-        // each parent[0] and parent[1] is storing a pointer to another person struct
+        // each parent[0] and parent[1] is storing a pointer to another person struct and so on..
         p->parents[0] = create_family(generations - 1);
         p->parents[1] = create_family(generations - 1);
 
+        // childs -> parent[0] and his parent[0] (childs grandfather) -> alleles [choose random]
         p->parent[0] = p->parent[0]->alleles[rand() % 2];
+        p->parent[1] = p->parent[1]->alleles[rand() % 2];
     }
 
     // If there are no generations left to create
