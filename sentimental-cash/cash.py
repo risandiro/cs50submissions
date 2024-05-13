@@ -18,16 +18,21 @@ def main():
         total += temp
 
     if balance >= 0.10:
-        int = balance // 0.10
+        temp = balance // 0.10
         balance -= temp * 0.10
         total += temp
 
     if balance >= 0.05:
-        int = balance // 0.05
+        temp = balance // 0.05
         balance -= temp * 0.05
         total += temp
 
+    if balance >= 0.01:
+        temp = balance // 0.01
+        balance -= temp * 0.01
+        total += temp
 
-    print(total + balance)
+
+    print(temp)
 
 main()
