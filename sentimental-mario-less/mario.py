@@ -1,7 +1,9 @@
 import sys
 
 def main():
-    height = int(input("Height: "))
+    try:
+        height = int(input("Height: "))
+
 
     counter = height
     hash = 1
