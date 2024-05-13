@@ -9,7 +9,8 @@ def main():
         except:
             continue
 
-if 
+    total = 0
+    if balance > 0.25
 
 
 
