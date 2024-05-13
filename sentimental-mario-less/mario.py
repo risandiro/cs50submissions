@@ -1,5 +1,6 @@
 import sys
 
+
 def main():
     while True:
         try:
@@ -18,5 +19,6 @@ def main():
         print("#" * hash)
         hash += 1
         counter -= 1
+
 
 main()
