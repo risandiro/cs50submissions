@@ -8,3 +8,12 @@ def main():
         except:
             print("Enter a number between 1 and 8 inclusive")
 
+    counter = height
+    hash = 1
+
+    while counter > 0:
+        print(" " * (height - hash), end="")
+        print("  ")
+        print("#" * hash)
+        hash += 1
+        counter -= 1
