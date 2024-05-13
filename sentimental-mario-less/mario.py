@@ -1,10 +1,17 @@
+import sys
+
 def main():
     height = int(input("Height: "))
-    blank = int(1)
-    while height > 0:
-        print(" " * (height - blank), end="")
-        print("#" * blank)
-        blank += 1
-        height -= 1
+    if height < 0:
+        sys.exit("Only positive integers")
+
+    counter = height
+    hash = 1
+
+    while counter > 0:
+        print(" " * (height - hash), end="")
+        print("#" * hash)
+        hash += 1
+        counter -= 1
 
 main()
