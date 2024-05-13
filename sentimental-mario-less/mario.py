@@ -10,8 +10,6 @@ def main():
         except:
             print("Enter a number between 1 and 8 inclusive")
 
-
-
     counter = height
     hash = 1
 
