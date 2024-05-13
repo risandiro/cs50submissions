@@ -14,6 +14,9 @@ def main():
     while counter > 0:
         print(" " * (height - hash), end="")
         print("#" * hash, end="  ")
-        print("#" * (height - hash))
+        print("#" * hash)
         hash += 1
         counter -= 1
+
+
+main()
