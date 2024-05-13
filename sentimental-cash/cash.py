@@ -13,7 +13,7 @@ def main():
     balance = change
 
     if balance >= 0.25:
-        total += balance / 0.25
+        int += balance / 0.25
         balance = balance % 0.25
 
     if balance >= 0.10:
