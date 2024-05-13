@@ -1,3 +1,5 @@
+total = 0
+
 def main():
     while True:
         try:
@@ -8,31 +10,16 @@ def main():
 
         except:
             continue
-
-    total = 0
-    balance = change
-
-    if balance >= 0.25:
-        temp = balance // 0.25
-        balance -= temp * 0.25
-        total += temp
-
-    if balance >= 0.10:
-        temp = balance // 0.10
-        balance -= temp * 0.10
-        total += temp
-
-    if balance >= 0.05:
-        temp = balance // 0.05
-        balance -= temp * 0.05
-        total += temp
-
-    if balance >= 0.01:
-        temp = balance // 0.01
-        balance -= temp * 0.01
-        total += temp
+        
+    dimes(change)
+    print(total)
 
 
-    print(temp)
+def dimes(n: float):
+    while n >= 0.25:
+        n - 0.25
+        total += 1
+    return n
+
 
 main()
