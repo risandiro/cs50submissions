@@ -19,21 +19,21 @@ def quarters(n: float):
     while n >= 0.25:
         n -= 0.25
         total += 1
-    return n
+    return round(n, 2)
 
 def dimes(n: float):
     global total
     while n >= 0.10:
         n -= 0.10
         total += 1
-    return n
+    return round(n, 2)
 
 def nickels(n: float):
     global total
     while n >= 0.05:
         n -= 0.05
         total += 1
-    return n
+    return round(n, 2)
 
 def pennies(n: float):
     global total
