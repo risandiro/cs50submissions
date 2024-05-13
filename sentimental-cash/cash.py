@@ -14,28 +14,28 @@ def main():
     pennies(nickels(dimes(quarters(change))))
     print(total)
 
-def quarters(n: float):
+def quarters(n: float) -> float:
     global total
     while n >= 0.25:
         n -= 0.25
         total += 1
     return round(n, 2)
 
-def dimes(n: float):
+def dimes(n: float) -> float:
     global total
     while n >= 0.10:
         n -= 0.10
         total += 1
     return round(n, 2)
 
-def nickels(n: float):
+def nickels(n: float) -> float:
     global total
     while n >= 0.05:
         n -= 0.05
         total += 1
     return round(n, 2)
 
-def pennies(n: float):
+def pennies(n: float) -> float:
     global total
     while n >= 0.01:
         n -= 0.01
