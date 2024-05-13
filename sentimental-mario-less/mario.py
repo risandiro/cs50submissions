@@ -1,8 +1,10 @@
 import sys
 
 def main():
-    try:
+    while True:
         height = int(input("Height: "))
+        if 0 < height <= 8:
+
 
 
     counter = height
