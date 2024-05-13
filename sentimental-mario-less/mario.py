@@ -2,8 +2,6 @@ import sys
 
 def main():
     height = int(input("Height: "))
-    if height < 0:
-        sys.exit("Only positive integers")
 
     counter = height
     hash = 1
