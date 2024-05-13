@@ -13,7 +13,7 @@ def main():
 
     while counter > 0:
         print(" " * (height - hash), end="")
-        print("#" * hash)
-        print("  ")
+        print("#" * hash, end="  ")
+        print("#" * (height - hash))
         hash += 1
         counter -= 1
