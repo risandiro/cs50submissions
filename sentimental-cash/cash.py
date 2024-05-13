@@ -9,11 +9,12 @@ def main():
         except:
             continue
 
-    balance = 0
     total = 0
+    balance = change
 
-    if balance > 0.25:
-        balance
+    if change > 0.25:
+        total += balance / 0.25
+        balance = balance % 0.25
 
 
 
