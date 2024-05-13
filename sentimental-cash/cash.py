@@ -27,6 +27,7 @@ def main():
         balance -= temp * 0.05
         total += temp
 
+
     print(total + balance)
 
 main()
