@@ -1,10 +1,7 @@
 def main():
     height = int(input("Height: "))
-    for i in range(height):
-        print_row(height)
-        height -= height
-
-def print_row(height: int):
+    while height > 0:
         print("#" * height)
+        height -= 1
 
 main()
