@@ -1,5 +1,9 @@
 def main():
 
     number = input("Number: ")
-    algo = []
-    
+    sum = []
+
+    for i in number[::-2]:
+        
+
+
