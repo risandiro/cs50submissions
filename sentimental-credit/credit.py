@@ -12,7 +12,10 @@ def main():
 def verify(card):
     list = []
     for digid in card[::-2]:
-        list.append(int(digid) * 2)
+        try:
+            list.append(int(digid) * 2)
+        except:
+            return False
 
     sum = 0
     for i in list:
