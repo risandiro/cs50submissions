@@ -1,5 +1,15 @@
-def verify(card):
+def main():
+    number = input("Number: ")
 
+    if verify(number) != True:
+        print("INVALID")
+        return 1
+    print("good")
+
+
+
+
+def verify(card):
     list = []
     for digid in card[::-2]:
         list.append(digid * 2)
@@ -9,8 +19,13 @@ def verify(card):
         if i < 10:
             sum =+ sum
 
-        if i >= 10
-            x = sum % 10
+        if i >= 10:
+            sum =+ sum % 10
+            sum =+ 1
 
+    if sum % 10 == 0:
+        return True
+    else:
+        return False
 
-
+main()
