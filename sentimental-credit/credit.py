@@ -30,10 +30,10 @@ def verify(card):
     sum = 0
     for i in list:
         if i < 10:
-            sum =+ sum
+            sum =+ i
 
         if i >= 10:
-            sum =+ sum % 10
+            sum =+ i % 10
             sum =+ 1
 
     if sum % 10 == 0:
