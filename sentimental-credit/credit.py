@@ -3,8 +3,8 @@ def main():
 
     if verify(number) != True:
         print("INVALID")
-        return 1
-    print("good")
+
+    
 
 
 
