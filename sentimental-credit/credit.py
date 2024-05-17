@@ -4,7 +4,7 @@ def main():
     if verify(number) != True:
         print("INVALID")
 
-    
+    if len(nubmer)
 
 
 
