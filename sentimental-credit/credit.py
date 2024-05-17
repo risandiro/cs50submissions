@@ -1,13 +1,16 @@
-def verify(number):
+def verify(card):
 
-    x = []
-    for i in number[::-2]:
-        sum.append(i * 2)
+    list = []
+    for digid in card[::-2]:
+        list.append(digid * 2)
 
-    for item in sum:
-        if item < 10
+    sum = 0
+    for i in list:
+        if i < 10:
+            sum =+ sum
 
-        if item >= 10
+        if i >= 10
+            x = sum % 10
 
 
 
