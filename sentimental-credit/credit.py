@@ -16,10 +16,10 @@ def verify(card):
 
     sum = 0
     for i in list:
-        if i < 10:
+        if int(i) < 10:
             sum =+ sum
 
-        if i >= 10:
+        if int(i) >= 10:
             sum =+ sum % 10
             sum =+ 1
 
