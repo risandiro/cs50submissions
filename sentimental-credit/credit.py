@@ -1,9 +1,10 @@
-def main():
+def verify(number):
 
-    number = input("Number: ")
     sum = []
-
     for i in number[::-2]:
-        
+        sum.append(i)
+
+    
+
 
 
