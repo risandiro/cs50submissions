@@ -4,16 +4,16 @@ def main():
     if verify(number) != True:
         print("INVALID")
 
-    if len(number) == 13 and number[0] == 4:
+    if len(number) == 13 and number[0] == '4':
         print("VISA")
 
-    elif len(number) == 15 and number[0] == 3 and number[1] == 4 or number[1] == 7:
+    elif len(number) == 15 and number[0] == '3' and number[1] == '4' or number[1] == '7':
         print("AMEX")
 
     elif len(number) == 16:
-        if number[0] == 4:
+        if number[0] == '4':
             print("VISA")
-        elif number[0] == 5 and number[1] in [1, 2, 3, 4, 5]:
+        elif number[0] == '5' and number[1] in ['1', '2', '3', '4', '5']:
             print("MASTERCARD")
     else:
         print("INVALID")
