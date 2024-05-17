@@ -11,15 +11,15 @@ def main():
 
 def verify(card):
     list = []
-    for digid in card[::-1]:
-        list.append(digid * 2)
+    for digid in card[::-2]:
+        list.append(int(digid) * 2)
 
     sum = 0
     for i in list:
-        if int(i) < 10:
+        if i < 10:
             sum =+ sum
 
-        if int(i) >= 10:
+        if i >= 10:
             sum =+ sum % 10
             sum =+ 1
 
