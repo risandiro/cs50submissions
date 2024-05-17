@@ -11,7 +11,7 @@ def main():
 
 def verify(card):
     list = []
-    for digid in card[::-2]:
+    for digid in card[::-1]:
         list.append(digid * 2)
 
     sum = 0
