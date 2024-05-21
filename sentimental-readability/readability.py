@@ -1,5 +1,6 @@
 def main():
     text = input("Text: ")
+    
 
 
 
@@ -14,7 +15,7 @@ def main():
 def count_letters(text):
     counter = 0
     for character in text:
-        if isalpha(character):
+        if character.isalpha()
             counter++
 
 
