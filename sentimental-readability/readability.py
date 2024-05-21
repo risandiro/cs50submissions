@@ -1,19 +1,13 @@
 def main():
     text = input("Text: ")
+
     letters = count_letters(text)
     words = count_words(text)
     sentances = count_sentances(text)
 
-    L = letters / words * 100.00;
-
-
-
-
-
-
-
-
-# index = 0.0588 * L - 0.296 * S - 15.8
+    L = letters / words * 100.00
+    S = sentances / words * 100.00
+    index = 0.0588 * L - 0.296 * S - 15.8
 
 def count_letters(text: str):
     counter = 0
