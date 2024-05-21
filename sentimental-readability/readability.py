@@ -8,6 +8,17 @@ def main():
     L = letters / words * 100.00
     S = sentances / words * 100.00
     index = 0.0588 * L - 0.296 * S - 15.8
+    grade = round(index)
+
+    if grade >= 16:
+        print("Grade 16+")
+
+    elif grade < 1:
+        print("Before Grade 1")
+
+    else:
+        print("Grade", grade)
+
 
 def count_letters(text: str):
     counter = 0
