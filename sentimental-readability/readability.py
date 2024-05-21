@@ -35,6 +35,7 @@ def count_words(text: str):
 
         elif character == ' ':
             next = True
+            continue
 
     return counter
 
