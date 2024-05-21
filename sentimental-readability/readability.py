@@ -24,9 +24,15 @@ def count_letters(text):
 
 def count_words(text):
     counter = 0
+    next = False
 
     for character in text:
-        if character == ' ' and character
+        if character == ' ' and next = True:
+            counter += 1
+            next = False
+
+        else if character == ' ':
+            next = True
 
 # def count_sentances():
 
