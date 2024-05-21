@@ -1,6 +1,7 @@
 def main():
     text = input("Text: ")
     print(count_letters(text))
+    print(count_words(text))
 
 
 
@@ -27,12 +28,14 @@ def count_words(text):
     next = False
 
     for character in text:
-        if character == ' ' and next = True:
+        if character != ' ' and next == True:
             counter += 1
             next = False
 
-        else if character == ' ':
+        elif character == ' ':
             next = True
+
+    return counter
 
 # def count_sentances():
 
