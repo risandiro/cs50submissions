@@ -47,7 +47,7 @@ def count_sentances(text: str):
 
     text.strip()
     for character in text:
-        if character != '.' or character != '?' or character != '!' and next == True:
+        if character == ' ' and next == True:
             counter += 1
             next = False
 
