@@ -2,6 +2,7 @@ def main():
     text = input("Text: ")
     print(count_letters(text))
     print(count_words(text))
+    print(count_sentances(text))
 
 
 
@@ -39,7 +40,22 @@ def count_words(text: str):
 
     return counter
 
-# def count_sentances():
+
+def count_sentances(text: str):
+    counter = 0
+    next = False
+
+    text.strip()
+    for character in text:
+        if character != '.' or character != '?' or character != '!' and next == True:
+            counter += 1
+            next = False
+
+        elif character == '.' or character == '?' or character == '!':
+            next = True
+            continue
+
+    return counter
 
 
 main()
