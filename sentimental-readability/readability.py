@@ -18,11 +18,15 @@ def count_letters(text):
     for character in text:
         if character.isalpha():
             counter += 1
-            
+
     return counter
 
 
-# def count_words():
+def count_words(text):
+    counter = 0
+
+    for character in text:
+        if character == ' ' and character
 
 # def count_sentances():
 
