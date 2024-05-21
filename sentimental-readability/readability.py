@@ -24,7 +24,7 @@ def count_letters(text: str):
 
 
 def count_words(text: str):
-    counter = 0
+    counter = 1
     next = False
 
     text.strip()
