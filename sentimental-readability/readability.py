@@ -13,7 +13,7 @@ def main():
 
 # index = 0.0588 * L - 0.296 * S - 15.8
 
-def count_letters(text):
+def count_letters(text: str):
     counter = 0
 
     for character in text:
@@ -23,10 +23,11 @@ def count_letters(text):
     return counter
 
 
-def count_words(text):
+def count_words(text: str):
     counter = 0
     next = False
 
+    text.strip()
     for character in text:
         if character != ' ' and next == True:
             counter += 1
