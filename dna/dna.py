@@ -8,8 +8,14 @@ def main():
         print("usage: dna.py __.csv __.txt")
         return 1
 
+    with open(sys.argv[2]) as file:
+        reader = csv.DictReader(file)
+
+    rows = []
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
+        for row in reader:
+            rows.append(row)
 
     # TODO: Read DNA sequence file into a variable
 
