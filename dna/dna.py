@@ -8,11 +8,11 @@ def main():
         print("usage: dna.py __.csv __.txt")
         return 1
 
-    with open(sys.argv[1]) as file:
+    with open(sys.argv[1] "r") as file:
         reader = csv.DictReader(file)
         database = dict(reader) # read a dictionary
 
-    with open(sys.argv[2]) as file:
+    with open(sys.argv[2] "r") as file:
         sequence = f.read() # read a string
 
 
