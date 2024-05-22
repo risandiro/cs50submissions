@@ -10,7 +10,7 @@ def main():
 
     with open(sys.argv[1], "r") as file:
         reader = csv.DictReader(file)
-        database = list(reader)
+        database = list(reader) # list of dictionaries
 
     with open(sys.argv[2], "r") as file:
         sequence = file.read()
