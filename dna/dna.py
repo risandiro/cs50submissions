@@ -8,11 +8,13 @@ def main():
         print("usage: dna.py __.csv __.txt")
         return 1
 
-    with open(sys.argv[1] "r") as file:
+    with open(sys.argv[1], "r") as file:
         reader = csv.DictReader(file)
+        database = list(reader)
 
-    with open(sys.argv[2] "r") as file:
-        sequence = f.read() # read a string
+    with open(sys.argv[2], "r") as file:
+        sequence = file.read() # read a string
+
 
 
     # TODO: Find longest match of each STR in DNA sequence
