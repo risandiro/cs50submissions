@@ -9,12 +9,12 @@ def main():
         return 1
 
     with open(sys.argv[1]) as file:
-        reader = csv.reader(file)
-        database = list(reader)
+        reader = csv.DictReader(file)
+        database = dict(reader) # read a dictionary
 
-with open
+    with open(sys.argv[2]) as file:
+        sequence = f.read() # read a string
 
-    # TODO: Read DNA sequence file into a variable
 
     # TODO: Find longest match of each STR in DNA sequence
 
