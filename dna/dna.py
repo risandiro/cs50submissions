@@ -8,7 +8,7 @@ def main():
         print("usage: dna.py __.csv __.txt")
         return 1
 
-    with open(databases/sys.argv[2]) as file:
+    with open(sys.argv[2]) as file:
         reader = csv.DictReader(file)
 
     rows = []
