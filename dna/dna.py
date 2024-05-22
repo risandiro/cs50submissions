@@ -13,7 +13,7 @@ def main():
         database = list(reader)
 
     with open(sys.argv[2], "r") as file:
-        sequence = file.read() # read a string
+        sequence = file.read()
 
 
 
