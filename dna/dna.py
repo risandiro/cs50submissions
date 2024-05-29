@@ -17,8 +17,8 @@ def main():
         sequence = file.read()
         print(sequence)
 
-    print(database[0])
-
+    sequences = [person['name'] for person in database]
+    print(sequences)
 
 
 
