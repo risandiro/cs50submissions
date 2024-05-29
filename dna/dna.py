@@ -31,11 +31,14 @@ def main():
     for subsequence in sequences:
         person[subsequence] = longest_match(sequence, subsequence)
 
+    print(person)
     counter = 0
     for seq in sequences:
+        print(seq)
         for item in database:
-
+            print(item)
             if seq == item[seq]:
+                print(item[seq])
                 counter += 1
     print(counter)
 
