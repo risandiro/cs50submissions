@@ -4,30 +4,35 @@ import sys
 
 def main():
 
+    # check for if we get 2 command-line arguments
     if len(sys.argv) != 3:
         print("usage: dna.py __.csv __.txt")
         return 1
 
+    # open a database of people with their sequences
     with open(sys.argv[1], "r") as file:
         reader = csv.DictReader(file)
         database = list(reader) # list of dictionaries
         print(database)
 
+    # open a text file with a particular sequence
     with open(sys.argv[2], "r") as file:
         sequence = file.read()
         print(sequence)
 
+    # get all the possible sequences that can be checked
     sequences = set()
     for seq in database:
         sequences.update(seq.keys())
         sequences.remove("name")
 
+    # look for the longest match of each sequence that can be checked
     person = dict()
     for subsequence in sequences:
         person[subsequence] = longest_match(sequence, subsequence)
 
+    
 
-    # TODO: Find longest match of each STR in DNA sequence
 
     # TODO: Check database for matching profiles
 
