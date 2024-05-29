@@ -22,8 +22,8 @@ def main():
         sequences.update(seq.keys())
         sequences.remove("name")
 
-    for item in sequences:
-        
+    for subsequence in sequences:
+        print(longest_match(sequence, subsequence))
 
 
 
