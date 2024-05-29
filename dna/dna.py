@@ -17,7 +17,10 @@ def main():
         sequence = file.read()
         print(sequence)
 
-    sequences = [person['name'] for person in database]
+    sequences = set()
+    for seq in database:
+        sequences.update(seq.keys())
+
     print(sequences)
 
 
