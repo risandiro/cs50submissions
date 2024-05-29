@@ -17,7 +17,7 @@ def main():
         sequence = file.read()
         print(sequence)
 
-    print(database[0]['name'])
+    print(database[0])
 
 
 
