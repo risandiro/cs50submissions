@@ -33,7 +33,11 @@ def main():
 
 
     for seq in sequences:
-        if sequences['seq'] == 
+        for item in database:
+
+            if sequences['seq'] == item['seq']:
+                counter += 1
+    print(counter)
 
 
     # TODO: Check database for matching profiles
