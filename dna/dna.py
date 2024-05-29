@@ -17,7 +17,7 @@ def main():
         sequence = file.read()
         print(sequence)
 
-    sequences = []
+    
 
 
 
