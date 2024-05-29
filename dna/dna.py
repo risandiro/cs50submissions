@@ -17,8 +17,9 @@ def main():
         sequence = file.read()
         print(sequence)
 
-    
-    longest_match(sequence, )
+
+    x = longest_match(sequence, "")
+    print(x)
 
 
 
