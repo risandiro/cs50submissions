@@ -18,10 +18,8 @@ def main():
         print(sequence)
 
     sequences = [{"name"} for d in database]
+    print(sequences)
 
-
-    for d in database:
-        print(d.keys())
 
 
 
