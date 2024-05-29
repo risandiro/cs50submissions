@@ -35,7 +35,7 @@ def main():
     for seq in sequences:
         for item in database:
 
-            if sequences['seq'] == item['seq']:
+            if seq == item['seq']:
                 counter += 1
     print(counter)
 
