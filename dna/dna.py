@@ -13,12 +13,10 @@ def main():
     with open(sys.argv[1], "r") as file:
         reader = csv.DictReader(file)
         database = list(reader) # list of dictionaries
-        print(database)
 
     # open a text file with a particular sequence
     with open(sys.argv[2], "r") as file:
         sequence = file.read()
-        print(sequence)
 
     # get all the possible sequences that can be checked
     sequences = set()
@@ -33,14 +31,15 @@ def main():
 
     # check database for matching profiles
     counter = 0
-    for seq in sequences:
-        for item in database:
-            print(person[seq], item[seq])
-            if person[seq] == item[seq]:
+    for item in database:
+        for seq in sequences:
+
+            if int(person[seq]) == int(item[seq]):
                 counter += 1
-    print(counter)
 
-
+            if counter == len(person):
+                print(item['name'])
+                return
     return
 
 
