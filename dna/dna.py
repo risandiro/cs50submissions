@@ -22,7 +22,8 @@ def main():
         sequences.update(seq.keys())
         sequences.remove("name")
 
-    
+    for item in sequences:
+        
 
 
 
