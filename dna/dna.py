@@ -17,9 +17,11 @@ def main():
         sequence = file.read()
         print(sequence)
 
+    sequences = []
+    for n in database:
+        sequences.append(n['name'])
 
-    x = longest_match(sequence, "")
-    print(x)
+
 
 
 
