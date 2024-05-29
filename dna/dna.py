@@ -17,8 +17,7 @@ def main():
         sequence = file.read()
         print(sequence)
 
-    sequences = [for d in database]
-    print(sequences)
+    print(database[0].keys())
 
 
 
