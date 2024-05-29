@@ -40,6 +40,9 @@ def main():
             if counter == len(person):
                 print(item['name'])
                 return
+
+        counter = 0
+
     return
 
 
