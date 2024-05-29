@@ -22,8 +22,9 @@ def main():
         sequences.update(seq.keys())
         sequences.remove("name")
 
+    person = list()
     for subsequence in sequences:
-        print(longest_match(sequence, subsequence))
+        person.append(longest_match(sequence, subsequence))
 
 
 
