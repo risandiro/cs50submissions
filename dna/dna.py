@@ -31,7 +31,7 @@ def main():
     for subsequence in sequences:
         person[subsequence] = longest_match(sequence, subsequence)
 
-
+    counter = 0
     for seq in sequences:
         for item in database:
 
