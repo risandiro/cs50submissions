@@ -12,7 +12,7 @@ def main():
     # open a database of people with their sequences
     with open(sys.argv[1], "r") as file:
         reader = csv.DictReader(file)
-        database = list(reader) # list of dictionaries
+        database = list(reader)  # list of dictionaries
 
     # open a text file with a particular sequence
     with open(sys.argv[2], "r") as file:
