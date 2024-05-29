@@ -31,17 +31,17 @@ def main():
 
     # check database for matching profiles
     counter = 0
-    for item in database:
-        for seq in sequences:
+    for item in database:  # take one person
+        for seq in sequences:  # take one sequence
 
-            if int(person[seq]) == int(item[seq]):
+            if int(person[seq]) == int(item[seq]):  # if their sequence matches
                 counter += 1
 
-            if counter == len(person):
+            if counter == len(person):  # if all their sequences are matches
                 print(item['name'])
                 return
 
-        counter = 0
+        counter = 0  # if not all sequences matched, reset counter to 0
 
     print("No match")
     return
