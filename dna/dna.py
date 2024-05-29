@@ -24,14 +24,7 @@ def main():
 
     person = dict()
     for subsequence in sequences:
-        match = longest_match(sequence, subsequence)
-        person.
-
-
-
-
-
-
+        person[subsequence] = longest_match(sequence, subsequence)
 
 
     # TODO: Find longest match of each STR in DNA sequence
