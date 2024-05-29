@@ -18,8 +18,8 @@ def main():
         print(sequence)
 
     sequences = []
-    for d in database:
-        
+
+
 
 
 
