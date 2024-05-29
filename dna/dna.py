@@ -17,6 +17,8 @@ def main():
         sequence = file.read()
         print(sequence)
 
+    longest_match(sequence, )
+
 
 
     # TODO: Find longest match of each STR in DNA sequence
