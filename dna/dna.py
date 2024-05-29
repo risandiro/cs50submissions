@@ -11,9 +11,11 @@ def main():
     with open(sys.argv[1], "r") as file:
         reader = csv.DictReader(file)
         database = list(reader) # list of dictionaries
+        print(database)
 
     with open(sys.argv[2], "r") as file:
         sequence = file.read()
+        print(sequence)
 
 
 
