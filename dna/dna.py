@@ -24,7 +24,9 @@ def main():
 
     person = dict()
     for subsequence in sequences:
-        person.append(longest_match(sequence, subsequence))
+        match = longest_match(sequence, subsequence)
+        person.
+
 
 
 
