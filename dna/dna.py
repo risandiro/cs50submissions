@@ -31,7 +31,9 @@ def main():
     for subsequence in sequences:
         person[subsequence] = longest_match(sequence, subsequence)
 
-    
+
+    for seq in sequences:
+        if 
 
 
     # TODO: Check database for matching profiles
