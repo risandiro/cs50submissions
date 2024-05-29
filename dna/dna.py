@@ -33,7 +33,7 @@ def main():
 
 
     for seq in sequences:
-        if 
+        if sequences['seq'] == 
 
 
     # TODO: Check database for matching profiles
