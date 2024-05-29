@@ -31,19 +31,15 @@ def main():
     for subsequence in sequences:
         person[subsequence] = longest_match(sequence, subsequence)
 
-    print(person)
+    # check database for matching profiles
     counter = 0
     for seq in sequences:
-        print(seq)
         for item in database:
-            print(item)
-            if seq == item[seq]:
-                print(item[seq])
+            print(person[seq], item[seq])
+            if person[seq] == item[seq]:
                 counter += 1
     print(counter)
 
-
-    # TODO: Check database for matching profiles
 
     return
 
