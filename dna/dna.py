@@ -18,9 +18,8 @@ def main():
         print(sequence)
 
     sequences = []
-    for key in database.keys():
-        list.append(key)
-
+    for d in database:
+        
 
 
 
