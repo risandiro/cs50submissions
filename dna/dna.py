@@ -20,9 +20,9 @@ def main():
     sequences = set()
     for seq in database:
         sequences.update(seq.keys())
+        sequences.remove("name")
 
-    print(sequences)
-
+    
 
 
 
