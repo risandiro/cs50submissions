@@ -4,4 +4,5 @@ It might not be very representative due to not including individual artists into
 Many people listen to songs because of the artists, their voice and vibe and they sometimes make
 happy songs, sometimes sad songs and sometimes danceable and sometimes not dancable.
 Assigning multiple different metrics to artists and making the aura from the most favorite
-artists of the person and time listned for each individual artists as a weighted factor.
+artists of the person, adding time listned for each individual artists as a weighted factor
+would be my solution to calculating the aura of a listener.
