@@ -1,3 +1,3 @@
 SELECT COUNT(title)
 FROM movies
-WHERE ()
+JOIN id ON ratings.rating = 
