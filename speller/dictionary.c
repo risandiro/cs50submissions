@@ -24,7 +24,6 @@ unsigned int word_count = 0;
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
-{
     int hash_value = hash(word);
     node *cursor = table[hash_value];
 
@@ -80,6 +79,7 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    // TODO
+    
+
     return false;
 }
