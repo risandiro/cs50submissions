@@ -24,6 +24,7 @@ node *table[N];
 
 // Number of words already counted
 unsigned int word_count = 0;
+unsigned int hash_value;
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
@@ -75,7 +76,7 @@ bool load(const char *dictionary)
             return false;
         }
 
-        int hash_value = hash(buffer);
+        hash_value = hash(buffer);
         strcpy(iter_word->word, buffer);
         iter_word->next = table[hash_value];
         table[hash_value] = iter_word;
