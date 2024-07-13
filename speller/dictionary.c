@@ -14,7 +14,8 @@ typedef struct node
 {
     char word[LENGTH + 1];
     struct node *next;
-} node;
+}
+node;
 
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 26;
@@ -28,19 +29,16 @@ unsigned int word_count = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    unsigned long hash_value = hash(word);
+    unsigned int hash_value = hash(word);
     node *cursor = table[hash_value];
 
-    while(cursor != 0)
+    while(cursor != NULL)
     {
         if (strcmp(cursor->word, word) == 0)
         {
             return true;
         }
-        else
-        {
-            cursor = cursor->next;
-        }
+        cursor = cursor->next;
     }
     return false;
 }
