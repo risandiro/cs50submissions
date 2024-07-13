@@ -29,7 +29,7 @@ unsigned int hash_value;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    int hash_value = hash(word);
+    hash_value = hash(word);
     node *cursor = table[hash_value];
 
     while(cursor != NULL)
