@@ -43,13 +43,14 @@ bool load(const char *dictionary)
         return false;
     }
 
+    char buffer[45];
     while (fscanf(file, "%s", buffer))
     {
         node *iter_word = malloc(sizeof(node));
         int hash_value = hash(buffer);
         strcpy(iter_word->word, buffer);
         iter_word->next = table[hash_value];
-        table[hash_value] = iter_word
+        table[hash_value] = iter_word;
     }
 
     return false;
