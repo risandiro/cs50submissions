@@ -80,6 +80,15 @@ unsigned int size(void)
 bool unload(void)
 {
     for (int i = 0; i < N; i++)
+    {
+        node *cursor = table[i];
+        node *temp = table[i];
 
-    return false;
+        while(cursor != NULL)
+        {
+            cursor = cursor->next
+            free(temp)
+        }
+    }
+    return true;
 }
