@@ -1,8 +1,12 @@
 // Implements a dictionary's functionality
 
 #include <stdio.h>
+#include <stdlib.h>
+
 #include <ctype.h>
 #include <stdbool.h>
+#include <string.h>
+#include <strings.h>
 
 #include "dictionary.h"
 
@@ -24,6 +28,7 @@ unsigned int word_count = 0;
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
+{
     int hash_value = hash(word);
     node *cursor = table[hash_value];
 
@@ -53,7 +58,7 @@ bool load(const char *dictionary)
     FILE *file = fopen(dictionary, "r");
     if (file == NULL)
     {
-        printf("cannot open dictionary\n")
+        printf("cannot open dictionary\n");
         return false;
     }
 
@@ -86,8 +91,8 @@ bool unload(void)
 
         while(cursor != NULL)
         {
-            cursor = cursor->next
-            free(temp)
+            cursor = cursor->next;
+            free(temp);
         }
     }
     return true;
