@@ -49,7 +49,12 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    return toupper(word[0]) - 'A';
+    unsigned long total = 0;
+    for (int i = 0, len = strlen(word); i < len; i++)
+    {
+        total += tolower(word[i]);
+    }
+    return total % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
