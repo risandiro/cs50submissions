@@ -93,7 +93,6 @@ bool unload(void)
         while(cursor != NULL)
         {
             cursor = cursor->next;
-            if (tmp != NULL)
             free(tmp);
             tmp = cursor;
         }
