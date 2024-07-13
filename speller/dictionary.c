@@ -34,7 +34,7 @@ bool check(const char *word)
     hash_value = hash(word);
     node *cursor = table[hash_value];
 
-    while(cursor != NULL)
+    while(cursor != 0)
     {
         if (strcmp(cursor->word, word) == 0)
         {
