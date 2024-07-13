@@ -24,6 +24,8 @@ node *table[N];
 
 // Number of words already counted
 unsigned int word_count = 0;
+
+// Hash table value
 unsigned int hash_value;
 
 // Returns true if word is in dictionary, else false
