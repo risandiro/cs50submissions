@@ -25,9 +25,6 @@ node *table[N];
 // Number of words already counted
 unsigned int word_count = 0;
 
-// Hash table value
-unsigned int hash_value;
-
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -67,24 +64,26 @@ bool load(const char *dictionary)
     {
         unload()
         printf("cannot open %s\n", dictionary);
-        return 1;
+        return false;
     }
 
-    char buffer[LENGTH + 1];
     while (fscanf(file, "%s", buffer) != EOF)
     {
-        node *n = malloc(sizeof(node));
-        if (n == NULL)
+        unsigned int hash_value = hash(buffer)
+
+        node *new_node = malloc(sizeof(node));
+        if (new_node == NULL)
         {
+            printf("couldn't load a note\n");
             return false;
         }
 
-        strcpy(n->word, buffer);
-        hash_value = hash(buffer);
-        n->next = table[hash_value];
-        table[hash_value] = n;
+        strcpy(new_node->word, buffer);
+        new_node->next = table[hash_value];
+        table[hash_value] = new_node;
         word_count++;
     }
+
     fclose(file);
     return true;
 }
