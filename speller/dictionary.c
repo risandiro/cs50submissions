@@ -69,7 +69,7 @@ bool load(const char *dictionary)
         return false;
     }
 
-    char buffer[LENGTH];
+    char buffer[LENGTH + 1];
     while (fscanf(file, "%s", buffer) != EOF)
     {
         node *iter_word = malloc(sizeof(node));
@@ -78,9 +78,8 @@ bool load(const char *dictionary)
             return false;
         }
 
-        hash_value = hash(buffer);
         strcpy(iter_word->word, buffer);
-
+        hash_value = hash(buffer);
         iter_word->next = table[hash_value];
         table[hash_value] = iter_word;
         word_count++;
