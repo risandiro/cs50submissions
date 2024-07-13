@@ -1,2 +1,8 @@
-SELECT name FROM people WHERE id IN
-(SELECT id FROM movies WHERE year = 2004)
+SELECT name
+FROM people
+WHERE id IN
+(
+    SELECT id
+    FROM movies
+    WHERE year = 2004
+)
