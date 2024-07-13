@@ -62,11 +62,11 @@ bool load(const char *dictionary)
     FILE *file = fopen(dictionary, "r");
     if (file == NULL)
     {
-        printf("cannot open dictionary\n");
+        printf("cannot open %s\n", dictionary);
         return false;
     }
 
-    char buffer[LENGTH];
+    char buffer[LENGTH + 1];
     while (fscanf(file, "%s", buffer) != EOF)
     {
         node *iter_word = malloc(sizeof(node));
