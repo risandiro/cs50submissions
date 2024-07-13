@@ -52,8 +52,7 @@ bool load(const char *dictionary)
         iter_word->next = table[hash_value];
         table[hash_value] = iter_word;
     }
-
-    return false;
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
