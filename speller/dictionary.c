@@ -43,8 +43,11 @@ bool load(const char *dictionary)
         return false;
     }
 
-    fscanf(file, "%s", buffer);
-    
+    while (fscanf(file, "%s", buffer))
+    {
+        node *word = malloc(sizeof(node));
+    }
+
     return false;
 }
 
