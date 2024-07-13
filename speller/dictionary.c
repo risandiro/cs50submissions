@@ -72,6 +72,7 @@ bool load(const char *dictionary)
         table[hash_value] = iter_word;
         word_count++;
     }
+    fclose(file);
     return true;
 }
 
