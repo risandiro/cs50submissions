@@ -88,12 +88,14 @@ bool unload(void)
     for (int i = 0; i < N; i++)
     {
         node *cursor = table[i];
-        node *temp = table[i];
+        node *tmp = table[i];
 
         while(cursor != NULL)
         {
             cursor = cursor->next;
-            free(temp);
+            if (tmp != NULL)
+            free(tmp);
+            tmp = cursor;
         }
     }
     return true;
