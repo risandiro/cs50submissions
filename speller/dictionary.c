@@ -47,7 +47,7 @@ bool load(const char *dictionary)
     {
         node *iter_word = malloc(sizeof(node));
         int hash_value = hash(buffer)
-        iter_word->word = buffer
+        strcpy(iter_word->word, buffer)
     }
 
     return false;
