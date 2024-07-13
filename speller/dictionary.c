@@ -14,8 +14,7 @@ typedef struct node
 {
     char word[LENGTH + 1];
     struct node *next;
-}
-node;
+} node;
 
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 26;
@@ -32,7 +31,7 @@ bool check(const char *word)
     int hash_value = hash(word);
     node *cursor = table[hash_value];
 
-    while(cursor != NULL)
+    while (cursor != NULL)
     {
         if (strcasecmp(cursor->word, word) == 0)
         {
@@ -45,7 +44,6 @@ bool check(const char *word)
     }
     return false;
 }
-
 
 // Hashes word to a number
 unsigned int hash(const char *word)
@@ -109,7 +107,7 @@ bool unload(void)
         node *cursor = table[i];
         node *tmp = table[i];
 
-        while(cursor != NULL)
+        while (cursor != NULL)
         {
             cursor = cursor->next;
             free(tmp);
