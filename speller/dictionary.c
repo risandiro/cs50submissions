@@ -29,25 +29,24 @@ unsigned int word_count = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    char *new_word = word;
-    for(int i = 0; word[i]; i++)
+    unsigned int location = hash(word);
+    node *tmp = table[location];
+    if (tmp == NULL)
     {
-        new_word[i] = tolower(word[i]);
+        return false;
     }
-
-    unsigned int hash_value = hash(word);
-    node *cursor = table[hash_value];
-
-    while(cursor != NULL)
+    while (tmp != NULL)
     {
-        if (strcmp(cursor->word, word) == 0)
+        if (strcasecmp(tmp->word, word) == 0)
         {
             return true;
         }
-        cursor = cursor->next;
+        tmp = tmp->next;
     }
+
     return false;
 }
+
 
 // Hashes word to a number
 unsigned int hash(const char *word)
