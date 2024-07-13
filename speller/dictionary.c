@@ -45,8 +45,9 @@ bool load(const char *dictionary)
 
     while (fscanf(file, "%s", buffer))
     {
-        node *word = malloc(sizeof(node));
+        node *iter_word = malloc(sizeof(node));
         int hash_value = hash(buffer)
+        iter_word->word = buffer
     }
 
     return false;
