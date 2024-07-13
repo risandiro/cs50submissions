@@ -19,6 +19,9 @@ const unsigned int N = 26;
 // Hash table
 node *table[N];
 
+// Number of words already counted
+unsigned int word_count = 0;
+
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -29,7 +32,6 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    // TODO: Improve this hash function
     return toupper(word[0]) - 'A';
 }
 
@@ -51,6 +53,7 @@ bool load(const char *dictionary)
         strcpy(iter_word->word, buffer);
         iter_word->next = table[hash_value];
         table[hash_value] = iter_word;
+        word_count++;
     }
     return true;
 }
@@ -58,8 +61,7 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // TODO
-    return 0;
+    return word_count;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
