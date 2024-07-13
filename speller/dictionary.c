@@ -29,13 +29,15 @@ unsigned int word_count = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    
-    unsigned int hash_value = hash(word);
+    char *str = NULL;
+    sprintf(str, "%p", word);
+    str = tolower(str);
+    unsigned int hash_value = hash(str);
     node *cursor = table[hash_value];
 
     while(cursor != NULL)
     {
-        if (strcmp(cursor->word, word) == 0)
+        if (strcmp(cursor->word, str) == 0)
         {
             return true;
         }
