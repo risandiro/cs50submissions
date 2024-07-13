@@ -63,7 +63,7 @@ bool load(const char *dictionary)
     }
 
     char buffer[45];
-    while (fscanf(file, "%s", buffer))
+    while (fscanf(file, "%s", buffer) != EOF)
     {
         node *iter_word = malloc(sizeof(node));
         int hash_value = hash(buffer);
