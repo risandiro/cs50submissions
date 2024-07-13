@@ -70,6 +70,11 @@ bool load(const char *dictionary)
     while (fscanf(file, "%s", buffer) != EOF)
     {
         node *iter_word = malloc(sizeof(node));
+        if (iter_word == NULL)
+        {
+            return false;
+        }
+
         int hash_value = hash(buffer);
         strcpy(iter_word->word, buffer);
         iter_word->next = table[hash_value];
