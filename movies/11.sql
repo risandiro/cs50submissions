@@ -6,7 +6,7 @@ WHERE movies.id IN
     JOIN ratings ON stars.movie_id = ratings.movie_id
     JOIN people ON people.id = stars.person_id
     WHERE people.name = "Chadwick Boseman"
-    ORDER BY ratings.rating
+    ORDER BY ratings.rating DESC
     LIMIT 5
 );
 
