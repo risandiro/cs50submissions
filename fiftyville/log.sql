@@ -125,6 +125,16 @@
 -- | 36 | 8                 | 4                      | 8    | 20     |
 -- +----+-------------------+------------------------+------+--------+
 
+-- SELECT city FROM airports WHERE id = "4";
+
+-- +---------------+
+-- |     city      |
+-- +---------------+
+-- | New York City |
+-- +---------------+
+
+-- The city that he escaped to: New York City
+
 ------------------------------------------------------------------------------------------------------------------------------------
 
 -- SELECT name FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE day = "28" AND month = "7" AND duration < 60);
