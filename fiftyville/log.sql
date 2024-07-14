@@ -227,5 +227,12 @@
 -- | (367) 555-5533 |
 -- +----------------+
 
--- Accomplice number: (375) 555-8161
+-- SELECT receiver FROM phone_calls WHERE day = "28" AND month = "7" AND duration < 60 AND caller IN (SELECT phone_number FROM people WHERE name = "Bruce");
+
+-- +----------------+
+-- |    receiver    |
+-- +----------------+
+-- | (375) 555-8161 |
+-- +----------------+
+
 
