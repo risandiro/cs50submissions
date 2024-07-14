@@ -132,14 +132,14 @@
 -- +---------+
 -- |  name   |
 -- +---------+
--- | Kenny   |
+-- | Vanessa |
+-- | Barry   |
+-- | Iman    |
 -- | Sofia   |
--- | Benista |
--- | Taylor  |
+-- | Luca    |
 -- | Diana   |
 -- | Kelsey  |
 -- | Bruce   |
--- | Carina  |
 -- +---------+
 
 -- SELECT name FROM people WHERE passport_number IN (SELECT passport_number FROM passengers WHERE flight_id = "36");
@@ -156,3 +156,5 @@
 -- | Bruce  |
 -- | Doris  |
 -- +--------+
+
+Suspects: Sofia, 
