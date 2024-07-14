@@ -9,5 +9,3 @@ WHERE movies.title IN
     WHERE people.name = "Kevin Bacon" AND people.birth = 1958
 )
 AND people.name != "Kevin Bacon";
-
-
