@@ -76,6 +76,14 @@
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
+-- SELECT full_name, id  FROM airports WHERE city = "Fiftyville";
+
+-- +-----------------------------+----+
+-- |          full_name          | id |
+-- +-----------------------------+----+
+-- | Fiftyville Regional Airport | 8  |
+-- +-----------------------------+----+
+
 -- SELECT origin_airport_id, destination_airport_id, hour, minute  FROM flights WHERE month = "7" AND day = "29" ORDER BY hour, minute LIMIT 1;
 
 -- +-------------------+------------------------+------+--------+
