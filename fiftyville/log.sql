@@ -56,6 +56,21 @@
 -- | 26013199       |
 -- +----------------+
 
+-- SELECT person_id FROM bank_accounts WHERE account_number IN (SELECT account_number FROM atm_transactions WHERE atm_location = "Leggett Street" AND month = "7" AND day = "28" AND transaction_type = "withdraw");
+
+-- +-----------+
+-- | person_id |
+-- +-----------+
+-- | 686048    |
+-- | 514354    |
+-- | 458378    |
+-- | 395717    |
+-- | 396669    |
+-- | 467400    |
+-- | 449774    |
+-- | 438727    |
+-- +-----------+
+
 ------------------------------------------------------------------------------------------------------------------------------------
 
 -- SELECT caller FROM phone_calls WHERE day = "28" AND month = "7" AND duration < 60;
