@@ -176,4 +176,19 @@
 
 -- SELECT name FROM people WHERE id IN (SELECT person_id FROM bank_accounts WHERE account_number IN (SELECT account_number FROM atm_transactions WHERE atm_location = "Leggett Street" AND month = "7" AND day = "28" AND transaction_type = "withdraw"));
 
---
+-- +---------+
+-- |  name   |
+-- +---------+
+-- | Kenny   |
+-- | Iman    |
+-- | Benista |
+-- | Taylor  |
+-- | Brooke  |
+-- | Luca    |
+-- | Diana   |
+-- | Bruce   |
+-- +---------+
+
+-- Suspects: Bruce
+
+------------------------------------------------------------------------------------------------------------------------------------
