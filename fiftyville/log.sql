@@ -157,4 +157,4 @@
 -- | Doris  |
 -- +--------+
 
-Suspects: Sofia, 
+-- Suspects: Sofia, Kelsey, Bruce
