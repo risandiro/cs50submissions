@@ -84,13 +84,13 @@
 -- | Fiftyville Regional Airport | 8  |
 -- +-----------------------------+----+
 
--- SELECT origin_airport_id, destination_airport_id, hour, minute  FROM flights WHERE month = "7" AND day = "29" ORDER BY hour, minute LIMIT 1;
+-- SELECT id, origin_airport_id, destination_airport_id, hour, minute  FROM flights WHERE month = "7" AND day = "29" ORDER BY hour, minute LIMIT 1;
 
--- +-------------------+------------------------+------+--------+
--- | origin_airport_id | destination_airport_id | hour | minute |
--- +-------------------+------------------------+------+--------+
--- | 8                 | 4                      | 8    | 20     |
--- +-------------------+------------------------+------+--------+
+-- +----+-------------------+------------------------+------+--------+
+-- | id | origin_airport_id | destination_airport_id | hour | minute |
+-- +----+-------------------+------------------------+------+--------+
+-- | 36 | 8                 | 4                      | 8    | 20     |
+-- +----+-------------------+------------------------+------+--------+
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
