@@ -142,4 +142,17 @@
 -- | Carina  |
 -- +---------+
 
+-- SELECT name FROM people WHERE passport_number IN (SELECT passport_number FROM passengers WHERE flight_id = "36");
 
+-- +--------+
+-- |  name  |
+-- +--------+
+-- | Kenny  |
+-- | Sofia  |
+-- | Taylor |
+-- | Luca   |
+-- | Kelsey |
+-- | Edward |
+-- | Bruce  |
+-- | Doris  |
+-- +--------+
