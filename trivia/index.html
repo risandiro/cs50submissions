@@ -38,8 +38,16 @@
                 }
 
                 document.querySelector('#check').addEventListener('click', function() {
-
-                })
+                    let input = document.querySelector('input');
+                    if (input.value == '1969') {
+                        input.style.background = 'green';
+                        input.parentElement.querySelector('.feedback'.innerHTML = 'Correct!';)
+                    }
+                    else {
+                        input.style.background = 'red';
+                        input.parentElement.querySelector('.feedback'.innerHTML = 'Incorrect!';)
+                    }
+                });
             });
 
         </script>
