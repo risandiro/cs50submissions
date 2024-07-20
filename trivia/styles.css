@@ -50,7 +50,10 @@ button, input[type="submit"] {
     vertical-align: middle;
 }
 
-button[type="]
+button[type="submit"]:hover {
+    text-decoration: underline;
+    color: red;
+}
 
 
 input[type="search"] {
