@@ -53,6 +53,7 @@ button, input[type="submit"] {
 button[type="submit"]:hover {
     background-color: #477bff;
     transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+    border: 1px solid black;
 }
 
 
