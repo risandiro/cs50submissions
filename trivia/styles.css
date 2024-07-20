@@ -50,10 +50,6 @@ button, input[type="submit"] {
     vertical-align: middle;
 }
 
-button:hover {
-    
-}
-
 
 input[type="search"] {
     line-height: 1.8;
