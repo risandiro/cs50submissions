@@ -46,6 +46,8 @@
                     else {
                         input.style.backgroundColor = 'red';
                         input.parentElement.querySelector('.feedback').innerHTML = 'Incorrect!';
+                        setTimeout('', 5000);
+                        input.style.backgroundColor = 'white';
                     }
                 });
             });
