@@ -13,12 +13,14 @@
                 // Create a variable for every element with class 'correct'
                 let corrects = document.querySelectorAll('.correct');
 
-                // Add event listener to every class correct button
+                // Add click event listener to every class "correct" button
                 for (let i = 0; i < corrects.length; i++) {
                     corrects[i].addEventListener('click', function() {
 
+                        // When it happens, change the background to green
                         corrects[i].style.backgroundColor = 'Green';
 
+                        
                         corrects[i].parentElement.querySelector('.feedback').innerHTML = 'Correct!';
                     });
                 }
