@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
         <script>
-
             // Wait for DOM content to load
             document.addEventListener('DOMContentLoaded', function() {
 
@@ -42,16 +42,15 @@
                     if (input.value === '1969') {
                         input.style.backgroundColor = 'green';
                         input.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
-                    }
-                    else {
+                    } else {
                         input.style.backgroundColor = 'red';
                         input.parentElement.querySelector('.feedback').innerHTML = 'Incorrect! Try again';
                     }
                 });
             });
-
         </script>
     </head>
+
     <body>
         <div class="header">
             <h1>Trivia!</h1>
@@ -80,4 +79,5 @@
             </div>
         </div>
     </body>
+
 </html>
