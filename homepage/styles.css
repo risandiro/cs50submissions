@@ -22,9 +22,10 @@
 
 .topnav a.active {
     color: #ffc300;
+}
 
-
-h1 {
+.title {
+    width: 100%;
     padding-top: 100px;
     text-align: center;
 }
