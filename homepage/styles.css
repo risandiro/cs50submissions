@@ -24,9 +24,11 @@
     color: #ffc300;
 }
 
-.title {
-    width: 100%;
-    padding-top: 100px;
-    text-align: center;
-}
+.box {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+  }
 
