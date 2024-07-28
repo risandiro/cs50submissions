@@ -17,11 +17,11 @@
 }
 
 .topnav a:hover {
-    color: magenta;
+    color: #dad7cd;
 }
 
 .topnav a.active {
-    color: magenta;
+    color: #ffc300;
 
 
 h1 {
