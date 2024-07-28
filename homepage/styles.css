@@ -20,8 +20,12 @@
     color: magenta;
 }
 
+.topnav a.active {
+    color: magenta;
+
 
 h1 {
     padding-top: 100px;
     text-align: center;
 }
+
