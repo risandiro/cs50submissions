@@ -7,7 +7,7 @@ entry, stoploss = float(entry), float(stoploss)
 if entry > stoploss:
     target = entry + stoploss
 elif entry < stoploss:
-    target = stoploss - entry
+    target = entry - (stoploss - entry)
 
 risk_2 = ((balance / 100) * 2) * target
 risk_15 = ((balance / 100) * 1.5) * target
