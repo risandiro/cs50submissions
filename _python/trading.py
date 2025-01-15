@@ -6,12 +6,15 @@ while True:
     entry, stoploss = float(entry), float(stoploss)
 
     if entry > stoploss:
-        target = entry + (entry - stoploss)
-    elif entry < stoploss:
-        target = entry - (stoploss - entry)
+        risk = entry - stoploss
+        target = entry + risk
 
-    risk_2 = int(((balance / 100) * 2) / target)
-    risk_15 = int(((balance / 100) * 1.5) * target)
-    risk_1 = int((balance / 100) * target)
+    elif entry < stoploss:
+        risk = stoploss - entry
+        target = entry - risk
+
+    risk_2 = int(((balance / 100) * 2) / risk)
+    risk_15 = int(((balance / 100) * 1.5) / risk)
+    risk_1 = int((balance / 100) / risk)
 
     print(f"{ticker} --> Target: {target}  Entry: {entry}  Stoploss: {stoploss}    Risk? 2%: -{risk_2}- 1.5%: -{risk_15}- 1%: -{risk_1}-")
