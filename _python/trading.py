@@ -6,9 +6,9 @@ while True:
     entry, stoploss = float(entry), float(stoploss)
 
     if entry > stoploss:
-        target = entry + stoploss
+        target = entry + (entry - stoploss)
     elif entry < stoploss:
-        target = entry - (stoploss - entry)
+        target = entry + (stoploss - entry)
 
     risk_2 = int(((balance / 100) * 2) * target)
     risk_15 = int(((balance / 100) * 1.5) * target)
