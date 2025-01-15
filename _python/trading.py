@@ -13,4 +13,4 @@ risk_2 = ((balance / 100) * 2) * target
 risk_15 = ((balance / 100) * 1.5) * target
 risk_1 = (balance / 100) * target
 
-print(f"{ticker} --> Target: {target + entry}  Entry: {entry}  Stoploss: {stoploss}    Risk? 2%: -{risk_2}- 1.5%: -{risk_15}- 1%: -{risk_1}-")
+print(f"{ticker} --> Target: {target}  Entry: {entry}  Stoploss: {stoploss}    Risk? 2%: -{risk_2}- 1.5%: -{risk_15}- 1%: -{risk_1}-")
