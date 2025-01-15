@@ -10,7 +10,7 @@ while True:
     elif entry < stoploss:
         target = entry - (stoploss - entry)
 
-    risk_2 = int(((balance / 100) * 2) * target)
+    risk_2 = int(((balance / 100) * 2) / target)
     risk_15 = int(((balance / 100) * 1.5) * target)
     risk_1 = int((balance / 100) * target)
 
