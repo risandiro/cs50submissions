@@ -9,6 +9,9 @@ application, what should happen is this function index should get called. Index
 function uses render_template to return a index.html back to the user '''
 @app.route("/")
 def index():
-    # is name in URL? If so grab it's value. If not, default to "world" instead
+    return render_template("index.html")
+
+@app.route("/greet")
+def greet():
     name = request.args.get("name", "world")
-    return render_template("index.html", placeholder=name)
+    return render_template("greet.html", name = name)
