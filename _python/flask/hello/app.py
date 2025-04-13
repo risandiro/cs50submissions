@@ -9,5 +9,5 @@ application, what should happen is this function index should get called. Index
 function uses render_template to return a index.html back to the user '''
 @app.route("/")
 def index():
-    name []\';/.,,,
-    return render_template("index.html")
+    name = request.args[name]
+    return render_template("index.html", placeholder=name)
