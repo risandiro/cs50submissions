@@ -10,8 +10,5 @@ function uses render_template to return a index.html back to the user '''
 @app.route("/")
 def index():
     # is name in URL? If so grab it's value. If not, default to "world" instead
-    if "name" in request.args:
-        name = request.args["name"]
-    else:
-        name = "world"
+    name = request.args.get("name", "world")
     return render_template("index.html", placeholder=name)
