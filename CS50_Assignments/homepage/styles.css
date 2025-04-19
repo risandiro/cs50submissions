@@ -31,7 +31,9 @@
     text-align: center;
   }
 
-.logo {
+#main_logo {
     border-radius: 8px;
+    height: 400px;
+    width: 600px;
   }
 
