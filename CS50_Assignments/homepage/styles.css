@@ -35,5 +35,9 @@
     border-radius: 8px;
     height: 400px;
     width: 600px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    margin: auto;
   }
 
