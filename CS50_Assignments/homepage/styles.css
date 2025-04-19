@@ -31,8 +31,7 @@
     text-align: center;
   }
 
-  .logo {
-    width="500";
-    height="600";
+.logo {
+    border-radius: 8px;
   }
 
