@@ -17,6 +17,7 @@
 
     </head>
     <body>
+
         <nav class="topnav">
             <a href="index.html">Home</a>
             <a href="news.html">News</a>
@@ -26,27 +27,23 @@
 
         <div class="gap"></div>
 
-        <div class="form">
-            <p id="toggle" style ="display: none">Thank you!</p>
+        <script>
+            const button = document.getElementById("contact_button");
 
-            <script>
-                function toggleText() {
-                    var text = document.getElementById("toggle");
-                    if (text.style.display === "none") {
-                        text.style.display = "block";
-                    } else {
-                        text.style.display = "none";
-                    }
+            button.addEventListener("click", function() {
+                if (button.style.backgroundColor === 'blue') {
+                button.style.backgroundColor = 'red';
+                } else {
+                button.style.backgroundColor = 'blue';
                 }
-            </script>
+            });
+        </script>
 
-            <form>
+        <form class="form">
                 <input autocomplete="off" autofocus placeholder="Your name" required type="text">
                 <input autocomplete="off" placeholder="Your email" required type="email">
-                <button type="submit" onclick="toggleText()">Contact me</button>
-            </form>
-        </div>
-
+                <button id="contact_button"type="submit" onclick="toggleText()">Contact me</button>
+        </form>
 
     </body>
 </html>
