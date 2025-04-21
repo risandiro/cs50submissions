@@ -1,1 +1,1 @@
-HTML Tags used: <nav>, <a>, <div>, <h1>, <p>, <hr>, <img>, 
+HTML Tags used: <nav>, <a>, <div>, <h1>, <h2>, <h3> <p>, <hr>, <img>, <form>, <input>, <button>, <script>
