@@ -50,3 +50,14 @@ hr {
     padding: 15px;
 }
 
+.form {
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin: auto;
+  width: 50%;
+}
+
+.gap {
+  padding: 15px;
+}
+

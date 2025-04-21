@@ -24,13 +24,15 @@
             <a href="about.html">About</a>
         </nav>
 
-        <form>
-            <input autocomplete="off" autofocus name="name" placeholder="Name" required type="text">
-            {% for sport in sports %}
-                <input name="sport" type="checkbox" value="{{ sport }}"> {{ sport }}
-            {% endfor %}
-            <button type="submit">Register</button>
+        <div class="gap"></div>
 
+        <div class="form">
+            <form>
+                <input autocomplete="off" autofocus placeholder="Your name" required type="text">
+                <input autocomplete="off" placeholder="Your email">
+                <button type="submit">Contact me</button>
+            </form>
+        </div>
 
 
     </body>
