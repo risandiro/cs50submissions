@@ -27,11 +27,11 @@
         <div class="gap"></div>
 
         <div class="form">
-            <p id="text" style ="display: none">Hello Javascript</p>
+            <p id="toggle" style ="display: none">Thank you!</p>
 
             <script>
                 function toggleText() {
-                    var text = document.getElementById("text");
+                    var text = document.getElementById("toggle");
                     if (text.style.display === "none") {
                         text.style.display = "block";
                     } else {
@@ -43,7 +43,7 @@
             <form>
                 <input autocomplete="off" autofocus placeholder="Your name" required type="text">
                 <input autocomplete="off" placeholder="Your email" required type="email">
-                <button id="click" type="submit">Contact me</button>
+                <button type="submit" onclick="toggleText()">Contact me</button>
             </form>
         </div>
 
