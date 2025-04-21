@@ -27,21 +27,22 @@
         <div class="gap"></div>
 
         <div class="form">
+            <p id="text" style ="display: none">Hello Javascript</p>
+
+            <script>
+                function toggleText() {
+                    var text = document.getElementById("text");
+                    if (text.style.display === "none") {
+                        text.style.display = "block";
+                    } else {
+                        text.style.display = "none";
+                    }
+                }
+            </script>
+
             <form>
                 <input autocomplete="off" autofocus placeholder="Your name" required type="text">
                 <input autocomplete="off" placeholder="Your email" required type="email">
-
-                <script>
-                    function toggleText() {
-                        var text = document.getElementById("demo");
-                        if (text.style.display === "none") {
-                            text.style.display = "block";
-                        } else {
-                            text.style.display = "none";
-  }
-}
-                </script>
-
                 <button id="click" type="submit">Contact me</button>
             </form>
         </div>
