@@ -26,9 +26,9 @@
 .box {
     border: 1px solid black;
     padding: 10px;
-    margin: 5% 25px 5% 25px;
+    margin: 5% 10% 5% 10%;
     text-align: center;
-    background-color: beige;
+    background-color: lightgray;
   }
 
 #main_logo {
