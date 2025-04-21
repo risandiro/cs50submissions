@@ -27,6 +27,12 @@
 
         <div class="gap"></div>
 
+        <form class="form">
+                <input autocomplete="off" autofocus placeholder="Your name" required type="text">
+                <input autocomplete="off" placeholder="Your email" required type="email">
+                <button id="contact_button"type="submit">Contact me</button>
+        </form>
+
         <script>
             const button = document.getElementById("contact_button");
 
@@ -38,12 +44,6 @@
                 }
             });
         </script>
-
-        <form class="form">
-                <input autocomplete="off" autofocus placeholder="Your name" required type="text">
-                <input autocomplete="off" placeholder="Your email" required type="email">
-                <button id="contact_button"type="submit" onclick="toggleText()">Contact me</button>
-        </form>
 
     </body>
 </html>
