@@ -55,6 +55,8 @@ hr {
   padding: 5px;
   margin: auto;
   width: 50%;
+  border-radius: 8px;
+
 }
 
 .gap {
