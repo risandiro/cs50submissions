@@ -32,11 +32,14 @@
                 <input autocomplete="off" placeholder="Your email" required type="email">
 
                 <script>
-                    function response() {
-                      document.getElementById("click").style.fontSize = "25px";
-                      document.getElementById("click").style.color = "red";
-                      document.getElementById("click").style.backgroundColor = "yellow";
-                    }
+                    function toggleText() {
+                        var text = document.getElementById("demo");
+                        if (text.style.display === "none") {
+                            text.style.display = "block";
+                        } else {
+                            text.style.display = "none";
+  }
+}
                 </script>
 
                 <button id="click" type="submit">Contact me</button>
