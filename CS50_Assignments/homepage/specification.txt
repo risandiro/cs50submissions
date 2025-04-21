@@ -5,4 +5,4 @@ font-size, border, border-radius, height, width, display, box-shadow.
 
 JavaScript: make button change color after being clicked.
 
-Bootstrap: 
+Bootstrap: used template design "card" to decorate my text in about.html
