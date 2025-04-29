@@ -60,6 +60,9 @@ def buy():
         if not (quote * quantity) <= user_cash:
             return apology("not enough cash for the purchase", 403)
 
+        # process the transaction
+        db.execute("INSERT INTO transactions (id, symbol, quantity, price) VALUES ())
+
 
 
 
