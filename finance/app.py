@@ -51,7 +51,7 @@ def buy():
         except ValueError:
             return apology("invalid quantity", 403)
 
-        user_cash = db.execute(db.execute("SELECT * FROM users WHERE username = ?")
+        user_cash = db.execute("SELECT cash FROM users WHERE id = ?", )
 
 
 
