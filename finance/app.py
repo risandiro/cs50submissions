@@ -72,6 +72,12 @@ def buy():
             new_total=user_cash-total_cost, user_id=session["user_id"]
         )
 
+        receipt = f""
+        return render_template("buy.html", recepit)
+
+    else:
+
+
 
 @app.route("/history")
 @login_required
