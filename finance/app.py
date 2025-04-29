@@ -54,7 +54,7 @@ def buy():
             return apology("invalid quantity", 403)
 
 
-        user_cash = db.execute("SELECT cash FROM users WHERE id = ?", )
+        user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
 
 
 
