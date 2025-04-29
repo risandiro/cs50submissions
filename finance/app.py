@@ -68,7 +68,8 @@ def buy():
 
         #update cash
         db.execute(
-            "UPDATE users SET cash = :new_total WHERE id
+            "UPDATE users SET cash = :new_total WHERE id = :user_id",
+            new_total=user_cash-total_cost, user_id=session["user_id"]
         )
 
 
