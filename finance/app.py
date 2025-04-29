@@ -72,11 +72,11 @@ def buy():
             new_total=user_cash-total_cost, user_id=session["user_id"]
         )
 
-        receipt = f"You've just purchased {request.form.get("symbol")} "
-        return render_template("buy.html", recepit)
+        receipt = f"You've just purchased {quantity} shares of {quote["symbol"]} for the price of {quote["price"]}"
+        return render_template("buy.html", receipt)
 
     else:
-
+        return render_template("buy.html")
 
 
 @app.route("/history")
