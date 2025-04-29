@@ -41,11 +41,12 @@ def index():
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
+    # validate symbol
     if request.method == "POST":
         quote = lookup(request.form.get("symbol"))
         if not quote:
             return apology("stock symbol doesn't exist", 403)
-
+        # validate quantity
         try:
             quantity = int(request.form.get("quantity"))
         except ValueError:
@@ -53,8 +54,9 @@ def buy():
         if quantity <= 0:
             return apology("invalid quantity", 403)
 
-
+        # validate if user can afford the purchase
         user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        
 
 
 
