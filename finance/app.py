@@ -66,7 +66,7 @@ def buy():
             "INSERT INTO transactions (id, symbol, quantity, price) VALUES (?, ?, ?, ?)",
             session["user_id"], request.form.get("symbol"), quantity, quote)
 
-        #update cash
+        #update user's cash balnace
         db.execute(
             "UPDATE users SET cash = :new_total WHERE id = :user_id",
             new_total=user_cash-total_cost, user_id=session["user_id"]
