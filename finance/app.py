@@ -57,7 +57,8 @@ def buy():
 
         # validate if user can afford the purchase
         user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-        if not (quote * quantity) <= user_cash:
+        total_cost = quote * quantity
+        if not total_cost <= user_cash:
             return apology("not enough cash for the purchase", 403)
 
         # process the transaction
@@ -67,7 +68,7 @@ def buy():
 
         #update cash
         db.execute(
-            "UPDATE users SET cash = 
+            "UPDATE users SET cash = user_cash - total_cost
         )
 
 
