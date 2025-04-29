@@ -46,6 +46,7 @@ def buy():
         quote = lookup(request.form.get("symbol"))
         if not quote:
             return apology("stock symbol doesn't exist", 403)
+
         # validate quantity
         try:
             quantity = int(request.form.get("quantity"))
@@ -56,7 +57,8 @@ def buy():
 
         # validate if user can afford the purchase
         user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-        
+        if not (quote * quantity) <= user_cash:
+            return apology("not enough cash for the purchase", 403)
 
 
 
