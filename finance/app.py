@@ -61,9 +61,14 @@ def buy():
             return apology("not enough cash for the purchase", 403)
 
         # process the transaction
-        db.execute("INSERT INTO transactions (id, symbol, quantity, price) VALUES (?, ?, ?, ?)
-                   )
+        db.execute(
+            "INSERT INTO transactions (id, symbol, quantity, price) VALUES (?, ?, ?, ?)",
+            session["user_id"], request.form.get("symbol"), quantity, quote)
 
+        #update cash
+        db.execute(
+            "UPDATE users SET cash = 
+        )
 
 
 @app.route("/history")
