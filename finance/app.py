@@ -74,8 +74,8 @@ def buy():
             new_total=user_cash-total_cost, user_id=session["user_id"]
         )
 
-        receipt = f"You've just purchased {quantity} shares of {quote["symbol"]} for the price of {quote["price"]}"
-        return render_template("buy.html", receipt)
+        receipt = f"You've just purchased {quantity} shares of {quote["name"]}({quote["symbol"]}) for the price of {quote["price"]}"
+        return render_template("buy.html", receipt=receipt)
 
     else:
         return render_template("buy.html")
