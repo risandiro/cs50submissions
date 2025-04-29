@@ -43,7 +43,7 @@ def index():
 def buy():
     # validate symbol
     if request.method == "POST":
-        quote = lookup(request.form.get("symbol"))
+        quote = lookup(request.form.get("symbol").upper())
         if not quote:
             return apology("stock symbol doesn't exist", 403)
 
@@ -58,7 +58,7 @@ def buy():
         # validate if user can afford the purchase
         user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
         total_cost = quote["price"] * quantity
-        if not total_cost <= user_cash:
+        if not int(total_cost) <= int(user_cash[0]):
             return apology("not enough cash for the purchase", 403)
 
         # process the transaction
