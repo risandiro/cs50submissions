@@ -42,7 +42,18 @@ def index():
 @login_required
 def buy():
     if request.method == "POST":
-        
+        quote = lookup(request.form.get("symbol"))
+        if not quote:
+            return apology("stock symbol doesn't exist", 403)
+
+        try:
+            quantity = int(request.form.get("quantity"))
+        except ValueError:
+            return apology("invalid quantity", 403)
+
+        user_cash = db.execute(db.execute("SELECT * FROM users WHERE username = ?")
+
+
 
 
 @app.route("/history")
