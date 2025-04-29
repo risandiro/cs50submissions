@@ -57,6 +57,8 @@ def buy():
 
         # validate if user can afford the purchase
         user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        user_cash = user_cash[0]
+        print(user_cash)
         total_cost = quote["price"] * quantity
         if not int(total_cost) <= user_cash:
             return apology("not enough cash for the purchase", 403)
