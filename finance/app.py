@@ -57,14 +57,14 @@ def buy():
 
         # validate if user can afford the purchase
         user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-        total_cost = quote * quantity
+        total_cost = quote["price"] * quantity
         if not total_cost <= user_cash:
             return apology("not enough cash for the purchase", 403)
 
         # process the transaction
         db.execute(
             "INSERT INTO transactions (id, symbol, quantity, price) VALUES (?, ?, ?, ?)",
-            session["user_id"], request.form.get("symbol"), quantity, quote)
+            session["user_id"], request.form.get("symbol"), quantity, quote["price"])
 
         #update user's cash balnace
         db.execute(
@@ -72,7 +72,7 @@ def buy():
             new_total=user_cash-total_cost, user_id=session["user_id"]
         )
 
-        receipt = f""
+        receipt = f"You've just purchased {request.form.get("symbol")} "
         return render_template("buy.html", recepit)
 
     else:
