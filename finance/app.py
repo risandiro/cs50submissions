@@ -50,6 +50,9 @@ def buy():
             quantity = int(request.form.get("quantity"))
         except ValueError:
             return apology("invalid quantity", 403)
+        if quantity <= 0:
+            return apology("invalid quantity", 403)
+
 
         user_cash = db.execute("SELECT cash FROM users WHERE id = ?", )
 
