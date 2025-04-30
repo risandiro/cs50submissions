@@ -21,3 +21,14 @@ nav .navbar-brand .green
 {
     color: #2e944b;
 }
+
+table, th, td {
+    border:1px solid black;
+    width:100%;
+    margin-top: 5%;
+}
+
+.gap {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}

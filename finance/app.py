@@ -34,15 +34,33 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
-    """Show portfolio of stocks"""
-    return apology("TODO")
+    # get cash balance
+    cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+    cash = round(cash[0]["cash"], 2)
+
+    # get user's portfolio
+    holdings = db.execute("SELECT * FROM holdings WHERE id = ?", session["user_id"])
+
+    # create a list of dictionries that combines all the information about each individual holding of the user
+    portfolio = []
+    portfolio_balance = 0
+    for holding in holdings:
+        quote = lookup(holding["symbol"])
+        stock = { "name": quote["name"], "symbol": holding["symbol"], "quantity": holding["quantity"],
+          "current_price": quote["price"], "holding_value": quote["price"]*holding["quantity"] }
+        portfolio.append(stock)
+        portfolio_balance += quote["price"]*holding["quantity"]
+
+    return render_template("index.html", cash=cash, portfolio=portfolio, portfolio_balance=portfolio_balance)
 
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
-    # validate symbol
+    '''Buy a stock'''
     if request.method == "POST":
+
+        # validate symbol
         quote = lookup(request.form.get("symbol").upper())
         if not quote:
             return apology("stock symbol doesn't exist", 403)
@@ -58,7 +76,6 @@ def buy():
         # validate if user can afford the purchase
         user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
         user_cash = user_cash[0]["cash"]
-        print(user_cash)
         total_cost = quote["price"] * quantity
         if not int(total_cost) <= user_cash:
             return apology("not enough cash for the purchase", 403)
@@ -74,7 +91,23 @@ def buy():
             new_total=user_cash-total_cost, user_id=session["user_id"]
         )
 
-        receipt = f"You've just purchased {quantity} shares of {quote["name"]} ({quote["symbol"]}) for the price of {quote["price"]}"
+        #update user's holdings
+        stock = db.execute(
+            "SELECT quantity FROM holdings WHERE id = :user_id AND symbol = :symbol",
+            user_id=session["user_id"], symbol=quote["symbol"])
+
+        if stock:
+            db.execute(
+                "UPDATE holdings SET quantity = :new_quantity",
+                new_quantity=stock[0]["quantity"]+quantity)
+        else:
+            db.execute(
+                "INSERT INTO holdings (id, symbol, quantity) VALUES (?, ?, ?)",
+                session["user_id"], quote["symbol"], quantity
+            )
+
+
+        receipt = f"You've just purchased {quantity} shares of {quote["name"]} ({quote["symbol"]}) for the price of ${quote["price"]}"
         return render_template("buy.html", receipt=receipt)
 
     else:
@@ -201,5 +234,50 @@ def register():
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
-    """Sell shares of stock"""
-    return apology("TODO")
+    ''' Sell a stock'''
+    if request.method == "POST":
+
+        # validate symbol
+        quote = lookup(request.form.get("symbol").upper())
+        if not quote:
+            return apology("stock symbol doesn't exist", 403)
+
+        # validate quantity
+        try:
+            quantity = int(request.form.get("quantity"))
+        except ValueError:
+            return apology("invalid quantity", 403)
+        if quantity <= 0:
+            return apology("invalid quantity", 403)
+
+        # get the number of shares user owns
+        available_quantity = db.execute(
+            "SELECT quantity FROM holdings WHERE id = :user_id AND symbol = :symbol",
+            user_id=session["user_id"], symbol=quote["symbol"])
+
+        # validate if user actually owns the shares he wants to sell
+        if not available_quantity:
+            return apology("you don't own any shares of this stock", 403)
+        if available_quantity[0]["quantity"] < quantity:
+            return apology("you can't sell more shares than you own", 403)
+
+        # update user's cash
+        user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        user_cash = user_cash[0]["cash"]
+        total_cost = quote["price"]*quantity
+
+        db.execute(
+            "UPDATE users SET cash = :new_total WHERE id = :user_id",
+            new_total=user_cash+total_cost, user_id=session["user_id"] )
+
+        # update user's quantity
+        db.execute(
+            "UPDATE holdings SET quantity = :new_quantity",
+            new_quantity=available_quantity[0]["quantity"]-quantity
+        )
+
+        receipt = f"You've just sold {quantity} shares of {quote["name"]} ({quote["symbol"]}) for the price of ${quote["price"]}. Currently you own {available_quantity[0]["quantity"]-quantity} shares."
+        return render_template("sell.html", receipt=receipt)
+
+    else:
+        return render_template("sell.html")
