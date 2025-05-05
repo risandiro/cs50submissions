@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<table>
+    <tr>
+        <th>Stock name</th>
+        <th>Symbol</th>
+        <th>Quantity</th>
+        <th>Side</th>
+        <th>Price</th>
+        <th>Timestamp</th>
+    </tr>
+
+    {% for transaction in transactions %}
+        <tr>
+            <th>{{ transaction["name"]  }}</th>
+            <th>{{ transaction["symbol"]  }}</th>
+            <th>{{ transaction["quantity"]  }}</th>
+            <th>{{ transaction["side"]  }}</th>
+            <th>{{ transaction["price"]  }}</th>
+            <th>{{ transaction["timestamp"]  }}</th>
+        </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

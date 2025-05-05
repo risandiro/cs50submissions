@@ -34,81 +34,72 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
-    # get cash balance
-    cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-    cash = round(cash[0]["cash"], 2)
+    """Show portfolio of stocks"""
 
-    # get user's portfolio
-    holdings = db.execute("SELECT * FROM holdings WHERE id = ?", session["user_id"])
+    # get users stocks
+    transactions = db.execute("SELECT symbol, SUM(shares) as total_shares FROM transactions WHERE" \
+    " user_id = :user_id GROUP BY symbol HAVING total_shares > 0",
+                        user_id=session["user_id"])
 
-    # create a list of dictionries that combines all the information about each individual holding of the user
-    portfolio = []
-    portfolio_balance = 0
-    for holding in holdings:
-        quote = lookup(holding["symbol"])
-        stock = { "name": quote["name"], "symbol": holding["symbol"], "quantity": holding["quantity"],
-          "current_price": quote["price"], "holding_value": quote["price"]*holding["quantity"] }
-        portfolio.append(stock)
-        portfolio_balance += quote["price"]*holding["quantity"]
+    # get user's current cash balance
+    users_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+    users_cash = users_cash[0]["cash"]
 
-    return render_template("index.html", cash=cash, portfolio=portfolio, portfolio_balance=portfolio_balance)
+    # iterate over transactions, add together common symbols, sum their quantities, add to holding_value and grand_total
+    holding_value = users_cash
+    grand_total = users_cash
+    for transaction in transactions:
+        quote = lookup(transaction["symbol"])
+        transaction["name"] = quote["name"]
+        transaction["price"] = quote["price"]
+        transaction["value"] = transaction["price"] * transaction["total_shares"]
+        holding_value += transaction["value"]
+        grand_total += transaction["value"]
+
+    return render_template("index.html", transactions=transactions, users_cash=users_cash, holding_value=holding_value, grand_total=grand_total)
 
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
     '''Buy a stock'''
+
     if request.method == "POST":
 
-        # validate symbol
-        quote = lookup(request.form.get("symbol").upper())
+        # validate input
+        symbol = request.form.get("symbol").upper()
+        shares = request.form.get("shares")
+
+        if not symbol:
+            return apology("invalid symbol", 400)
+        elif not shares or not shares.isdigit() or int(shares) <= 0:
+            return apology("invalid quantity", 400)
+
+        quote = lookup(symbol)
         if not quote:
-            return apology("stock symbol doesn't exist", 403)
+            return apology("invalid not found", 400)
 
-        # validate quantity
-        try:
-            quantity = int(request.form.get("quantity"))
-        except ValueError:
-            return apology("invalid quantity", 403)
-        if quantity <= 0:
-            return apology("invalid quantity", 403)
+        # get user's current cash balance
+        stock_price = quote["price"]
+        users_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        users_cash = users_cash[0]["cash"]
 
-        # validate if user can afford the purchase
-        user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-        user_cash = user_cash[0]["cash"]
-        total_cost = quote["price"] * quantity
-        if not int(total_cost) <= user_cash:
-            return apology("not enough cash for the purchase", 403)
+        # verify if user can afford the purchase
+        purchase_cost = int(shares) * stock_price
+        if purchase_cost > users_cash:
+            return apology("not enough cash for the purchase", 400)
+
+        # update user's cash
+        db.execute("UPDATE users SET cash = cash - :purchase_cost WHERE id = :user_id",
+                   purchase_cost=purchase_cost, user_id=session["user_id"])
 
         # process the transaction
-        db.execute(
-            "INSERT INTO transactions (id, symbol, quantity, price) VALUES (?, ?, ?, ?)",
-            session["user_id"], request.form.get("symbol"), quantity, quote["price"])
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, side) VALUES (?, ?, ?, ?, ?)",
+                   session["user_id"], symbol, shares, stock_price, 'B')
 
-        #update user's cash balnace
-        db.execute(
-            "UPDATE users SET cash = :new_total WHERE id = :user_id",
-            new_total=user_cash-total_cost, user_id=session["user_id"]
-        )
+        flash(f"Bought {shares} shares of {symbol} for {usd(purchase_cost)}!")
 
-        #update user's holdings
-        stock = db.execute(
-            "SELECT quantity FROM holdings WHERE id = :user_id AND symbol = :symbol",
-            user_id=session["user_id"], symbol=quote["symbol"])
-
-        if stock:
-            db.execute(
-                "UPDATE holdings SET quantity = :new_quantity",
-                new_quantity=stock[0]["quantity"]+quantity)
-        else:
-            db.execute(
-                "INSERT INTO holdings (id, symbol, quantity) VALUES (?, ?, ?)",
-                session["user_id"], quote["symbol"], quantity
-            )
-
-
-        receipt = f"You've just purchased {quantity} shares of {quote["name"]} ({quote["symbol"]}) for the price of ${quote["price"]}"
-        return render_template("buy.html", receipt=receipt)
+        return redirect("/")
 
     else:
         return render_template("buy.html")
@@ -118,7 +109,11 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    return apology("TODO")
+
+    transactions = db.execute("SELECT * FROM transactions WHERE user_id = :user_id ORDER BY timestamp DESC",
+                              user_id=session["user_id"])
+
+    return render_template("history.html", transactions=transactions)
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -175,10 +170,11 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
+
     if request.method == "POST":
         quote = lookup(request.form.get("symbol"))
         if not quote:
-            return apology("stock symbol doesn't exist", 403)
+            return apology("stock symbol doesn't exist", 400)
         return render_template("quote.html", quote=quote)
     else:
         return render_template("quote.html")
@@ -187,8 +183,6 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
-    # forget any user_id
-    session.clear()
 
     if request.method == "POST":
         username = request.form.get("username")
@@ -197,32 +191,27 @@ def register():
 
         # check if not blank
         if not request.form.get("username"):
-            return apology("must provide username", 403)
+            return apology("must provide username", 400)
         elif not request.form.get("password"):
-            return apology("must provide password", 403)
+            return apology("must provide password", 400)
         elif not request.form.get("confirmation"):
-            return apology("must provide password confirmation", 403)
+            return apology("must provide password confirmation", 400)
 
         # check if passwords match
         elif password != confirmation:
-            return apology("passwords don't match", 403)
+            return apology("passwords don't match", 400)
 
         # check if username isn't taken
         name_check = db.execute(
-            "SELECT username FROM users WHERE username = ?", username
-        )
-        if len(name_check) != 0:
-            return apology("username is already taken", 403)
+            "SELECT * FROM users WHERE username = ?", username)
 
-        # hash the password and add the user to the databse
-        hashed_password = generate_password_hash("password")
+        if len(name_check) == 1:
+            return apology("username is already taken", 400)
+
+        # add the user to the databse
         db.execute(
             "INSERT INTO users (username, hash) VALUES(?, ?)",
-            username, hashed_password)
-
-        # begin a new session with the user
-        new_user = db.execute("SELECT * FROM users WHERE username = ?", username)
-        session["user_id"] = new_user[0]["id"]
+            username, generate_password_hash(password))
 
         return redirect("/")
 
@@ -230,54 +219,83 @@ def register():
         return render_template("register.html")
 
 
-
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
-    ''' Sell a stock'''
+    """Sell shares of stock"""
+
+    # get users stocks
+    stocks = db.execute("SELECT symbol, SUM(shares) as total_shares FROM transactions WHERE" \
+    " user_id = :user_id GROUP BY symbol HAVING total_shares > 0",
+                        user_id=session["user_id"])
+
+    # acquire user's input
     if request.method == "POST":
+        symbol = request.form.get("symbol").upper()
+        shares = request.form.get("shares")
 
-        # validate symbol
-        quote = lookup(request.form.get("symbol").upper())
-        if not quote:
-            return apology("stock symbol doesn't exist", 403)
+        # validate user's input
+        if not symbol:
+            return apology("invalid symbol", 400)
+        elif not shares or not shares.isdigit() or int(shares) <= 0:
+            return apology("invalid quantity", 400)
+        else:
+            shares = int(shares)
 
-        # validate quantity
-        try:
-            quantity = int(request.form.get("quantity"))
-        except ValueError:
-            return apology("invalid quantity", 403)
-        if quantity <= 0:
-            return apology("invalid quantity", 403)
 
-        # get the number of shares user owns
-        available_quantity = db.execute(
-            "SELECT quantity FROM holdings WHERE id = :user_id AND symbol = :symbol",
-            user_id=session["user_id"], symbol=quote["symbol"])
+        for stock in stocks:
+            if stock["symbol"] == symbol:
+                # validate if user have enough shares to sell
+                if stock["total_shares"] < shares:
+                    return apology("not enough shares")
+                else:
+                    # get a sale quote
+                    quote = lookup(symbol)
+                    price = quote["price"]
+                    sale_price = price * shares
 
-        # validate if user actually owns the shares he wants to sell
-        if not available_quantity:
-            return apology("you don't own any shares of this stock", 403)
-        if available_quantity[0]["quantity"] < quantity:
-            return apology("you can't sell more shares than you own", 403)
+                    # update user's cash
+                    db.execute("UPDATE users SET cash = cash + :sale_price WHERE id = :user_id",
+                               sale_price=sale_price, user_id=session["user_id"])
 
-        # update user's cash
-        user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-        user_cash = user_cash[0]["cash"]
-        total_cost = quote["price"]*quantity
+                    # process the transaction
+                    db.execute("INSERT INTO transactions (user_id, symbol, shares, price, side) VALUES (?, ?, ?, ?, ?)",
+                               session["user_id"], symbol, shares, price, 'S')
 
-        db.execute(
-            "UPDATE users SET cash = :new_total WHERE id = :user_id",
-            new_total=user_cash+total_cost, user_id=session["user_id"] )
+                    flash(f"Sold {shares} shares of {symbol} for {usd(sale_price)}!")
 
-        # update user's quantity
-        db.execute(
-            "UPDATE holdings SET quantity = :new_quantity",
-            new_quantity=available_quantity[0]["quantity"]-quantity
-        )
-
-        receipt = f"You've just sold {quantity} shares of {quote["name"]} ({quote["symbol"]}) for the price of ${quote["price"]}. Currently you own {available_quantity[0]["quantity"]-quantity} shares."
-        return render_template("sell.html", receipt=receipt)
+                    return redirect("/")
 
     else:
         return render_template("sell.html")
+
+
+@app.route("/addcash", methods=["GET", "POST"])
+@login_required
+def addcash():
+    '''Add cash'''
+
+    if request.method == "POST":
+        # validate input
+        try:
+            amount = float(request.form.get("amount"))
+        except ValueError:
+            return apology("invalid amount", 400)
+
+        if amount <= 0:
+            return apology("amount must be higher than $0", 400)
+
+        # update user's cash
+        current = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        current = current[0]["cash"]
+
+        new_total = current+amount
+        db.execute(
+            "UPDATE users SET cash = :new_total WHERE id = :user_id",
+            new_total=new_total, user_id=session["user_id"]
+        )
+
+        return render_template("addcash.html", amount=amount, new_total=new_total)
+
+    else:
+        return render_template("addcash.html")
