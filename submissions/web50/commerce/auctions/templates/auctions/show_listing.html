@@ -1,0 +1,161 @@
+{% extends "auctions/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+    <div style="padding: 50px;">
+        <h3 class="mb-4">{{ listing.title }} ({{ listing.year }})</h3>
+
+        <div class="row align-items-start" style="margin-top: 50px;">
+
+            <!-- Left: Image + Watchlist -->
+            <div class="col-md-5 d-flex align-items-start gap-2">
+                <img src="{{ listing.img_url }}" alt="{{ listing.title }}" class="img-fluid" 
+                    style="height: 300px; object-fit: cover;">
+                
+                    <!-- Watchlist tooltip upon hover -->
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'toggle_watchlist' listing.id %}" style="margin-top: -6px;" data-bs-toggle="tooltip" data-bs-placement="top" 
+                            title="{% if is_in_watchlist %}Remove from Watchlist{% else %}Add to Watchlist{% endif %}">
+                    {% else %}
+                        <a style="margin-top: -6px; cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top" 
+                            title="Must be logged in">
+                    {% endif %}
+
+                            <!-- Watchlist icon toggle -->
+                            {% if is_in_watchlist %}
+                                <i class="bi bi-heart-fill text-danger watchlist-icon"></i>
+                            {% else %}
+                                <i class="bi bi-heart watchlist-icon"></i>
+                            {% endif %}
+                        </a>
+            </div>
+        
+
+            <!-- Right: Description aligned with image -->
+            <div class="col-md-7">
+                <h3>Description</h3>
+                <div style="width: 50%;">
+                    <p>{{ listing.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <div style="padding: 50px; margin-top: -100px">
+        <div class="row align-items-start mt-5">
+            <!-- Left: Info -->
+            <div class="col-md-5">
+                <p class="mb-1">Created at: {{ listing.timestamp }}</p>
+                <p class="mb-1">Starting price: ${{ listing.starting_bid }}</p>
+                <p class="mb-1">Listed by: <a href="{% url 'user_profile' listing.creator %}">{{ listing.creator }}</a></p>
+            </div>
+
+            <!-- Right: Bidding -->
+            <div class="col-md-7" style="width: 50%;">
+                <!-- Bidding info-->
+                <p class="mb-1">
+                    Status: 
+                    {% if listing.active %}
+                        <strong><span class="text-success">Active</span></strong>
+                    {% else %}
+                        <strong><span class="text-danger">Closed</span></strong>
+                    {% endif %}
+                </p>
+                {% if listing.active %}
+                    <p class="mb-1">Current price: <strong>${{ listing.current_price }}</strong></p>
+                    <p class="mb-1">Highest bidder: <a href="{% url 'user_profile' listing.highest_bidder %}">{{ listing.highest_bidder}}</a></p>
+
+                    <br>
+
+                    <!-- Tooltip message -->
+                    {% if message %}
+                        <div id="alert-message" class="alert alert-warning small py-1">
+                            {{ message }}
+                        </div>
+                    {% endif %}
+
+                    <!-- Bidding form  for authorized and unauthorized users-->
+                    {% if user.is_authenticated %}
+                        <form action="{% url 'bid_order' listing.id %}" method="POST">
+                            {% csrf_token %}
+                            {% if form %}
+                                {{ form }}
+                            {% else %}
+                                {{ NewBidForm }}
+                            {% endif %}
+                            <button type="submit" class="btn btn-primary btn-sm" style="margin-top: -5px;">Place a bid</button>
+                        </form>
+                    {% else %}
+                        <label for="fakefield">Bid:</label>
+                        <input type="number" name="fakefield" step="0.01" min="0" max="999.99" size="30"
+                            placeholder="0.00" style="width: 190px;">
+                        <button class="btn btn-primary btn-sm" style="margin-top: -5px;" data-bs-toggle="tooltip" 
+                            data-bs-placement="top" title="Must be logged in.">Place a bid</button>
+                    {% endif %}
+
+                {% else %}
+                    <!-- Closed listing additional info -->
+                    <p class="mb-1">Hammer price: <strong>${{ listing.current_price }}</strong></p>
+                    <p class="mb-1">Winner of the auction: <a href="{% url 'user_profile' listing.highest_bidder %}">{{ listing.highest_bidder }}</a></p>
+                    {% if listing.highest_bidder == user %} 
+                        Congratulations! You are the winner of this auction!
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div style="padding: 50px; margin-top: -50px">
+        <div class="row align-items-start mt-5">
+            <!-- Bid history -->
+            <div class="col-md-5">
+                <h4>Bid history:</h4>
+                {% for bid in listing.bid_history %}
+                    <a href="{% url 'user_profile' bid.bidder %}">{{ bid.bidder }}</a> made a bid at ${{ bid.amount }} at {{ bid.timestamp|timesince }} ago
+                    <br>
+                {% endfor %}
+            </div>
+
+            <!-- Comment history -->
+            <div class="col-md-7">
+                <h4>Latest comments:</h4>
+                <div class="comment-section">
+                    {% for comment in listing.comment_history %}
+                        <div class="comment-entry">
+                            <a href="{% url 'user_profile' comment.author %}">{{ comment.author }}</a>
+                            commented at {{ comment.timestamp|date:"F j, Y" }}:
+                            <span class="comment-text">{{ comment.text }}</span>
+                        </div>
+                        {% if not forloop.last %}<hr>{% endif %}
+                        {% empty %}
+                            <p>No comments  yet.</p>
+                    {% endfor %}
+                </div>
+
+                {% if listing.comment_history|length > 1 %}
+                    <br>
+                    <a href="{% url 'all_comments' listing.id %}">
+                        <button class="btn btn-secondary btn-sm" id="toggle-comments">Show more ({{ listing.comment_history|length }})</button>
+                    </a>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+        
+    <hr>        
+
+    <!-- Footer with buttons-->
+    <div style="padding-left: 50px; padding-top: 25px;">
+        {% if listing.active and listing.creator == user %}
+            <a href="{% url 'auction_close' listing.id %}" class="btn btn-primary btn-sm">Close the auction</a>
+        {% endif %}
+        {% if user.is_authenticated %}
+            <a href="{% url 'add_comment' listing.id %}" class="btn btn-primary btn-sm">Add a comment</a>
+        {% endif %}
+    </div>
+
+{% endblock %}
