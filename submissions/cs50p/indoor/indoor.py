@@ -1,1 +1,0 @@
-print(input(str()).lower())

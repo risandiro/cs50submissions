@@ -1,8 +1,0 @@
-Their audio aura is rather energetic, neutral in terms of positivity and negativity and pretty danceable.
-
-It might not be very representative due to not including individual artists into the calculation.
-Many people listen to songs because of the artists, their voice and vibe and they sometimes make
-happy songs, sometimes sad songs and sometimes danceable and sometimes not dancable.
-Assigning multiple different metrics to artists and making the aura from the most favorite
-artists of the person, adding time listned for each individual artists as a weighted factor
-would be my proposition on how to calculating the aura of a listener.
